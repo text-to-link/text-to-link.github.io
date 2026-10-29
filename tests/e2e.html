@@ -12,10 +12,19 @@ function eq(name, got, want) {
   if (got !== want) fails.push('FAIL ' + name + '\n  got:  ' + JSON.stringify(got) + '\n  want: ' + JSON.stringify(want));
 }
 var sleep = function (ms) { return new Promise(function (r) { setTimeout(r, ms); }); };
+function loaded() {
+  var f = document.getElementById('f');
+  return new Promise(function (r) { f.onload = function () { setTimeout(r, 150); }; });
+}
 
 async function run() {
   var f = document.getElementById('f');
-  await new Promise(function (r) { f.onload = r; if (f.contentDocument.readyState === 'complete') r(); });
+  // the iframe starts as about:blank, wait for the real page and for its scripts to finish
+  for (var t = 0; t < 100; t++) {
+    var cd = f.contentDocument;
+    if (cd && cd.readyState === 'complete' && f.contentWindow.location.pathname === '/' && cd.querySelector('#examples .chip')) break;
+    await sleep(50);
+  }
   await sleep(100);
   var d = f.contentDocument, w = f.contentWindow;
   var $ = function (id) { return d.getElementById(id); };
@@ -208,8 +217,7 @@ async function run() {
 
   // privacy page changes the analytics choice
   f.src = '/privacy/';
-  await new Promise(function (r) { f.onload = r; });
-  await sleep(100);
+  await loaded();
   d = f.contentDocument; w = f.contentWindow;
   d.querySelector('[data-consent="granted"]').click(); await sleep(20);
   eq('privacy accept stored', w.localStorage.getItem('ttl-consent'), 'granted');
@@ -219,16 +227,14 @@ async function run() {
 
   // prefilled from the address (also what the share target sends)
   f.src = '/?title=My%20page&text=https%3A%2F%2Fexample.com%2Fp%3Futm_x%3D1&fmt=markdown';
-  await new Promise(function (r) { f.onload = r; });
-  await sleep(100);
+  await loaded();
   d = f.contentDocument; w = f.contentWindow;
   eq('share: url from text', d.getElementById('in-url').value, 'https://example.com/p?utm_x=1');
   eq('share: label from title', d.getElementById('in-text').value, 'My page');
   eq('share: fmt param', d.querySelector('[data-fmt="markdown"]').getAttribute('aria-selected'), 'true');
   eq('share: output (tracking option saved earlier)', d.getElementById('out').textContent, '[My page](https://example.com/p)');
   f.src = '/?url=example.org&text=Hello';
-  await new Promise(function (r) { f.onload = r; });
-  await sleep(100);
+  await loaded();
   d = f.contentDocument;
   eq('prefill: url param', d.getElementById('in-url').value, 'example.org');
   eq('prefill: text param', d.getElementById('in-text').value, 'Hello');

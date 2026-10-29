@@ -1,6 +1,6 @@
 /* text-to-link service worker: the pages and assets of this build are precached,
    at runtime the network wins and the cache is the offline fallback. */
-var CACHE = 'ttl-8de3d428';
+var CACHE = 'ttl-9a6e3ffa';
 var PRECACHE = [
   "/",
   "/privacy/",
@@ -19,7 +19,7 @@ var PRECACHE = [
   "/assets/style.css?v=736df128",
   "/assets/chrome.js?v=daaa087e",
   "/assets/core.js?v=3077b303",
-  "/assets/app.js?v=f3ed7c10",
+  "/assets/app.js?v=74fd7292",
   "/assets/qrcode.js?v=6e6189e2",
   "/favicon.svg"
 ];

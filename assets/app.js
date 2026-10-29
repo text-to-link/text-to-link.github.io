@@ -483,6 +483,7 @@
     var title = (q.get('title') || '').trim();
     var f = q.get('fmt');
     if (f && document.querySelector('[data-fmt="' + f + '"]')) fmt = f;
+    if (!url && !text && !title) return;
     if (!url) {
       // share sheets often put the page address into "text"
       var found = T.splitUrls(text + ' ' + title).filter(function (p) { return p.type === 'url'; })[0];
