@@ -1,0 +1,253 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>e2e</title>
+<pre id="out">running…</pre>
+<iframe id="f" src="/" style="width:1000px;height:900px"></iframe>
+<script>
+// Serve the repo root (python3 -m http.server 8765), then:
+// google-chrome --headless=new --no-sandbox --dump-dom --virtual-time-budget=20000 http://localhost:8765/tests/e2e.html | grep -E "FAIL|SUMMARY"
+var total = 0, fails = [];
+function eq(name, got, want) {
+  total++;
+  if (got !== want) fails.push('FAIL ' + name + '\n  got:  ' + JSON.stringify(got) + '\n  want: ' + JSON.stringify(want));
+}
+var sleep = function (ms) { return new Promise(function (r) { setTimeout(r, ms); }); };
+
+async function run() {
+  var f = document.getElementById('f');
+  await new Promise(function (r) { f.onload = r; if (f.contentDocument.readyState === 'complete') r(); });
+  await sleep(100);
+  var d = f.contentDocument, w = f.contentWindow;
+  var $ = function (id) { return d.getElementById(id); };
+  var out = function () { return $('out').textContent; };
+  async function type(id, value) { $(id).value = value; $(id).dispatchEvent(new w.Event('input', { bubbles: true })); await sleep(20); }
+  async function check(id, on) { $(id).checked = on; $(id).dispatchEvent(new w.Event('change', { bubbles: true })); await sleep(20); }
+  async function click(sel) { d.querySelector(sel).click(); await sleep(30); }
+
+  // placeholder state
+  eq('placeholder shown', $('out').classList.contains('is-placeholder'), true);
+  eq('copy disabled initially', $('btn-copy').disabled, true);
+
+  // single link
+  await type('in-text', 'My <site>');
+  await type('in-url', 'example.com/a?utm_source=x&b=1');
+  eq('html basic', out(), '<a href="https://example.com/a?utm_source=x&amp;b=1">My &lt;site&gt;</a>');
+  eq('copy enabled', $('btn-copy').disabled, false);
+  eq('preview visible', $('preview-wrap').hidden, false);
+  eq('preview link text', $('preview').textContent, 'My <site>');
+
+  $('o-params').value = 'tracking'; $('o-params').dispatchEvent(new w.Event('change', { bubbles: true })); await sleep(20);
+  eq('tracking removed', out(), '<a href="https://example.com/a?b=1">My &lt;site&gt;</a>');
+
+  await type('in-text', 'Site');
+  d.querySelector('.hl-start').value = 'hello world';
+  d.querySelector('.hl-start').dispatchEvent(new w.Event('input', { bubbles: true }));
+  await sleep(20);
+  eq('highlight added', out(), '<a href="https://example.com/a?b=1#:~:text=hello%20world">Site</a>');
+
+  await click('[data-fmt="markdown"]');
+  eq('markdown', out(), '[Site](https://example.com/a?b=1#:~:text=hello%20world)');
+  await click('[data-fmt="bbcode"]');
+  eq('bbcode', out(), '[url=https://example.com/a?b=1#:~:text=hello%20world]Site[/url]');
+  await click('[data-fmt="slack"]');
+  eq('slack', out(), '<https://example.com/a?b=1#:~:text=hello%20world|Site>');
+  await click('[data-fmt="textile"]');
+  eq('textile', out(), '"Site":https://example.com/a?b=1#:~:text=hello%20world');
+  await click('[data-fmt="org"]');
+  eq('org', out(), '[[https://example.com/a?b=1#:~:text=hello%20world][Site]]');
+  eq('fmt hint describes org', $('fmt-hint').textContent.indexOf('Org:') === 0, true);
+  await click('[data-fmt="html"]');
+
+  await check('o-newtab', true);
+  eq('newtab', out(), '<a href="https://example.com/a?b=1#:~:text=hello%20world" target="_blank" rel="noopener noreferrer">Site</a>');
+  await check('o-newtab', false);
+
+  // second highlight row
+  await click('#hl-add');
+  eq('two highlight rows', $('hl-list').children.length, 2);
+  var rows = d.querySelectorAll('.hl-row');
+  rows[1].querySelector('.hl-start').value = 'a-b';
+  rows[1].querySelector('.hl-start').dispatchEvent(new w.Event('input', { bubbles: true }));
+  await sleep(20);
+  eq('two highlights', out(), '<a href="https://example.com/a?b=1#:~:text=hello%20world&amp;text=a%2Db">Site</a>');
+  rows[1].querySelector('.hl-remove').click(); await sleep(20);
+  eq('highlight removed', $('hl-list').children.length, 1);
+
+  // invalid URL
+  await type('in-url', 'not a url');
+  eq('invalid shows error', $('url-error').hidden, false);
+  eq('invalid disables copy', $('btn-copy').disabled, true);
+  eq('invalid disables qr', $('btn-qr').disabled, true);
+  await type('in-url', 'javascript:alert(1)');
+  eq('js url rejected', $('btn-copy').disabled, true);
+  await type('in-url', 'https://example.com/x');
+
+  // QR
+  await click('#btn-qr');
+  for (var i = 0; i < 40 && !$('qr-svg').querySelector('svg'); i++) await sleep(50);
+  eq('qr rendered', !!$('qr-svg').querySelector('svg'), true);
+  eq('qr download enabled', $('qr-dl-png').disabled, false);
+  eq('qr panel open', $('qr-panel').hidden, false);
+  await click('#btn-qr');
+  eq('qr panel closed', $('qr-panel').hidden, true);
+
+  // linkify
+  await click('[data-mode="linkify"]');
+  eq('single field hidden', d.querySelector('[data-modes="single"]').hidden, true);
+  eq('linkify field shown', d.querySelector('[data-modes="linkify"]').hidden, false);
+  await type('in-paste', 'See https://a.com/p?utm_x=1&k=2. Thanks');
+  eq('linkify html', out(), 'See <a href="https://a.com/p?k=2">https://a.com/p?k=2</a>. Thanks');
+  await type('in-paste', 'no links');
+  eq('linkify none warns', $('warn').hidden, false);
+
+  // bulk
+  await click('[data-mode="bulk"]');
+  await type('in-bulk', 'A | a.com\nbad line\nhttps://b.org');
+  eq('bulk plain', out(), '<a href="https://a.com">A</a>\n<a href="https://b.org">https://b.org</a>');
+  eq('bulk warns about line 2', $('warn').textContent.indexOf('2') >= 0, true);
+  await check('o-list', true);
+  eq('bulk list', out(), '<ul>\n  <li><a href="https://a.com">A</a></li>\n  <li><a href="https://b.org">https://b.org</a></li>\n</ul>');
+  await check('o-list', false);
+
+  // settings persisted
+  var saved = JSON.parse(w.localStorage.getItem('ttl-settings') || '{}');
+  eq('settings saved params', saved.params, 'tracking');
+
+  // theme
+  $('theme-toggle').click(); await sleep(20);
+  var first = d.documentElement.dataset.theme;
+  $('theme-toggle').click(); await sleep(20);
+  eq('theme toggles', first !== d.documentElement.dataset.theme, true);
+
+  // consent banner
+  eq('consent banner shown', $('consent').hidden, false);
+  $('consent-decline').click(); await sleep(20);
+  eq('consent banner hidden', $('consent').hidden, true);
+  eq('consent stored', w.localStorage.getItem('ttl-consent'), 'denied');
+
+  // examples, paste and clear
+  var chips = function () { return d.querySelectorAll('#examples .chip'); };
+  var savedBefore = JSON.parse(w.localStorage.getItem('ttl-settings')).params;
+  await click('[data-mode="single"]');
+  eq('single mode hint visible', d.querySelector('.mode-hint[data-modes="single"]').hidden, false);
+  eq('bulk mode hint hidden', d.querySelector('.mode-hint[data-modes="bulk"]').hidden, true);
+  eq('single has 5 examples', chips().length, 5);
+  var simple = '<a href="https://example.com/blog/my-article">Read the full article</a>';
+  chips()[0].click(); await sleep(30);
+  eq('example 1', out(), simple);
+  eq('fmt hint describes html', $('fmt-hint').textContent.indexOf('HTML:') === 0, true);
+  chips()[1].click(); await sleep(30);
+  eq('example 2 tracking', out(), '<a href="https://shop.example.com/sale?color=blue">Spring sale</a>');
+  chips()[2].click(); await sleep(30);
+  eq('example 3 highlight', out(), '<a href="https://en.wikipedia.org/wiki/Hyperlink#:~:text=hyperlink%2C%20or%20simply%20a%20link,clicking%20or%20tapping">What is a hyperlink?</a>');
+  eq('example opens advanced', $('advanced').open, true);
+  chips()[0].click(); await sleep(30);
+  eq('example resets options and highlight', out(), simple);
+  chips()[3].click(); await sleep(30);
+  eq('example 4 rel', out(), '<a href="https://partner.example.com/?ref=blog" target="_blank" rel="nofollow sponsored noopener noreferrer">Partner offer</a>');
+  chips()[4].click(); await sleep(30);
+  eq('example 5 bbcode', out(), '[url=https://github.com/text-to-link/text-to-link.github.io]My project on GitHub[/url]');
+  eq('example 5 selects bbcode tab', d.querySelector('[data-fmt="bbcode"]').getAttribute('aria-selected'), 'true');
+  eq('examples do not overwrite saved options', JSON.parse(w.localStorage.getItem('ttl-settings')).params, savedBefore);
+  chips()[0].click(); await sleep(30);
+  eq('example resets format', d.querySelector('[data-fmt="html"]').getAttribute('aria-selected'), 'true');
+
+  await click('[data-mode="linkify"]');
+  eq('linkify has 3 examples', chips().length, 3);
+  chips()[2].click(); await sleep(30);
+  eq('linkify extract example', out(), 'https://example.com/a\nhttps://www.example.org/b\nhttps://example.net/c');
+  await click('[data-mode="bulk"]');
+  chips()[0].click(); await sleep(30);
+  eq('bulk example list', out(), '<ul>\n  <li><a href="https://developer.mozilla.org">MDN Web Docs</a></li>\n  <li><a href="https://github.com">GitHub</a></li>\n  <li><a href="https://example.com/page">https://example.com/page</a></li>\n</ul>');
+  await click('[data-clear="in-bulk"]');
+  eq('bulk field cleared', $('in-bulk').value, '');
+  eq('bulk output back to placeholder', $('out').classList.contains('is-placeholder'), true);
+  eq('placeholder explains itself', $('fmt-hint').textContent.indexOf('example') >= 0, true);
+
+  await click('[data-mode="single"]');
+  var clipboard = '  https://pasted.example.com/x  ';
+  Object.defineProperty(w.navigator, 'clipboard', { configurable: true, value: { readText: function () { return Promise.resolve(clipboard); } } });
+  await click('[data-clear="in-url"]');
+  await click('[data-clear="in-text"]');
+  eq('url cleared', $('in-url').value, '');
+  await click('[data-paste="in-url"]'); await sleep(50);
+  eq('paste into url trims', $('in-url').value, 'https://pasted.example.com/x');
+  await click('[data-clear="in-url"]');
+  await click('[data-paste="in-text"]'); await sleep(50);
+  eq('url pasted into text goes to url field', $('in-url').value, 'https://pasted.example.com/x');
+  eq('text field stays empty', $('in-text').value, '');
+  clipboard = 'Some  words\n here';
+  await click('[data-paste="in-text"]'); await sleep(50);
+  eq('plain text pasted into text field', $('in-text').value, 'Some words here');
+  clipboard = '   ';
+  var pasteBtn = d.querySelector('[data-paste="in-url"]');
+  pasteBtn.click(); await sleep(50);
+  eq('empty clipboard shows fallback hint', pasteBtn.textContent, 'Press Ctrl+V');
+
+  // seo bits of every language, home and privacy pages
+  var langs = ['', 'uk/', 'es/', 'pt/', 'de/', 'fr/', 'pl/'];
+  for (var lang of langs) {
+    for (var page of ['', 'privacy/']) {
+      var path = '/' + lang + page, label = path;
+      var res = await fetch(path); var html = await res.text();
+      var doc = new DOMParser().parseFromString(html, 'text/html');
+      eq(label + ' status', res.status, 200);
+      eq(label + ' h1 count', doc.querySelectorAll('h1').length, 1);
+      eq(label + ' canonical', doc.querySelector('link[rel=canonical]').href, 'https://text-to-link.github.io' + path);
+      eq(label + ' hreflang count', doc.querySelectorAll('link[rel=alternate][hreflang]').length, langs.length + 1);
+      eq(label + ' og:image', !!doc.querySelector('meta[property="og:image"]'), true);
+      eq(label + ' no unreplaced placeholder', /\{\{[\w.]+\}\}/.test(html), false);
+      eq(label + ' title length <= 65', doc.title.length <= 65, true);
+      eq(label + ' description length <= 160', doc.querySelector('meta[name=description]').content.length <= 160, true);
+      eq(label + ' links to privacy', !!doc.querySelector('.site-footer a[href="/' + lang + 'privacy/"]'), true);
+      eq(label + ' language menu keeps the page', !!doc.querySelector('#lang-menu a[hreflang=en][href="/' + page + '"]'), true);
+      if (!page) eq(label + ' jsonld parses', JSON.parse(doc.querySelector('script[type="application/ld+json"]').textContent)['@graph'].length, 2);
+      else eq(label + ' consent buttons', doc.querySelectorAll('[data-consent]').length, 2);
+    }
+  }
+
+  // privacy page changes the analytics choice
+  f.src = '/privacy/';
+  await new Promise(function (r) { f.onload = r; });
+  await sleep(100);
+  d = f.contentDocument; w = f.contentWindow;
+  d.querySelector('[data-consent="granted"]').click(); await sleep(20);
+  eq('privacy accept stored', w.localStorage.getItem('ttl-consent'), 'granted');
+  eq('privacy accept confirmed', d.getElementById('consent-status').textContent.length > 0, true);
+  d.querySelector('[data-consent="denied"]').click(); await sleep(20);
+  eq('privacy decline stored', w.localStorage.getItem('ttl-consent'), 'denied');
+
+  // prefilled from the address (also what the share target sends)
+  f.src = '/?title=My%20page&text=https%3A%2F%2Fexample.com%2Fp%3Futm_x%3D1&fmt=markdown';
+  await new Promise(function (r) { f.onload = r; });
+  await sleep(100);
+  d = f.contentDocument; w = f.contentWindow;
+  eq('share: url from text', d.getElementById('in-url').value, 'https://example.com/p?utm_x=1');
+  eq('share: label from title', d.getElementById('in-text').value, 'My page');
+  eq('share: fmt param', d.querySelector('[data-fmt="markdown"]').getAttribute('aria-selected'), 'true');
+  eq('share: output (tracking option saved earlier)', d.getElementById('out').textContent, '[My page](https://example.com/p)');
+  f.src = '/?url=example.org&text=Hello';
+  await new Promise(function (r) { f.onload = r; });
+  await sleep(100);
+  d = f.contentDocument;
+  eq('prefill: url param', d.getElementById('in-url').value, 'example.org');
+  eq('prefill: text param', d.getElementById('in-text').value, 'Hello');
+
+  // PWA files
+  var manifest = await (await fetch('/site.webmanifest')).json();
+  eq('manifest standalone', manifest.display, 'standalone');
+  eq('manifest share target', manifest.share_target.params.url, 'url');
+  for (var icon of manifest.icons) eq('manifest icon ' + icon.src, (await fetch(icon.src)).status, 200);
+  var sw = await (await fetch('/sw.js')).text();
+  eq('sw has no placeholders', /__[A-Z]+__/.test(sw), false);
+  var precache = JSON.parse(/var PRECACHE = (\[[\s\S]*?\]);/.exec(sw)[1]);
+  eq('sw precache list is not empty', precache.length > 10, true);
+  for (var url of precache) eq('sw precache ' + url, (await fetch(url)).status, 200);
+}
+
+run().then(function () {
+  document.getElementById('out').textContent = fails.join('\n') + '\nSUMMARY ' + (total - fails.length) + '/' + total + ' passed';
+}, function (e) {
+  document.getElementById('out').textContent = 'FAIL exception ' + e + '\nSUMMARY error';
+});
+</script>

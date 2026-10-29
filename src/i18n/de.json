@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "lang": "de",
+    "dir": "ltr",
+    "locale": "de_DE",
+    "lang_short": "DE",
+    "native": "Deutsch",
+    "title": "Text-zu-Link-Generator – HTML-, Markdown- und Hervorhebungs-Links",
+    "description": "Kostenloser Text-zu-Link-Generator: Links als HTML, Markdown oder BBCode, Link auf markierten Text, Tracking entfernen, QR-Codes.",
+    "og_alt": "Text to Link – kostenloser Generator für klickbare Links aus Text"
+  },
+  "ui": {
+    "skip": "Zum Tool springen",
+    "nav_label": "Website",
+    "language": "Sprache",
+    "theme_toggle": "Zwischen hellem und dunklem Design wechseln",
+    "h1": "Text-zu-Link-Generator",
+    "lead": "Verwandeln Sie beliebigen Text in einen klickbaren Link. Erhalten Sie HTML, Markdown oder BBCode, verlinken Sie direkt auf markierten Text einer Seite und erstellen Sie einen QR-Code – kostenlos, sofort und direkt in Ihrem Browser.",
+    "tool_label": "Text-zu-Link-Generator",
+    "modes_label": "Modus",
+    "mode_single": "Einzelner Link",
+    "mode_linkify": "Text verlinken",
+    "mode_bulk": "Mehrere Links",
+    "label_text": "Linktext",
+    "ph_text": "Den ganzen Artikel lesen",
+    "label_url": "URL",
+    "label_paste": "Text mit URLs",
+    "ph_paste": "Beliebigen Text einfügen. Jede URL darin wird zu einem Link, zum Beispiel https://example.com/article",
+    "label_bulk": "Ein Link pro Zeile",
+    "ph_bulk": "Beispielseite | https://example.com\nhttps://example.org/page",
+    "hint_bulk": "Verwenden Sie in jeder Zeile „Text | URL“ oder nur eine URL. Zeilen mit ungültiger URL werden übersprungen.",
+    "adv_toggle": "Erweiterte Optionen",
+    "adv_link": "Link",
+    "opt_newtab": "In neuem Tab öffnen",
+    "opt_title": "Titel (Tooltip)",
+    "adv_url": "URL",
+    "opt_params": "Abfrageparameter",
+    "params_keep": "Alle behalten",
+    "params_tracking": "Nur Tracking entfernen (utm_*, fbclid, gclid …)",
+    "params_all": "Alles nach „?“ entfernen",
+    "opt_hash": "#Anker entfernen",
+    "opt_shorten": "Kurze URLs anzeigen (ohne https://, www.)",
+    "opt_list": "Als Liste ausgeben",
+    "adv_highlight": "Text auf der Seite hervorheben",
+    "hl_help": "Fügen Sie Text hinzu, zu dem der Browser beim Öffnen des Links scrollen und den er hervorheben soll.",
+    "hl_add": "Weitere Hervorhebung hinzufügen",
+    "hl_support": "Funktioniert in Chrome, Edge, Safari 16.1+ und Firefox 131+. Andere Browser öffnen die Seite ohne Hervorhebung.",
+    "hl_start": "Zu markierender Text",
+    "hl_until": "… bis (optional, Ende einer längeren Passage)",
+    "hl_prefix": "Text direkt davor (optional)",
+    "hl_suffix": "Text direkt danach (optional)",
+    "hl_precise": "Genauer Treffer",
+    "hl_remove": "Hervorhebung entfernen",
+    "label_result": "Ergebnis",
+    "formats_label": "Ausgabeformat",
+    "btn_copy": "Kopieren",
+    "btn_copy_rich": "Als formatierten Link kopieren",
+    "btn_test": "Link testen",
+    "btn_qr": "QR-Code",
+    "btn_clear": "Leeren",
+    "qr_title": "QR-Code",
+    "qr_help": "Mit der Handykamera scannen, um den Link zu öffnen.",
+    "qr_dl_svg": "SVG herunterladen",
+    "qr_dl_png": "PNG herunterladen",
+    "label_preview": "Vorschau",
+    "privacy_badge": "Läuft vollständig in Ihrem Browser. Ihr Text und Ihre Links werden nie hochgeladen.",
+    "how_h2": "So machen Sie aus Text einen Link",
+    "about_h2": "Ein kostenloser Link-Generator für Text",
+    "hl_h2": "So verlinken Sie auf markierten Text einer Seite",
+    "faq_h2": "Häufig gestellte Fragen",
+    "footer_text": "Text to Link – kostenlose Online-Link-Tools.",
+    "footer_source": "Quellcode auf GitHub",
+    "consent_label": "Einwilligung zur Analyse",
+    "consent_text": "Wir verwenden Google Analytics, um zu verstehen, welche Tools gebraucht werden. Es bleibt ausgeschaltet, solange Sie nicht zustimmen.",
+    "consent_accept": "Akzeptieren",
+    "consent_decline": "Ablehnen",
+    "btn_paste": "Einfügen",
+    "btn_clear_all": "Alles leeren",
+    "examples_label": "Beispiel ausprobieren:",
+    "mode_hint_single": "Erstellen Sie aus Ihrem Text und einer URL einen Link. Sie wissen nicht, wo Sie anfangen sollen? Probieren Sie ein Beispiel.",
+    "mode_hint_linkify": "Beliebigen Text einfügen: Jede URL darin wird zu einem klickbaren Link.",
+    "mode_hint_bulk": "Viele Zeilen auf einmal in Links verwandeln. Ein Link pro Zeile, geschrieben als „Text | URL“.",
+    "tip_copy": "Code kopieren (Strg+Enter)",
+    "tip_copy_rich": "Einen klickbaren Link kopieren, den Sie in Gmail, Google Docs, Notion oder Slack einfügen können",
+    "tip_test": "Link zur Kontrolle in einem neuen Tab öffnen",
+    "footer_privacy": "Datenschutz"
+  },
+  "how": [
+    {
+      "t": "Linktext eingeben",
+      "d": "Geben Sie die Wörter ein, die Nutzer sehen und anklicken sollen, zum Beispiel „Den ganzen Artikel lesen“."
+    },
+    {
+      "t": "URL einfügen",
+      "d": "Fügen Sie die Adresse hinzu. Fehlt https://, ergänzen wir es, und auf Wunsch entfernen wir Tracking-Parameter."
+    },
+    {
+      "t": "Format wählen und kopieren",
+      "d": "Wählen Sie HTML, Markdown, BBCode, reST, AsciiDoc, Slack, Textile oder Org und kopieren Sie den Code oder einen formatierten Link zum Einfügen in E-Mails und Dokumente."
+    }
+  ],
+  "about": [
+    "Text to Link ist ein kostenloser Link-Generator für Text. Geben Sie die gewünschten Wörter ein, fügen Sie die Adresse ein und erhalten Sie einen fertigen Link als HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile oder Org-mode. Ideal für Blogbeiträge, E-Mails, Forensignaturen, Dokumentation und Social-Media-Profile – überall dort, wo eine nackte URL unordentlich aussieht.",
+    "Das Tool dient als Textlink-Generator, URL-Text-Generator und Artikellink-Generator: Fügen Sie einen Titel hinzu, öffnen Sie den Link in einem neuen Tab, markieren Sie ihn als nofollow, sponsored oder ugc, entfernen Sie utm_ und andere Tracking-Parameter und kopieren Sie ihn als formatierten Link, der sich in Gmail, Google Docs, Notion oder Slack als klickbarer Text einfügen lässt.",
+    "Sie brauchen mehrere Links? Fügen Sie im Modus „Text verlinken“ einen ganzen Absatz ein, und jede URL darin wird zum Link, oder nutzen Sie „Mehrere Links“, um Zeilen im Format „Text | URL“ in eine fertige HTML-Liste zu verwandeln. Alles läuft in Ihrem Browser, daher werden Ihr Text und Ihre URLs nie hochgeladen."
+  ],
+  "hl_text": [
+    "Ein Hervorhebungs-Link, auch Textfragment-Link genannt, öffnet eine Webseite, scrollt zu einer Passage und markiert sie. Öffnen Sie die erweiterten Optionen, suchen Sie „Text auf der Seite hervorheben“, geben Sie die genauen Wörter ein, die Sie hervorheben möchten, und der Generator hängt #:~:text= an Ihre URL an.",
+    "Um eine längere Passage hervorzuheben, füllen Sie das Feld „bis“ aus: Der Browser markiert alles vom Anfangs- bis zum Endtext. Kommen dieselben Wörter mehrmals vor, nutzen Sie „Genauer Treffer“, um den Text direkt davor oder danach anzugeben. Sie können einem Link mehrere Hervorhebungen hinzufügen.",
+    "Hervorhebungs-Links funktionieren in Chrome, Edge, Safari 16.1+ und Firefox 131+. In anderen Browsern öffnet der Link die Seite trotzdem, nur ohne Hervorhebung. Der Text muss auf der Seite sichtbar sein und genau übereinstimmen, wobei die Groß- und Kleinschreibung keine Rolle spielt."
+  ],
+  "faq": [
+    {
+      "q": "Wie wandle ich Text in einen Link um?",
+      "a": "Geben Sie den Linktext ein, fügen Sie die URL ein, wählen Sie HTML, Markdown oder ein anderes Format und klicken Sie auf „Kopieren“. Der Text wird zum klickbaren Teil des Links."
+    },
+    {
+      "q": "Was ist der Unterschied zwischen HTML-, Markdown- und BBCode-Links?",
+      "a": "HTML-Links werden auf Webseiten und in E-Mail-Vorlagen verwendet, Markdown-Links auf GitHub, Reddit, Notion und in Dokumentationen, BBCode-Links in vielen Foren."
+    },
+    {
+      "q": "Wie verlinke ich auf markierten Text einer Webseite?",
+      "a": "Öffnen Sie die erweiterten Optionen, geben Sie unter „Text auf der Seite hervorheben“ die Wörter ein und kopieren Sie das Ergebnis. Der Link endet mit #:~:text= gefolgt von Ihrem Text, und unterstützende Browser scrollen dorthin und markieren ihn."
+    },
+    {
+      "q": "Kann ich utm- und andere Tracking-Parameter aus einer URL entfernen?",
+      "a": "Ja. Wählen Sie in den erweiterten Optionen „Nur Tracking entfernen“, um utm_*, fbclid, gclid und ähnliche Parameter zu entfernen, oder entfernen Sie alles nach dem Fragezeichen."
+    },
+    {
+      "q": "Wie füge ich einen klickbaren Link in Gmail oder Google Docs ein?",
+      "a": "Klicken Sie auf „Als formatierten Link kopieren“ und fügen Sie ihn ein. Ihr Text erscheint bereits klickbar, ohne dass Sie Code bearbeiten müssen."
+    },
+    {
+      "q": "Kann ich den Generator mit bereits ausgefüllten Feldern öffnen?",
+      "a": "Ja. Hängen Sie die Parameter an die Adresse an: ?url=https://example.com&text=Mein%20Link&fmt=markdown. Auf dem Smartphone können Sie die Website außerdem als App installieren und eine Seite direkt dorthin teilen."
+    },
+    {
+      "q": "Kann ich einen QR-Code für meinen Link erstellen?",
+      "a": "Ja. Klicken Sie unter dem Ergebnis auf „QR-Code“, scannen Sie ihn, um den Link zu prüfen, und laden Sie ihn als SVG oder PNG herunter. Er wird in Ihrem Browser erzeugt."
+    },
+    {
+      "q": "Funktioniert es offline?",
+      "a": "Ja. Nach dem ersten Besuch speichert Ihr Browser die Website, sodass Sie auch ohne Verbindung Links erstellen können. Nur die optionale Analyse und die Vorschau anderer Websites benötigen das Internet."
+    },
+    {
+      "q": "Ist das Tool kostenlos und privat?",
+      "a": "Ja. Es ist kostenlos, erfordert keine Anmeldung und alles läuft in Ihrem Browser: Der eingegebene Text und die URLs werden nie an einen Server gesendet. Die Analyse wird nur aktiviert, wenn Sie zustimmen."
+    }
+  ],
+  "js": {
+    "err_url_invalid": "Das sieht nicht nach einer gültigen URL aus.",
+    "count_label": "Gefundene Links: {n}",
+    "no_links": "Im Text wurden keine Links gefunden. Links beginnen mit http://, https:// oder www.",
+    "bulk_errors": "Übersprungene Zeilen mit ungültiger URL: {lines}",
+    "example_text": "Beispiel",
+    "copied": "Kopiert!",
+    "copied_rich": "Als formatierter Link kopiert!",
+    "copy_failed": "Kopieren nicht möglich. Markieren Sie den Text und kopieren Sie ihn manuell.",
+    "qr_help": "Mit der Handykamera scannen, um den Link zu öffnen.",
+    "qr_need_url": "Geben Sie eine gültige URL ein, um einen QR-Code zu erstellen.",
+    "qr_too_long": "Diese URL ist für einen QR-Code zu lang. Kürzen Sie den hervorgehobenen Text oder die URL.",
+    "qr_error": "Der QR-Code-Generator konnte nicht geladen werden. Prüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+    "paste_fallback": "Drücken Sie Strg+V",
+    "example_note": "Dies ist ein Beispiel. Füllen Sie die Felder oben aus, um Ihren eigenen Link zu erhalten.",
+    "fmt_hint": {
+      "html": "HTML: für Websites, Blogs und E-Mail-Vorlagen.",
+      "markdown": "Markdown: für GitHub, Reddit, Notion, Obsidian und README-Dateien.",
+      "bbcode": "BBCode: für Foren und Message Boards.",
+      "url": "URL: nur die fertige Webadresse. Im Modus „Text verlinken“ werden alle URLs aus dem Text extrahiert.",
+      "rst": "reStructuredText: für Sphinx und die Python-Dokumentation.",
+      "asciidoc": "AsciiDoc: für Asciidoctor und technische Dokumentation.",
+      "slack": "Slack: mrkdwn für Bots, Webhooks, Apps und Workflow Builder. Verwenden Sie im Nachrichtenfeld stattdessen „Als formatierten Link kopieren“.",
+      "textile": "Textile: für Redmine, Jira (alter Editor) und andere Textile-basierte Tools.",
+      "org": "Org: für Notizen und Agenden in Emacs Org-mode."
+    },
+    "examples": {
+      "single": [
+        {
+          "label": "Einfacher Link",
+          "text": "Den ganzen Artikel lesen",
+          "url": "https://example.com/blog/my-article"
+        },
+        {
+          "label": "Tracking entfernen",
+          "text": "Frühjahrsangebot",
+          "url": "https://shop.example.com/sale?utm_source=newsletter&utm_medium=email&utm_campaign=spring&fbclid=IwAR0abc&color=blue",
+          "params": "tracking"
+        },
+        {
+          "label": "Text hervorheben",
+          "text": "Was ist ein Hyperlink?",
+          "url": "https://en.wikipedia.org/wiki/Hyperlink",
+          "hl": [
+            {
+              "start": "hyperlink, or simply a link",
+              "until": "clicking or tapping"
+            }
+          ]
+        },
+        {
+          "label": "Gesponserter Link",
+          "text": "Partnerangebot",
+          "url": "https://partner.example.com/?ref=blog",
+          "newTab": true,
+          "nofollow": true,
+          "sponsored": true
+        },
+        {
+          "label": "Forum (BBCode)",
+          "text": "Mein Projekt auf GitHub",
+          "url": "https://github.com/text-to-link/text-to-link.github.io",
+          "fmt": "bbcode"
+        }
+      ],
+      "linkify": [
+        {
+          "label": "Absatz",
+          "text": "Hallo zusammen! Der Entwurf liegt unter https://docs.example.com/draft und das Board unter www.example.com/board. Fragen? Stellt sie im Kanal (https://chat.example.com/help)."
+        },
+        {
+          "label": "Newsletter-Links bereinigen",
+          "text": "Angebot: https://shop.example.com/sale?utm_source=mail&utm_campaign=spring\nNeu: https://shop.example.com/new?fbclid=IwAR0abc&size=m",
+          "params": "tracking",
+          "shorten": true
+        },
+        {
+          "label": "URLs extrahieren",
+          "text": "Quellen: siehe https://example.com/a, außerdem www.example.org/b und https://example.net/c.",
+          "fmt": "url"
+        }
+      ],
+      "bulk": [
+        {
+          "label": "Ressourcenliste",
+          "text": "MDN Web Docs | https://developer.mozilla.org\nGitHub | https://github.com\nhttps://example.com/page",
+          "list": true
+        },
+        {
+          "label": "Markdown-Liste",
+          "text": "MDN Web Docs | https://developer.mozilla.org\nGitHub | https://github.com\nhttps://example.com/page",
+          "list": true,
+          "fmt": "markdown"
+        },
+        {
+          "label": "Mit Tracking",
+          "text": "Newsletter | https://example.com/?utm_source=a&id=7\nBlog | https://example.org/post?fbclid=IwAR0",
+          "params": "tracking"
+        }
+      ]
+    }
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung – Text to Link",
+    "description": "Was Text to Link auf Ihrem Gerät speichert, welche Analyse zum Einsatz kommt und wie Sie Ihre Auswahl ändern können.",
+    "h1": "Datenschutzerklärung",
+    "updated_label": "Zuletzt aktualisiert",
+    "sections": [
+      {
+        "h": "Kurzfassung",
+        "p": [
+          "Text to Link läuft in Ihrem Browser. Der eingegebene Text und die URLs werden auf Ihrem Gerät verarbeitet und nie an einen Server gesendet. Es gibt keine Konten und keine Werbung."
+        ]
+      },
+      {
+        "h": "Was auf Ihrem Gerät gespeichert wird",
+        "p": [
+          "Ihr Browser speichert für diese Website einige kleine Einträge: Ihr Design (ttl-theme), Ihr Ausgabeformat und Ihre Optionen, jedoch nicht Ihren Text (ttl-settings), sowie Ihre Auswahl zur Analyse (ttl-consent).",
+          "Die Website wird außerdem im Service-Worker-Cache Ihres Browsers gespeichert, damit sie ohne Verbindung geöffnet werden kann. Sie können all das jederzeit entfernen, indem Sie die Websitedaten in den Browsereinstellungen löschen."
+        ]
+      },
+      {
+        "h": "Analyse",
+        "p": [
+          "Wir verwenden Google Analytics 4, um Besuche zu zählen und zu sehen, welche Tools, Sprachen und Länder genutzt werden. Der von Ihnen eingegebene Text und die URLs werden dabei nie übermittelt. Werbefunktionen und personalisierte Anzeigen sind deaktiviert.",
+          "Der Analyse-Speicher ist standardmäßig verweigert. Solange Sie nicht auf „Akzeptieren“ klicken, werden keine Analyse-Cookies gesetzt. Das Google-Tag wird dennoch von googletagmanager.com geladen, sodass Ihr Browser Google kontaktiert und Google Ihre IP-Adresse sehen kann; außerdem kann Google anonyme Pings ohne Cookies oder Kennungen erhalten.",
+          "Wenn Sie auf „Akzeptieren“ klicken, setzt Google Analytics Cookies (_ga und _ga_*) und erfasst pseudonyme Nutzungsdaten wie die aufgerufenen Seiten, Ihren ungefähren Standort sowie Browser- und Gerätetyp. Google handelt dabei als Auftragsverarbeiter dieser Daten und kann sie in Länder außerhalb Ihres Landes übermitteln."
+        ]
+      },
+      {
+        "h": "Hosting",
+        "p": [
+          "Die Website wird auf GitHub Pages gehostet. GitHub kann technische Daten wie Ihre IP-Adresse protokollieren, wenn Ihr Browser eine Seite anfordert, wie in der Datenschutzerklärung von GitHub beschrieben."
+        ]
+      },
+      {
+        "h": "Links, QR-Codes und andere Websites",
+        "p": [
+          "QR-Codes werden in Ihrem Browser erzeugt. Die Schaltfläche „Link testen“ öffnet die eingegebene Adresse in einem neuen Tab, sodass die geöffnete Website Ihren Besuch sieht. Wir sehen ihn nicht."
+        ]
+      },
+      {
+        "h": "Ihre Rechte und Kontakt",
+        "p": [
+          "Sie können die Analyse unten jederzeit akzeptieren oder ablehnen. Je nach Wohnort haben Sie möglicherweise das Recht auf Auskunft, Berichtigung oder Löschung personenbezogener Daten sowie auf Widerspruch gegen deren Verarbeitung. Da wir weder Ihren Text erfassen noch Sie identifizieren, richten Sie die meisten Anfragen zu Analysedaten am besten an Google.",
+          "Fragen oder Anliegen: Eröffnen Sie ein Issue unter github.com/text-to-link/text-to-link.github.io/issues. Ändert sich diese Erklärung, wird das obige Datum aktualisiert."
+        ]
+      }
+    ],
+    "choice_h2": "Ihre Auswahl zur Analyse",
+    "choice_p": "Legen Sie fest, ob Google Analytics Cookies speichern und Nutzungsdaten erfassen darf. Sie können dies jederzeit ändern.",
+    "back": "Zurück zum Generator"
+  }
+}

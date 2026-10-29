@@ -1,0 +1,15 @@
+<main class="wrap">
+  <article class="prose page" id="privacy">
+    <h1>{{privacy.h1}}</h1>
+    <p class="hint">{{privacy.updated_label}}: {{privacy_updated}}</p>
+{{privacy_sections}}
+    <h2>{{privacy.choice_h2}}</h2>
+    <p>{{privacy.choice_p}}</p>
+    <div class="actions">
+      <button type="button" class="btn btn-primary btn-small" data-consent="granted">{{ui.consent_accept}}</button>
+      <button type="button" class="btn btn-small" data-consent="denied">{{ui.consent_decline}}</button>
+      <span class="status" id="consent-status" role="status" aria-live="polite"></span>
+    </div>
+    <p><a class="btn" href="{{home}}">{{privacy.back}}</a></p>
+  </article>
+</main>
