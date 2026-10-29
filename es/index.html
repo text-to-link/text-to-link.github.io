@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Texto a enlace: generador de enlaces HTML y Markdown</title>
+<meta name="description" content="Generador gratuito de enlaces a partir de texto: HTML, Markdown, BBCode, enlaces a texto resaltado en cualquier página, sin rastreo y con código QR.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b1117" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://text-to-link.github.io/es/">
+<link rel="alternate" hreflang="en" href="https://text-to-link.github.io/">
+<link rel="alternate" hreflang="uk" href="https://text-to-link.github.io/uk/">
+<link rel="alternate" hreflang="es" href="https://text-to-link.github.io/es/">
+<link rel="alternate" hreflang="pt" href="https://text-to-link.github.io/pt/">
+<link rel="alternate" hreflang="de" href="https://text-to-link.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://text-to-link.github.io/fr/">
+<link rel="alternate" hreflang="pl" href="https://text-to-link.github.io/pl/">
+<link rel="alternate" hreflang="x-default" href="https://text-to-link.github.io/">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Text to Link">
+<meta property="og:title" content="Texto a enlace: generador de enlaces HTML y Markdown">
+<meta property="og:description" content="Generador gratuito de enlaces a partir de texto: HTML, Markdown, BBCode, enlaces a texto resaltado en cualquier página, sin rastreo y con código QR.">
+<meta property="og:url" content="https://text-to-link.github.io/es/">
+<meta property="og:image" content="https://text-to-link.github.io/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Text to Link – generador gratuito de enlaces clicables a partir de texto">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="uk_UA">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Texto a enlace: generador de enlaces HTML y Markdown">
+<meta name="twitter:description" content="Generador gratuito de enlaces a partir de texto: HTML, Markdown, BBCode, enlaces a texto resaltado en cualquier página, sin rastreo y con código QR.">
+<meta name="twitter:image" content="https://text-to-link.github.io/og-image.png">
+<meta name="twitter:image:alt" content="Text to Link – generador gratuito de enlaces clicables a partir de texto">
+
+<script>try{var t=localStorage.getItem('ttl-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "@id": "https://text-to-link.github.io/es/#app", "name": "Text to Link", "url": "https://text-to-link.github.io/es/", "description": "Generador gratuito de enlaces a partir de texto: HTML, Markdown, BBCode, enlaces a texto resaltado en cualquier página, sin rastreo y con código QR.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "inLanguage": "es", "image": "https://text-to-link.github.io/og-image.png", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "featureList": ["HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile and Org-mode links", "Text fragment (highlight) links", "Tracking parameter removal", "QR code generator"]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cómo convierto texto en un enlace?", "acceptedAnswer": {"@type": "Answer", "text": "Escribe el texto del enlace, pega la URL, elige HTML, Markdown u otro formato y pulsa Copiar. El texto será la parte clicable del enlace."}}, {"@type": "Question", "name": "¿Qué diferencia hay entre enlaces HTML, Markdown y BBCode?", "acceptedAnswer": {"@type": "Answer", "text": "Los enlaces HTML se usan en páginas web y plantillas de correo, los de Markdown en GitHub, Reddit, Notion y documentación, y los de BBCode en muchos foros."}}, {"@type": "Question", "name": "¿Cómo enlazo a un texto resaltado de una página web?", "acceptedAnswer": {"@type": "Answer", "text": "Abre las opciones avanzadas, escribe las palabras a resaltar en «Resaltar texto en la página» y copia el resultado. El enlace termina en #:~:text= seguido de tu texto, y los navegadores compatibles se desplazan hasta él y lo resaltan."}}, {"@type": "Question", "name": "¿Puedo quitar utm y otros parámetros de rastreo de una URL?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. En las opciones avanzadas elige «Quitar solo rastreo» para eliminar utm_*, fbclid, gclid y similares, o quita todo lo que sigue al signo de interrogación."}}, {"@type": "Question", "name": "¿Cómo pego un enlace clicable en Gmail o Google Docs?", "acceptedAnswer": {"@type": "Answer", "text": "Pulsa «Copiar como enlace» y pega. El texto llega ya clicable, sin código que editar."}}, {"@type": "Question", "name": "¿Puedo abrir el generador con los campos ya rellenados?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Añade los parámetros a la dirección: ?url=https://example.com&text=Mi%20enlace&fmt=markdown. En el móvil también puedes instalar el sitio como app y compartir una página directamente con ella."}}, {"@type": "Question", "name": "¿Puedo crear un código QR para mi enlace?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Pulsa «Código QR» bajo el resultado, escanéalo para comprobar el enlace y descárgalo como SVG o PNG. Se genera en tu navegador."}}, {"@type": "Question", "name": "¿Funciona sin conexión?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Tras la primera visita el navegador guarda el sitio, así que puedes crear enlaces sin conexión. Solo la analítica opcional y la vista previa de otros sitios necesitan internet."}}, {"@type": "Question", "name": "¿La herramienta es gratuita y privada?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Es gratuita, no requiere registro y todo funciona en tu navegador: el texto y las URL que escribes nunca se envían a un servidor. La analítica solo se activa si la aceptas."}}]}]}</script>
+
+<!-- Google tag (gtag.js) with Consent Mode: analytics storage stays denied until the visitor accepts -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  var ttlConsent = '';
+  try { ttlConsent = localStorage.getItem('ttl-consent') || ''; } catch (e) {}
+  gtag('consent', 'default', {
+    analytics_storage: ttlConsent === 'granted' ? 'granted' : 'denied',
+    ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-X7MFHDKBP2');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X7MFHDKBP2"></script>
+
+<link rel="stylesheet" href="/assets/style.css?v=736df128">
+</head>
+<body>
+<a class="skip" href="#tool">Ir a la herramienta</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="logo" href="/es/" aria-label="Text to Link">
+      <svg width="26" height="26" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M7.775 3.275a.75.75 0 0 0 1.06 1.06l1.25-1.25a2 2 0 1 1 2.83 2.83l-2.5 2.5a2 2 0 0 1-2.83 0 .75.75 0 0 0-1.06 1.06 3.5 3.5 0 0 0 4.95 0l2.5-2.5a3.5 3.5 0 0 0-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 0 1 0-2.83l2.5-2.5a2 2 0 0 1 2.83 0 .75.75 0 0 0 1.06-1.06 3.5 3.5 0 0 0-4.95 0l-2.5 2.5a3.5 3.5 0 0 0 4.95 4.95l1.25-1.25a.75.75 0 0 0-1.06-1.06l-1.25 1.25a2 2 0 0 1-2.83 0z"/></svg>
+      <span>text-to-link</span>
+    </a>
+    <nav class="bar-actions" aria-label="Sitio">
+      <details class="lang" id="lang-menu">
+        <summary aria-label="Idioma">
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM5.78 8.75a9.64 9.64 0 0 0 1.363 4.177c.255.426.542.832.857 1.215.245-.296.551-.705.857-1.215A9.64 9.64 0 0 0 10.22 8.75Zm4.44-1.5a9.64 9.64 0 0 0-1.363-4.177c-.307-.51-.612-.919-.857-1.215a9.927 9.927 0 0 0-.857 1.215A9.64 9.64 0 0 0 5.78 7.25Zm-5.944 1.5H1.543a6.507 6.507 0 0 0 4.666 5.5c-.123-.181-.24-.365-.352-.552-.715-1.192-1.437-2.874-1.581-4.948Zm-2.733-1.5h2.733c.144-2.074.866-3.756 1.58-4.948.12-.197.237-.381.353-.552a6.507 6.507 0 0 0-4.666 5.5Zm10.181 1.5c-.144 2.074-.866 3.756-1.58 4.948-.12.197-.237.381-.353.552a6.507 6.507 0 0 0 4.666-5.5Zm2.733-1.5a6.507 6.507 0 0 0-4.666-5.5c.123.181.24.365.353.552.714 1.192 1.436 2.874 1.58 4.948Z"/></svg>
+          <span>ES</span>
+        </summary>
+        <ul>
+          <li><a href="/" hreflang="en" lang="en">English</a></li>
+          <li><a href="/uk/" hreflang="uk" lang="uk">Українська</a></li>
+          <li><a href="/es/" hreflang="es" lang="es" aria-current="page">Español</a></li>
+          <li><a href="/pt/" hreflang="pt" lang="pt">Português</a></li>
+          <li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li>
+          <li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li>
+          <li><a href="/pl/" hreflang="pl" lang="pl">Polski</a></li>
+        </ul>
+      </details>
+      <button type="button" class="icon-btn" id="theme-toggle" aria-label="Cambiar tema claro / oscuro" title="Cambiar tema claro / oscuro">
+        <svg class="i-sun" width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-1.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm5.657-8.157a.75.75 0 0 1 0 1.061l-1.061 1.06a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.06-1.06a.75.75 0 0 1 1.06 0Zm-9.193 9.193a.75.75 0 0 1 0 1.06l-1.06 1.061a.75.75 0 1 1-1.061-1.06l1.06-1.061a.75.75 0 0 1 1.061 0ZM8 0a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 8 0ZM3 8a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 3 8Zm13 0a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 16 8Zm-8 5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 13Zm3.536-1.464a.75.75 0 0 1 1.06 0l1.061 1.06a.75.75 0 0 1-1.06 1.061l-1.061-1.06a.75.75 0 0 1 0-1.061ZM2.343 2.343a.75.75 0 0 1 1.061 0l1.06 1.061a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-1.06-1.06a.75.75 0 0 1 0-1.06Z"/></svg>
+        <svg class="i-moon" width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M9.598 1.591a.749.749 0 0 1 .785-.175 7.001 7.001 0 1 1-8.967 8.967.75.75 0 0 1 .961-.96 5.5 5.5 0 0 0 7.046-7.046.75.75 0 0 1 .175-.786Zm1.616 1.945a7 7 0 0 1-7.678 7.678 5.499 5.499 0 1 0 7.678-7.678Z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Generador de enlaces a partir de texto</h1>
+    <p class="lead">Convierte cualquier texto en un enlace clicable. Obtén HTML, Markdown o BBCode, enlaza directamente a un texto resaltado de la página y crea un código QR: gratis, al instante y en tu navegador.</p>
+  </section>
+
+  <section class="card tool" id="tool" aria-label="Generador de enlaces a partir de texto">
+    <div class="tabs modes" role="tablist" aria-label="Modo">
+      <button type="button" role="tab" class="tab" data-mode="single" aria-selected="true">Un enlace</button>
+      <button type="button" role="tab" class="tab" data-mode="linkify" aria-selected="false" tabindex="-1">Convertir URL en enlaces</button>
+      <button type="button" role="tab" class="tab" data-mode="bulk" aria-selected="false" tabindex="-1">Varios enlaces</button>
+    </div>
+
+    <div class="card-body">
+      <p class="hint mode-hint" data-modes="single">Crea un enlace a partir de tu texto y una URL. ¿No sabes por dónde empezar? Prueba un ejemplo.</p>
+      <p class="hint mode-hint" data-modes="linkify" hidden>Pega cualquier texto: cada URL se convertirá en un enlace clicable.</p>
+      <p class="hint mode-hint" data-modes="bulk" hidden>Convierte muchas líneas en enlaces a la vez. Un enlace por línea, escrito como «texto | url».</p>
+      <div class="examples" role="group" aria-label="Prueba un ejemplo:">
+        <span class="examples-label">Prueba un ejemplo:</span>
+        <span class="chips" id="examples"></span>
+      </div>
+
+      <div class="field" data-modes="single">
+        <div class="label-row"><label for="in-text">Texto del enlace</label><span class="mini-actions"><button type="button" class="btn-mini" data-paste="in-text">Pegar</button><button type="button" class="btn-mini" data-clear="in-text">Borrar</button></span></div>
+        <input id="in-text" type="text" autocomplete="off" spellcheck="false" placeholder="Leer el artículo completo">
+      </div>
+      <div class="field" data-modes="single">
+        <div class="label-row"><label for="in-url">URL</label><span class="mini-actions"><button type="button" class="btn-mini" data-paste="in-url">Pegar</button><button type="button" class="btn-mini" data-clear="in-url">Borrar</button></span></div>
+        <input id="in-url" type="text" inputmode="url" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="https://example.com/page" aria-describedby="url-error">
+        <p class="error" id="url-error" role="alert" hidden></p>
+      </div>
+
+      <div class="field" data-modes="linkify" hidden>
+        <div class="label-row"><label for="in-paste">Texto con URL</label><span class="mini-actions"><button type="button" class="btn-mini" data-paste="in-paste">Pegar</button><button type="button" class="btn-mini" data-clear="in-paste">Borrar</button></span></div>
+        <textarea id="in-paste" rows="6" spellcheck="false" placeholder="Pega cualquier texto. Cada URL se convertirá en un enlace, por ejemplo https://example.com/article"></textarea>
+      </div>
+
+      <div class="field" data-modes="bulk" hidden>
+        <div class="label-row"><label for="in-bulk">Un enlace por línea</label><span class="mini-actions"><button type="button" class="btn-mini" data-paste="in-bulk">Pegar</button><button type="button" class="btn-mini" data-clear="in-bulk">Borrar</button></span></div>
+        <textarea id="in-bulk" rows="6" spellcheck="false" placeholder="Sitio de ejemplo | https://example.com
+https://example.org/page" aria-describedby="bulk-hint"></textarea>
+        <p class="hint" id="bulk-hint">Escribe «texto | url» en cada línea o solo la URL. Las líneas con una URL no válida se omiten.</p>
+      </div>
+
+      <details class="advanced" id="advanced">
+        <summary>Opciones avanzadas</summary>
+        <div class="adv-grid">
+          <fieldset>
+            <legend>Enlace</legend>
+            <label class="check"><input type="checkbox" id="o-newtab"> <span>Abrir en una pestaña nueva</span></label>
+            <label class="check"><input type="checkbox" id="o-nofollow"> <span>nofollow</span></label>
+            <label class="check"><input type="checkbox" id="o-sponsored"> <span>sponsored</span></label>
+            <label class="check"><input type="checkbox" id="o-ugc"> <span>ugc</span></label>
+            <div class="field" data-modes="single">
+              <label for="o-title">Título (tooltip)</label>
+              <input id="o-title" type="text" autocomplete="off">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>URL</legend>
+            <div class="field">
+              <label for="o-params">Parámetros de la consulta</label>
+              <select id="o-params">
+                <option value="keep">Conservar todos</option>
+                <option value="tracking">Quitar solo rastreo (utm_*, fbclid, gclid…)</option>
+                <option value="all">Quitar todo lo que sigue a «?»</option>
+              </select>
+            </div>
+            <label class="check"><input type="checkbox" id="o-hash"> <span>Quitar el #ancla</span></label>
+            <label class="check" data-modes="linkify bulk" hidden><input type="checkbox" id="o-shorten"> <span>URL cortas (sin https://, www.)</span></label>
+            <label class="check" data-modes="bulk" hidden><input type="checkbox" id="o-list"> <span>Mostrar como lista</span></label>
+          </fieldset>
+
+          <fieldset class="adv-wide" data-modes="single">
+            <legend>Resaltar texto en la página</legend>
+            <p class="hint">Añade el texto al que el navegador debe desplazarse y que resaltará al abrir el enlace.</p>
+            <div id="hl-list"></div>
+            <button type="button" class="btn btn-small" id="hl-add">Añadir otro resaltado</button>
+            <p class="hint">Funciona en Chrome, Edge, Safari 16.1+ y Firefox 131+. Otros navegadores abren la página sin resaltar.</p>
+          </fieldset>
+        </div>
+      </details>
+
+      <div class="result">
+        <div class="result-head">
+          <h2 class="result-title">Resultado</h2>
+          <div class="tabs formats" role="tablist" aria-label="Formato de salida">
+            <button type="button" role="tab" class="tab" data-fmt="html" aria-selected="true">HTML</button>
+            <button type="button" role="tab" class="tab" data-fmt="markdown" aria-selected="false" tabindex="-1">Markdown</button>
+            <button type="button" role="tab" class="tab" data-fmt="bbcode" aria-selected="false" tabindex="-1">BBCode</button>
+            <button type="button" role="tab" class="tab" data-fmt="url" aria-selected="false" tabindex="-1">URL</button>
+            <button type="button" role="tab" class="tab" data-fmt="rst" aria-selected="false" tabindex="-1">reST</button>
+            <button type="button" role="tab" class="tab" data-fmt="asciidoc" aria-selected="false" tabindex="-1">AsciiDoc</button>
+            <button type="button" role="tab" class="tab" data-fmt="slack" aria-selected="false" tabindex="-1">Slack</button>
+            <button type="button" role="tab" class="tab" data-fmt="textile" aria-selected="false" tabindex="-1">Textile</button>
+            <button type="button" role="tab" class="tab" data-fmt="org" aria-selected="false" tabindex="-1">Org</button>
+          </div>
+        </div>
+        <pre class="output"><code id="out" class="is-placeholder"></code></pre>
+        <p class="hint" id="fmt-hint"></p>
+        <p class="warn" id="warn" role="status" hidden></p>
+
+        <div class="actions">
+          <button type="button" class="btn btn-primary" id="btn-copy" title="Copiar el código (Ctrl+Enter)" disabled>Copiar</button>
+          <button type="button" class="btn" id="btn-copy-rich" title="Copiar un enlace clicable para pegarlo en Gmail, Google Docs, Notion o Slack" disabled>Copiar como enlace</button>
+          <button type="button" class="btn" id="btn-test" data-modes="single" title="Abrir el enlace en una pestaña nueva para comprobarlo" disabled>Probar enlace</button>
+          <button type="button" class="btn" id="btn-qr" data-modes="single" aria-expanded="false" aria-controls="qr-panel" data-src="/assets/qrcode.js?v=6e6189e2" disabled>Código QR</button>
+          <button type="button" class="btn btn-ghost" id="btn-clear">Borrar todo</button>
+          <span class="status" id="status" role="status" aria-live="polite"></span>
+        </div>
+
+        <div class="qr" id="qr-panel" hidden>
+          <div class="qr-box" id="qr-svg" role="img" aria-label="Código QR"></div>
+          <div class="qr-side">
+            <h3>Código QR</h3>
+            <p class="hint" id="qr-msg">Escanéalo con la cámara del móvil para abrir el enlace.</p>
+            <div class="actions">
+              <button type="button" class="btn btn-small" id="qr-dl-svg">Descargar SVG</button>
+              <button type="button" class="btn btn-small" id="qr-dl-png">Descargar PNG</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-wrap" id="preview-wrap" hidden>
+          <h3 class="preview-title">Vista previa</h3>
+          <div class="preview" id="preview"></div>
+        </div>
+      </div>
+    </div>
+    <p class="privacy-note">
+      <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M4 4a4 4 0 0 1 8 0v2h.25c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 12.25 15h-8.5A1.75 1.75 0 0 1 2 13.25v-5.5C2 6.784 2.784 6 3.75 6H4Zm8.25 3.5h-8.5a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25ZM10.5 6V4a2.5 2.5 0 1 0-5 0v2Z"/></svg>
+      Funciona por completo en tu navegador. Tu texto y tus enlaces nunca se suben.
+    </p>
+  </section>
+
+  <section class="prose" id="how">
+    <h2>Cómo convertir texto en un enlace</h2>
+    <ol class="steps">
+      <li><div><strong>Escribe el texto del enlace</strong><span>Escribe las palabras que verá y pulsará la gente, por ejemplo «Leer el artículo completo».</span></div></li>
+      <li><div><strong>Pega la URL</strong><span>Añade la dirección. Si falta, ponemos https:// y, si quieres, quitamos los parámetros de rastreo.</span></div></li>
+      <li><div><strong>Elige un formato y copia</strong><span>Elige HTML, Markdown, BBCode, reST, AsciiDoc, Slack, Textile u Org y copia el código o copia un enlace enriquecido para pegarlo en correos y documentos.</span></div></li>
+    </ol>
+  </section>
+
+  <section class="prose" id="about">
+    <h2>Un creador de enlaces gratuito a partir de texto</h2>
+    <p>Text to Link es un creador de enlaces gratuito a partir de texto. Escribe las palabras que quieres mostrar, pega la dirección y obtén un enlace listo para usar en HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile u Org-mode. Sirve para blogs, correos, firmas de foros, documentación y perfiles sociales: en cualquier lugar donde una URL sin formato quede desordenada.</p>
+    <p>Funciona como generador de enlaces de texto, de texto para URL y de enlaces para artículos: añade un título, abre el enlace en una pestaña nueva, márcalo como nofollow, sponsored o ugc, elimina utm_ y otros parámetros de rastreo y cópialo como enlace formateado que se pega como texto clicable en Gmail, Google Docs, Notion o Slack.</p>
+    <p>¿Necesitas varios enlaces? Pega un párrafo entero en el modo «Convertir URL en enlaces» y cada URL se volverá un enlace, o usa «Varios enlaces» para convertir líneas «texto | url» en una lista HTML lista para usar. Todo funciona en tu navegador, así que el texto y las URL que escribes nunca se suben.</p>
+  </section>
+
+  <section class="prose" id="highlight-links">
+    <h2>Cómo enlazar a un texto resaltado de una página</h2>
+    <p>Un enlace con resaltado, o enlace a fragmento de texto, abre una página, se desplaza hasta un pasaje y lo marca. Abre las opciones avanzadas, busca «Resaltar texto en la página», escribe las palabras exactas que quieres resaltar y el generador añade #:~:text= a tu URL.</p>
+    <p>Para resaltar un pasaje más largo, rellena el campo «hasta»: el navegador marca todo desde las palabras iniciales hasta las finales. Si las mismas palabras aparecen varias veces, usa «Coincidencia exacta» para añadir el texto que va justo antes o después. Puedes añadir varios resaltados a un enlace.</p>
+    <p>Los enlaces con resaltado funcionan en Chrome, Edge, Safari 16.1+ y Firefox 131+. En otros navegadores el enlace abre la página igualmente, solo que sin resaltar. El texto debe estar visible en la página y coincidir exactamente, sin distinguir mayúsculas de minúsculas.</p>
+    <p><code class="sample">https://example.com/article#:~:text=quick%20brown,lazy%20dog</code></p>
+  </section>
+
+  <section class="prose" id="faq">
+    <h2>Preguntas frecuentes</h2>
+    <details class="faq-item"><summary>¿Cómo convierto texto en un enlace?</summary><p>Escribe el texto del enlace, pega la URL, elige HTML, Markdown u otro formato y pulsa Copiar. El texto será la parte clicable del enlace.</p></details>
+    <details class="faq-item"><summary>¿Qué diferencia hay entre enlaces HTML, Markdown y BBCode?</summary><p>Los enlaces HTML se usan en páginas web y plantillas de correo, los de Markdown en GitHub, Reddit, Notion y documentación, y los de BBCode en muchos foros.</p></details>
+    <details class="faq-item"><summary>¿Cómo enlazo a un texto resaltado de una página web?</summary><p>Abre las opciones avanzadas, escribe las palabras a resaltar en «Resaltar texto en la página» y copia el resultado. El enlace termina en #:~:text= seguido de tu texto, y los navegadores compatibles se desplazan hasta él y lo resaltan.</p></details>
+    <details class="faq-item"><summary>¿Puedo quitar utm y otros parámetros de rastreo de una URL?</summary><p>Sí. En las opciones avanzadas elige «Quitar solo rastreo» para eliminar utm_*, fbclid, gclid y similares, o quita todo lo que sigue al signo de interrogación.</p></details>
+    <details class="faq-item"><summary>¿Cómo pego un enlace clicable en Gmail o Google Docs?</summary><p>Pulsa «Copiar como enlace» y pega. El texto llega ya clicable, sin código que editar.</p></details>
+    <details class="faq-item"><summary>¿Puedo abrir el generador con los campos ya rellenados?</summary><p>Sí. Añade los parámetros a la dirección: ?url=https://example.com&amp;text=Mi%20enlace&amp;fmt=markdown. En el móvil también puedes instalar el sitio como app y compartir una página directamente con ella.</p></details>
+    <details class="faq-item"><summary>¿Puedo crear un código QR para mi enlace?</summary><p>Sí. Pulsa «Código QR» bajo el resultado, escanéalo para comprobar el enlace y descárgalo como SVG o PNG. Se genera en tu navegador.</p></details>
+    <details class="faq-item"><summary>¿Funciona sin conexión?</summary><p>Sí. Tras la primera visita el navegador guarda el sitio, así que puedes crear enlaces sin conexión. Solo la analítica opcional y la vista previa de otros sitios necesitan internet.</p></details>
+    <details class="faq-item"><summary>¿La herramienta es gratuita y privada?</summary><p>Sí. Es gratuita, no requiere registro y todo funciona en tu navegador: el texto y las URL que escribes nunca se envían a un servidor. La analítica solo se activa si la aceptas.</p></details>
+  </section>
+</main>
+
+<template id="hl-template">
+  <div class="hl-row">
+    <div class="hl-grid">
+      <label><span>Texto a resaltar</span><input type="text" class="hl-start" autocomplete="off" spellcheck="false"></label>
+      <label><span>…hasta (opcional, final de un pasaje largo)</span><input type="text" class="hl-until" autocomplete="off" spellcheck="false"></label>
+    </div>
+    <details class="hl-precise">
+      <summary>Coincidencia exacta</summary>
+      <div class="hl-grid">
+        <label><span>Texto justo antes (opcional)</span><input type="text" class="hl-prefix" autocomplete="off" spellcheck="false"></label>
+        <label><span>Texto justo después (opcional)</span><input type="text" class="hl-suffix" autocomplete="off" spellcheck="false"></label>
+      </div>
+    </details>
+    <button type="button" class="btn btn-small btn-ghost hl-remove">Quitar resaltado</button>
+  </div>
+</template>
+
+
+
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <p>Text to Link: herramientas gratuitas de enlaces en línea. <a href="https://github.com/text-to-link/text-to-link.github.io" rel="noopener">Código en GitHub</a> · <a href="/es/privacy/">Privacidad</a></p>
+    <ul class="foot-langs" aria-label="Idioma">
+      <li><a href="/" hreflang="en" lang="en">English</a></li>
+      <li><a href="/uk/" hreflang="uk" lang="uk">Українська</a></li>
+      <li><a href="/es/" hreflang="es" lang="es" aria-current="page">Español</a></li>
+      <li><a href="/pt/" hreflang="pt" lang="pt">Português</a></li>
+      <li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li>
+      <li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li>
+      <li><a href="/pl/" hreflang="pl" lang="pl">Polski</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="consent" id="consent" role="dialog" aria-label="Consentimiento de analítica" hidden>
+  <p>Usamos Google Analytics para saber qué herramientas necesita la gente. Permanece desactivado si no lo aceptas. <a href="/es/privacy/">Privacidad</a></p>
+  <div class="actions">
+    <button type="button" class="btn btn-primary btn-small" id="consent-accept">Aceptar</button>
+    <button type="button" class="btn btn-small" id="consent-decline">Rechazar</button>
+  </div>
+</div>
+
+<script src="/assets/chrome.js?v=daaa087e"></script>
+<script>window.TTL_I18N = {"err_url_invalid": "Esto no parece una URL válida.", "count_label": "Enlaces encontrados: {n}", "no_links": "No se encontraron enlaces en el texto. Empiezan por http://, https:// o www.", "bulk_errors": "Líneas omitidas por tener una URL no válida: {lines}", "example_text": "Ejemplo", "copied": "¡Copiado!", "copied_rich": "¡Copiado como enlace!", "copy_failed": "No se pudo copiar. Selecciona el texto y cópialo manualmente.", "qr_help": "Escanéalo con la cámara del móvil para abrir el enlace.", "qr_need_url": "Escribe una URL válida para crear un código QR.", "qr_too_long": "Esta URL es demasiado larga para un código QR. Acorta el texto resaltado o la URL.", "qr_error": "No se pudo cargar el generador de códigos QR. Revisa tu conexión e inténtalo de nuevo.", "paste_fallback": "Pulsa Ctrl+V", "example_note": "Esto es un ejemplo. Rellena los campos de arriba para obtener tu propio enlace.", "fmt_hint": {"html": "HTML: para sitios web, blogs y plantillas de correo.", "markdown": "Markdown: para GitHub, Reddit, Notion, Obsidian y archivos README.", "bbcode": "BBCode: para foros y tablones de mensajes.", "url": "URL: solo la dirección web final. En el modo «Convertir URL en enlaces» extrae todas las URL del texto.", "rst": "reStructuredText: para Sphinx y la documentación de Python.", "asciidoc": "AsciiDoc: para Asciidoctor y documentación técnica.", "slack": "Slack: mrkdwn para bots, webhooks, apps y Workflow Builder. En el cuadro de mensaje usa «Copiar como enlace».", "textile": "Textile: para Redmine, Jira (editor antiguo) y otras herramientas basadas en Textile.", "org": "Org: para notas y agendas de Emacs Org-mode."}, "examples": {"single": [{"label": "Enlace simple", "text": "Leer el artículo completo", "url": "https://example.com/blog/my-article"}, {"label": "Quitar rastreo", "text": "Rebajas de primavera", "url": "https://shop.example.com/sale?utm_source=newsletter&utm_medium=email&utm_campaign=spring&fbclid=IwAR0abc&color=blue", "params": "tracking"}, {"label": "Resaltar texto", "text": "¿Qué es un hipervínculo?", "url": "https://en.wikipedia.org/wiki/Hyperlink", "hl": [{"start": "hyperlink, or simply a link", "until": "clicking or tapping"}]}, {"label": "Enlace patrocinado", "text": "Oferta de un socio", "url": "https://partner.example.com/?ref=blog", "newTab": true, "nofollow": true, "sponsored": true}, {"label": "Foro (BBCode)", "text": "Mi proyecto en GitHub", "url": "https://github.com/text-to-link/text-to-link.github.io", "fmt": "bbcode"}], "linkify": [{"label": "Párrafo", "text": "¡Hola, equipo! El borrador está en https://docs.example.com/draft y el tablero en www.example.com/board. ¿Dudas? Preguntad en el canal (https://chat.example.com/help)."}, {"label": "Limpiar enlaces de un boletín", "text": "Rebajas: https://shop.example.com/sale?utm_source=mail&utm_campaign=spring\nNovedades: https://shop.example.com/new?fbclid=IwAR0abc&size=m", "params": "tracking", "shorten": true}, {"label": "Extraer URL", "text": "Fuentes: mira https://example.com/a, también www.example.org/b y https://example.net/c.", "fmt": "url"}], "bulk": [{"label": "Lista de recursos", "text": "MDN Web Docs | https://developer.mozilla.org\nGitHub | https://github.com\nhttps://example.com/page", "list": true}, {"label": "Lista Markdown", "text": "MDN Web Docs | https://developer.mozilla.org\nGitHub | https://github.com\nhttps://example.com/page", "list": true, "fmt": "markdown"}, {"label": "Con rastreo", "text": "Boletín | https://example.com/?utm_source=a&id=7\nBlog | https://example.org/post?fbclid=IwAR0", "params": "tracking"}]}};</script>
+<script src="/assets/core.js?v=3077b303"></script>
+<script src="/assets/app.js?v=74fd7292"></script>
+</body>
+</html>

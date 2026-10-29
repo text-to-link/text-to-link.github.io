@@ -1,0 +1,110 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>core tests</title>
+<pre id="out">running…</pre>
+<script src="../assets/core.js"></script>
+<script>
+// Run: google-chrome --headless=new --no-sandbox --dump-dom file://$PWD/tests/core.test.html | grep -E "FAIL|SUMMARY"
+var fails = 0, total = 0, log = [];
+function eq(name, actual, expected) {
+  total++;
+  var ok = JSON.stringify(actual) === JSON.stringify(expected);
+  if (!ok) { fails++; log.push('FAIL ' + name + '\n  got:      ' + JSON.stringify(actual) + '\n  expected: ' + JSON.stringify(expected)); }
+}
+var T = TTL;
+
+// normalizeUrl
+eq('norm empty', T.normalizeUrl('  ').error, 'empty');
+eq('norm adds https', T.normalizeUrl('example.com/a').url, 'https://example.com/a');
+eq('norm keeps http', T.normalizeUrl('http://example.com').url, 'http://example.com');
+eq('norm protocol-relative', T.normalizeUrl('//example.com/x').url, 'https://example.com/x');
+eq('norm mailto', T.normalizeUrl('mailto:a@b.co').error, '');
+eq('norm js blocked', T.normalizeUrl('javascript:alert(1)').error, 'invalid');
+eq('norm js// blocked', T.normalizeUrl('javascript://%0aalert(1)').error, 'invalid');
+eq('norm data blocked', T.normalizeUrl('data:text/html,<b>x</b>').error, 'invalid');
+eq('norm plain words', T.normalizeUrl('hello world').error, 'invalid');
+eq('norm no tld', T.normalizeUrl('hello').error, 'invalid');
+eq('norm localhost', T.normalizeUrl('localhost:3000').error, '');
+eq('norm unicode host', T.normalizeUrl('https://приклад.укр/шлях').error, '');
+
+// cleanUrl
+eq('clean keep', T.cleanUrl('https://a.com/p?x=1&utm_source=z#h', {params: 'keep'}), 'https://a.com/p?x=1&utm_source=z#h');
+eq('clean tracking', T.cleanUrl('https://a.com/p?x=1&utm_source=z&fbclid=Q#h', {params: 'tracking'}), 'https://a.com/p?x=1#h');
+eq('clean tracking all gone', T.cleanUrl('https://a.com/p?utm_medium=a&gclid=b', {params: 'tracking'}), 'https://a.com/p');
+eq('clean all', T.cleanUrl('https://a.com/p?x=1&y=2#h', {params: 'all'}), 'https://a.com/p#h');
+eq('clean hash', T.cleanUrl('https://a.com/p?x=1#h', {params: 'keep', hash: true}), 'https://a.com/p?x=1');
+eq('clean mailto untouched', T.cleanUrl('mailto:a@b.co?subject=x', {params: 'all'}), 'mailto:a@b.co?subject=x');
+eq('clean keeps encoding', T.cleanUrl('https://a.com/?q=a%20b+c&utm_x=1', {params: 'tracking'}), 'https://a.com/?q=a%20b+c');
+eq('clean more tracking', T.cleanUrl('https://a.com/?_ga=1&_gl=2&pk_campaign=x&mtm_kwd=y&oly_anon_id=z&id=7', {params: 'tracking'}), 'https://a.com/?id=7');
+eq('clean keeps generic params', T.cleanUrl('https://a.com/?si=1&feature=x&ref=home', {params: 'tracking'}), 'https://a.com/?si=1&feature=x&ref=home');
+
+// text fragments
+eq('dir simple', T.buildDirective([{start: 'hello world'}]), 'text=hello%20world');
+eq('dir range', T.buildDirective([{start: 'a', until: 'b'}]), 'text=a,b');
+eq('dir ctx', T.buildDirective([{start: 'a', prefix: 'p', suffix: 's'}]), 'text=p-,a,-s');
+eq('dir encodes dash comma amp', T.buildDirective([{start: 'a-b, c&d'}]), 'text=a%2Db%2C%20c%26d');
+eq('dir collapses ws', T.buildDirective([{start: ' a \n  b '}]), 'text=a%20b');
+eq('dir multiple', T.buildDirective([{start: 'a'}, {start: ''}, {start: 'b'}]), 'text=a&text=b');
+eq('dir empty', T.buildDirective([{start: ' '}]), '');
+eq('dir unicode', T.buildDirective([{start: 'привіт'}]), 'text=%D0%BF%D1%80%D0%B8%D0%B2%D1%96%D1%82');
+eq('apply no hash', T.applyDirective('https://a.com/p', 'text=x'), 'https://a.com/p#:~:text=x');
+eq('apply empty hash', T.applyDirective('https://a.com/p#', 'text=x'), 'https://a.com/p#:~:text=x');
+eq('apply with anchor', T.applyDirective('https://a.com/p#sec', 'text=x'), 'https://a.com/p#sec:~:text=x');
+eq('apply replaces old', T.applyDirective('https://a.com/p#sec:~:text=old', 'text=x'), 'https://a.com/p#sec:~:text=x');
+eq('apply with query', T.applyDirective('https://a.com/p?q=1', 'text=x'), 'https://a.com/p?q=1#:~:text=x');
+eq('apply none', T.applyDirective('https://a.com/p', ''), 'https://a.com/p');
+eq('apply mailto skipped', T.applyDirective('mailto:a@b.co', 'text=x'), 'mailto:a@b.co');
+
+// formatters
+var U = 'https://example.com/a?x=1&y=2';
+eq('html', T.formatLink('html', 'A <b> & "c"', U, {}), '<a href="https://example.com/a?x=1&amp;y=2">A &lt;b&gt; &amp; &quot;c&quot;</a>');
+eq('html newtab', T.formatLink('html', 'A', U, {newTab: true}), '<a href="https://example.com/a?x=1&amp;y=2" target="_blank" rel="noopener noreferrer">A</a>');
+eq('html rel+title', T.formatLink('html', 'A', 'https://e.co', {nofollow: true, ugc: true, title: 'T "q"'}), '<a href="https://e.co" title="T &quot;q&quot;" rel="nofollow ugc">A</a>');
+eq('html empty text', T.formatLink('html', '  ', 'https://e.co', {}), '<a href="https://e.co">https://e.co</a>');
+eq('md', T.formatLink('markdown', 'A [x]', 'https://e.co/a b(c)', {}), '[A \\[x\\]](https://e.co/a%20b%28c%29)');
+eq('md title', T.formatLink('markdown', 'A', 'https://e.co', {title: 'T'}), '[A](https://e.co "T")');
+eq('bbcode', T.formatLink('bbcode', 'A', 'https://e.co', {}), '[url=https://e.co]A[/url]');
+eq('bbcode same', T.formatLink('bbcode', 'https://e.co', 'https://e.co', {}), '[url]https://e.co[/url]');
+eq('rst', T.formatLink('rst', 'A', 'https://e.co', {}), '`A <https://e.co>`__');
+eq('asciidoc', T.formatLink('asciidoc', 'A', 'https://e.co', {newTab: true}), 'https://e.co[A,window=_blank]');
+eq('slack', T.formatLink('slack', 'A <b> & c', 'https://e.co/?a=1&b=2', {}), '<https://e.co/?a=1&amp;b=2|A &lt;b&gt; &amp; c>');
+eq('slack same', T.formatLink('slack', 'https://e.co', 'https://e.co', {}), '<https://e.co>');
+eq('textile', T.formatLink('textile', 'A "x"', 'https://e.co/a b', {}), '"A &quot;x&quot;":https://e.co/a%20b');
+eq('textile title', T.formatLink('textile', 'A', 'https://e.co', {title: 'T (1)'}), '"A (T 1)":https://e.co');
+eq('textile same', T.formatLink('textile', 'https://e.co', 'https://e.co', {}), '"https://e.co":https://e.co');
+eq('org', T.formatLink('org', 'A', 'https://e.co/[x]', {}), '[[https://e.co/%5Bx%5D][A]]');
+eq('org same', T.formatLink('org', 'https://e.co', 'https://e.co', {}), '[[https://e.co]]');
+eq('org text brackets', T.formatLink('org', 'a]]b', 'https://e.co', {}), '[[https://e.co][a] ]b]]');
+eq('url', T.formatLink('url', 'A', 'https://e.co', {}), 'https://e.co');
+
+// linkify
+eq('splitUrls trailing punct', T.splitUrls('see https://a.com/x. ok').map(function (s) { return s.value; }), ['see ', 'https://a.com/x', '.', ' ok']);
+eq('splitUrls parens', T.splitUrls('(https://a.com/x)').map(function (s) { return s.value; }), ['(', 'https://a.com/x', ')']);
+eq('splitUrls wiki parens', T.splitUrls('https://en.wikipedia.org/wiki/A_(b)').map(function (s) { return s.value; }), ['https://en.wikipedia.org/wiki/A_(b)']);
+eq('splitUrls www', T.splitUrls('go www.a.com now').map(function (s) { return s.type; }), ['text', 'url', 'text']);
+eq('linkify html', T.linkify('Hi <b>\nhttps://a.com/?utm_x=1&k=2.', 'html', {params: 'tracking'}),
+  {output: 'Hi &lt;b&gt;<br>\n<a href="https://a.com/?k=2">https://a.com/?k=2</a>.', count: 1});
+eq('linkify www shown', T.linkify('www.a.com', 'markdown', {}), {output: '[www.a.com](https://www.a.com)', count: 1});
+eq('linkify shorten', T.linkify('https://www.a.com/', 'bbcode', {shorten: true}), {output: '[url=https://www.a.com/]a.com[/url]', count: 1});
+eq('linkify extract', T.linkify('a https://x.co b https://y.co.', 'url', {}), {output: 'https://x.co\nhttps://y.co', count: 2});
+eq('linkify none', T.linkify('nothing here', 'html', {}), {output: 'nothing here', count: 0});
+
+// bulk
+var b = T.parseBulk('Google | google.com\nhttps://b.co\n\nbad line here\nexample.org\tExample', {});
+eq('bulk items', b.items, [
+  {text: 'Google', url: 'https://google.com'},
+  {text: 'https://b.co', url: 'https://b.co'},
+  {text: 'Example', url: 'https://example.org'}
+]);
+eq('bulk errors', b.errors, [4]);
+eq('bulk swapped order', T.parseBulk('https://x.co | Label', {}).items, [{text: 'Label', url: 'https://x.co'}]);
+eq('bulk html list', T.formatBulk([{text: 'A', url: 'https://a.co'}], 'html', {list: true}), '<ul>\n  <li><a href="https://a.co">A</a></li>\n</ul>');
+eq('bulk md list', T.formatBulk([{text: 'A', url: 'https://a.co'}, {text: 'B', url: 'https://b.co'}], 'markdown', {list: true}), '- [A](https://a.co)\n- [B](https://b.co)');
+eq('bulk slack list', T.formatBulk([{text: 'A', url: 'https://a.co'}], 'slack', {list: true}), '\u2022 <https://a.co|A>');
+eq('bulk org list', T.formatBulk([{text: 'A', url: 'https://a.co'}], 'org', {list: true}), '- [[https://a.co][A]]');
+eq('bulk textile list', T.formatBulk([{text: 'A', url: 'https://a.co'}], 'textile', {list: true}), '* "A":https://a.co');
+eq('linkify slack', T.linkify('see https://a.co.', 'slack', {}), {output: 'see <https://a.co>.', count: 1});
+eq('bulk plain', T.formatBulk([{text: 'A', url: 'https://a.co'}], 'url', {}), 'https://a.co');
+
+document.getElementById('out').textContent = log.join('\n') + '\nSUMMARY ' + (total - fails) + '/' + total + ' passed';
+</script>

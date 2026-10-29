@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the toolchain image
+        run: docker build -t text-to-link-dev .
+
+      - name: Build pages
+        run: docker run --rm --user "$(id -u):$(id -g)" -v "$PWD:/app" text-to-link-dev python3 build.py
+
+      - name: Generated files must be committed
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git status --short
+            git --no-pager diff --stat
+            echo "::error::Generated files are out of date. Run 'just build' and commit the result."
+            exit 1
+          fi
+
+      - name: Unit and end-to-end tests
+        run: docker run --rm --user "$(id -u):$(id -g)" -v "$PWD:/app" text-to-link-dev tools/test.sh
