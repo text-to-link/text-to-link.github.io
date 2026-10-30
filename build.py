@@ -75,6 +75,52 @@ def load_translations():
     return data
 
 
+FEATURES = {
+    "en": [
+        "HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile and Org-mode links",
+        "Text fragment (highlight) links",
+        "Tracking parameter removal",
+        "QR code generator",
+    ],
+    "uk": [
+        "Посилання HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile та Org-mode",
+        "Посилання на виділений текст",
+        "Видалення параметрів трекінгу",
+        "Генератор QR-кодів",
+    ],
+    "es": [
+        "Enlaces HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile y Org-mode",
+        "Enlaces a texto resaltado",
+        "Eliminación de parámetros de seguimiento",
+        "Generador de códigos QR",
+    ],
+    "pt": [
+        "Links HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile e Org-mode",
+        "Links para texto destacado",
+        "Remoção de parâmetros de rastreamento",
+        "Gerador de códigos QR",
+    ],
+    "de": [
+        "HTML-, Markdown-, BBCode-, reStructuredText-, AsciiDoc-, Slack-, Textile- und Org-Mode-Links",
+        "Links zu hervorgehobenem Text",
+        "Entfernung von Tracking-Parametern",
+        "QR-Code-Generator",
+    ],
+    "fr": [
+        "Liens HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile et Org-mode",
+        "Liens vers du texte surligné",
+        "Suppression des paramètres de suivi",
+        "Générateur de codes QR",
+    ],
+    "pl": [
+        "Linki HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile i Org-mode",
+        "Linki do wyróżnionego tekstu",
+        "Usuwanie parametrów śledzenia",
+        "Generator kodów QR",
+    ],
+}
+
+
 def build_jsonld(t, lang):
     graph = [
         {
@@ -89,12 +135,7 @@ def build_jsonld(t, lang):
             "inLanguage": t["meta"]["lang"],
             "image": SITE_URL + "/og-image.png",
             "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
-            "featureList": [
-                "HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile and Org-mode links",
-                "Text fragment (highlight) links",
-                "Tracking parameter removal",
-                "QR code generator",
-            ],
+            "featureList": FEATURES.get(lang, FEATURES["en"]),
         },
         {
             "@type": "FAQPage",

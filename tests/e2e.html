@@ -238,6 +238,10 @@ async function run() {
   d = f.contentDocument;
   eq('prefill: url param', d.getElementById('in-url').value, 'example.org');
   eq('prefill: text param', d.getElementById('in-text').value, 'Hello');
+  f.src = '/?fmt=%22%5D&url=example.org&text=Hello';
+  await loaded();
+  d = f.contentDocument;
+  eq('prefill: invalid fmt handled safely', d.getElementById('out').textContent.indexOf('example.org') >= 0, true);
 
   // PWA files
   var manifest = await (await fetch('/site.webmanifest')).json();

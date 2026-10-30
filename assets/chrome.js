@@ -45,7 +45,8 @@
     Array.prototype.forEach.call(document.querySelectorAll('[data-consent]'), function (btn) {
       btn.addEventListener('click', function () {
         choose(btn.getAttribute('data-consent'));
-        $('consent-status').textContent = '✓ ' + btn.textContent;
+        var status = $('consent-status');
+        if (status) status.textContent = '✓ ' + btn.textContent;
       });
     });
 
