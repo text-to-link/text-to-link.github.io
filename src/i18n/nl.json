@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "lang": "nl",
+    "dir": "ltr",
+    "locale": "nl_NL",
+    "lang_short": "NL",
+    "native": "Nederlands",
+    "title": "Tekst naar link generator: HTML, Markdown & links markeren",
+    "description": "Gratis tekst naar link generator: maak links in HTML, Markdown of BBCode, link naar gemarkeerde tekst op een pagina, verwijder tracking en maak QR-codes.",
+    "og_alt": "Text to Link – gratis generator van klikbare links uit tekst"
+  },
+  "ui": {
+    "skip": "Ga naar de tool",
+    "nav_label": "Site",
+    "language": "Taal",
+    "theme_toggle": "Wissel licht / donker thema",
+    "h1": "Tekst naar link generator",
+    "lead": "Zet elke tekst om in een klikbare link. Krijg HTML, Markdown of BBCode, link rechtstreeks naar gemarkeerde tekst op een pagina en maak gratis een QR-code.",
+    "tool_label": "Tekst naar link generator",
+    "modes_label": "Modus",
+    "mode_single": "Enkele link",
+    "mode_linkify": "Maak URL's klikbaar",
+    "mode_bulk": "Lijst met links",
+    "label_text": "Linktekst",
+    "ph_text": "Lees het volledige artikel",
+    "label_url": "URL",
+    "label_paste": "Tekst met URL's",
+    "ph_paste": "Plak tekst. Elke URL erin wordt een link, bijvoorbeeld https://example.com/artikel",
+    "label_bulk": "Eén link per regel",
+    "ph_bulk": "Voorbeeldsite | https://example.com\nhttps://example.org/pagina",
+    "hint_bulk": "Gebruik \"tekst | url\" per regel, of alleen een URL. Regels met ongeldige URL's worden overgeslagen.",
+    "adv_toggle": "Geavanceerde opties",
+    "adv_link": "Link",
+    "opt_newtab": "Openen in nieuw tabblad",
+    "opt_title": "Titel (tooltip)",
+    "adv_url": "URL",
+    "opt_params": "Queryparameters",
+    "params_keep": "Alles behouden",
+    "params_tracking": "Alleen tracking verwijderen (utm_*, fbclid, gclid…)",
+    "params_all": "Alles na \"?\" verwijderen",
+    "opt_hash": "#anker verwijderen",
+    "opt_shorten": "Korte URL's tonen (geen https://, www.)",
+    "opt_list": "Als lijst weergeven",
+    "adv_highlight": "Tekst op pagina markeren",
+    "hl_help": "Voeg tekst toe waar de browser naartoe scrollt en die gemarkeerd wordt bij het openen van de link.",
+    "hl_add": "Nog een markering toevoegen",
+    "hl_support": "Werkt in Chrome, Edge, Safari 16.1+ en Firefox 131+. Andere browsers openen de pagina zonder markering.",
+    "hl_start": "Te markeren tekst",
+    "hl_until": "…tot (optioneel einde van een langere passage)",
+    "hl_prefix": "Tekst direct ervoor (optioneel)",
+    "hl_suffix": "Tekst direct erna (optioneel)",
+    "hl_precise": "Exacte overeenkomst",
+    "hl_remove": "Markering verwijderen",
+    "label_result": "Resultaat",
+    "formats_label": "Uitvoerformaat",
+    "btn_copy": "Kopiëren",
+    "btn_copy_rich": "Kopiëren als opgemaakte link",
+    "btn_test": "Link testen",
+    "btn_qr": "QR-code",
+    "btn_clear": "Wissen",
+    "qr_title": "QR-code",
+    "qr_help": "Scan met een telefooncamera om de link te openen.",
+    "qr_dl_svg": "Download SVG",
+    "qr_dl_png": "Download PNG",
+    "label_preview": "Voorbeeld",
+    "privacy_badge": "Werkt volledig in uw browser. Uw tekst en links worden nooit geüpload.",
+    "how_h2": "Hoe u tekst omzet in een link",
+    "about_h2": "Een gratis linkmaker voor tekst",
+    "hl_h2": "Linken naar gemarkeerde tekst op een pagina",
+    "faq_h2": "Veelgestelde vragen",
+    "footer_text": "Text to Link – gratis online linktools.",
+    "footer_source": "Broncode op GitHub",
+    "consent_label": "Toestemming voor analyse",
+    "consent_text": "We gebruiken Google Analytics om te zien welke tools mensen nodig hebben. Het blijft uitgeschakeld tenzij u accepteert.",
+    "consent_accept": "Accepteren",
+    "consent_decline": "Weigeren",
+    "btn_paste": "Plakken",
+    "btn_clear_all": "Alles wissen",
+    "examples_label": "Probeer een voorbeeld:",
+    "mode_hint_single": "Maak één link van uw tekst en een URL. Weet u niet waar te beginnen? Probeer een voorbeeld.",
+    "mode_hint_linkify": "Plak tekst: elke URL erin wordt een klikbare link.",
+    "mode_hint_bulk": "Zet veel regels tegelijk om in links. Eén link per regel in de vorm \"tekst | url\".",
+    "tip_copy": "Code kopiëren (Ctrl+Enter)",
+    "tip_copy_rich": "Klikbare link kopiëren voor Gmail, Google Docs, Notion of Slack",
+    "tip_test": "Open de link in een nieuw tabblad ter controle",
+    "footer_privacy": "Privacy"
+  },
+  "how": [
+    {
+      "t": "Voer de linktekst in",
+      "d": "Typ de woorden die zichtbaar en klikbaar zijn, bijvoorbeeld \"Lees het volledige artikel\"."
+    },
+    {
+      "t": "Plak de URL",
+      "d": "Voeg het adres toe. We voegen https:// toe indien nodig en kunnen trackingparameters verwijderen."
+    },
+    {
+      "t": "Kies een formaat en kopieer",
+      "d": "Kies HTML, Markdown, BBCode, reST, AsciiDoc, Slack, Textile of Org, kopieer de code of kopieer als opgemaakte link."
+    }
+  ],
+  "about": [
+    "Text to Link is een gratis linkmaker voor tekst. Typ de gewenste woorden, plak het adres en ontvang een kant-en-klare link in HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile of Org-mode. Ideaal voor blogberichten, e-mails, forumhandtekeningen, documentatie en sociale media.",
+    "Het werkt als een tekstlinkgenerator, URL-tekstgenerator en artikellinkgenerator: voeg een titel toe, open in een nieuw tabblad, markeer als nofollow, sponsored of ugc, verwijder utm_-parameters en kopieer als klikbare tekst voor Gmail, Google Docs, Notion of Slack.",
+    "Meer links nodig? Plak een hele alinea in de modus Maak URL's klikbaar of gebruik Lijst met links om regels \"tekst | url\" om te zetten in een HTML-lijst. Alles draait in uw browser, dus ingevoerde teksten en URL's blijven strikt privé."
+  ],
+  "hl_text": [
+    "Een link naar gemarkeerde tekst (text fragment link) opent een webpagina, scrollt naar het gewenste gedeelte en markeert dit. Open Geavanceerde opties, zoek \"Tekst op pagina markeren\", vul de exacte woorden in en de generator voegt #:~:text= toe aan uw URL.",
+    "Om een langere passage te markeren, vult u het veld \"tot\" in: de browser markeert alles van begin tot eind. Komen dezelfde woorden vaker voor, gebruik dan Exacte overeenkomst om tekst ervoor of erna op te geven.",
+    "Links met markering werken in Chrome, Edge, Safari 16.1+ en Firefox 131+. In andere browsers opent de pagina gewoon zonder markering. De tekst moet zichtbaar zijn en exact overeenkomen, ongeacht hoofdletters."
+  ],
+  "faq": [
+    {
+      "q": "Hoe zet ik tekst om in een link?",
+      "a": "Typ de linktekst, plak de URL, kies HTML, Markdown of een ander formaat en klik op Kopiëren. De tekst wordt het klikbare deel van de link."
+    },
+    {
+      "q": "Wat is het verschil tussen HTML-, Markdown- en BBCode-links?",
+      "a": "HTML-links worden gebruikt op websites en in e-mails, Markdown-links op GitHub, Reddit, Notion en in documentatie, en BBCode-links op forums."
+    },
+    {
+      "q": "Hoe link ik naar gemarkeerde tekst op een webpagina?",
+      "a": "Open Geavanceerde opties, typ de woorden onder \"Tekst op pagina markeren\" en kopieer het resultaat. De link eindigt op #:~:text= gevolgd door uw tekst."
+    },
+    {
+      "q": "Kan ik utm- en andere trackingparameters verwijderen?",
+      "a": "Ja. Kies in Geavanceerde opties voor \"Alleen tracking verwijderen\" om utm_*, fbclid, gclid en dergelijke te wissen, of verwijder alles na het vraagteken."
+    },
+    {
+      "q": "Hoe plak ik een klikbare link in Gmail of Google Docs?",
+      "a": "Klik op \"Kopiëren als opgemaakte link\" en plak. Uw tekst is meteen klikbaar zonder dat u code hoeft aan te passen."
+    },
+    {
+      "q": "Kan ik de generator openen met vooraf ingevulde velden?",
+      "a": "Ja. Voeg parameters toe aan het adres: ?url=https://example.com&text=Mijn%20link&fmt=markdown. Op smartphones kunt u de site ook als app installeren en direct delen."
+    },
+    {
+      "q": "Kan ik een QR-code maken voor mijn link?",
+      "a": "Ja. Druk op \"QR-code\" onder het resultaat, scan om te testen en download als SVG of PNG. Deze wordt in uw browser gegenereerd."
+    },
+    {
+      "q": "Werkt het offline?",
+      "a": "Ja. Na het eerste bezoek wordt de site door uw browser opgeslagen, zodat u links kunt maken zonder internetverbinding."
+    },
+    {
+      "q": "Is de tool gratis en privé?",
+      "a": "Ja. Het is gratis, vereist geen account en draait in uw browser: uw gegevens worden nooit naar een server gestuurd."
+    }
+  ],
+  "js": {
+    "err_url_invalid": "Dit lijkt niet op een geldige URL.",
+    "count_label": "Gevonden links: {n}",
+    "no_links": "Geen links gevonden in de tekst. Links beginnen met http://, https:// of www.",
+    "bulk_errors": "Regels overgeslagen met ongeldige URL: {lines}",
+    "example_text": "Voorbeeld",
+    "copied": "Gekopieerd!",
+    "copied_rich": "Gekopieerd als opgemaakte link!",
+    "copy_failed": "Kopiëren mislukt. Selecteer de tekst en kopieer handmatig.",
+    "qr_help": "Scan met een telefooncamera om de link te openen.",
+    "qr_need_url": "Voer een geldige URL in om een QR-code te maken.",
+    "qr_too_long": "Deze URL is te lang voor een QR-code. Maak de tekst of URL korter.",
+    "qr_error": "Kon de QR-codegenerator niet laden. Controleer de verbinding.",
+    "paste_fallback": "Druk op Ctrl+V",
+    "example_note": "Dit is een voorbeeld. Vul de velden hierboven in voor uw eigen link.",
+    "fmt_hint": {
+      "html": "HTML: voor websites, blogs en e-mailsjablonen.",
+      "markdown": "Markdown: voor GitHub, Reddit, Notion, Obsidian en README-bestanden.",
+      "bbcode": "BBCode: voor forums en prikborden.",
+      "url": "URL: alleen het uiteindelijke webadres. In tekstmodus haalt het alle URL's op.",
+      "rst": "reStructuredText: voor Sphinx en Python-documentatie.",
+      "asciidoc": "AsciiDoc: voor Asciidoctor en technische documentatie.",
+      "slack": "Slack: mrkdwn voor bots, webhooks en workflows. Gebruik in berichten \"Kopiëren als opgemaakte link\".",
+      "textile": "Textile: voor Redmine, Jira (oude editor) en andere Textile-tools.",
+      "org": "Org: voor notities en agenda's in Emacs Org-mode."
+    },
+    "examples": {
+      "single": [
+        {
+          "label": "Eenvoudige link",
+          "text": "Lees het volledige artikel",
+          "url": "https://example.com/blog/my-article"
+        },
+        {
+          "label": "Tracking verwijderen",
+          "text": "Lente-uitverkoop",
+          "url": "https://shop.example.com/sale?utm_source=newsletter&utm_medium=email&utm_campaign=spring&fbclid=IwAR0abc&color=blue",
+          "params": "tracking"
+        },
+        {
+          "label": "Tekst markeren",
+          "text": "Wat is een hyperlink?",
+          "url": "https://en.wikipedia.org/wiki/Hyperlink",
+          "hl": [
+            {
+              "start": "hyperlink, or simply a link",
+              "until": "clicking or tapping"
+            }
+          ]
+        },
+        {
+          "label": "Gesponsorde link",
+          "text": "Partneraanbod",
+          "url": "https://partner.example.com/?ref=blog",
+          "newTab": true,
+          "nofollow": true,
+          "sponsored": true
+        },
+        {
+          "label": "Forum (BBCode)",
+          "text": "Mijn project op GitHub",
+          "url": "https://github.com/text-to-link/text-to-link.github.io",
+          "fmt": "bbcode"
+        }
+      ],
+      "linkify": [
+        {
+          "label": "Alinea",
+          "text": "Hallo team! Het concept staat op https://docs.example.com/draft en het bord op www.example.com/board. Vragen? Stel ze in het kanaal (https://chat.example.com/help)."
+        },
+        {
+          "label": "Nieuwsbrieflinks opschonen",
+          "text": "Sale: https://shop.example.com/sale?utm_source=mail&utm_campaign=spring\nNieuw: https://shop.example.com/new?fbclid=IwAR0abc&size=m",
+          "params": "tracking",
+          "shorten": true
+        },
+        {
+          "label": "URL's extraheren",
+          "text": "Bronnen: zie https://example.com/a, ook www.example.org/b en https://example.net/c.",
+          "fmt": "url"
+        }
+      ],
+      "bulk": [
+        {
+          "label": "Bronnenlijst",
+          "text": "MDN Web Docs | https://developer.mozilla.org\nGitHub | https://github.com\nhttps://example.com/page",
+          "list": true
+        },
+        {
+          "label": "Markdown-lijst",
+          "text": "MDN Web Docs | https://developer.mozilla.org\nGitHub | https://github.com\nhttps://example.com/page",
+          "list": true,
+          "fmt": "markdown"
+        },
+        {
+          "label": "Met tracking",
+          "text": "Nieuwsbrief | https://example.com/?utm_source=a&id=7\nBlog | https://example.org/post?fbclid=IwAR0",
+          "params": "tracking"
+        }
+      ]
+    }
+  },
+  "privacy": {
+    "title": "Privacybeleid – Text to Link",
+    "description": "Wat Text to Link op uw apparaat opslaat, welke statistieken worden gebruikt en hoe u dit aanpast.",
+    "h1": "Privacybeleid",
+    "updated_label": "Laatst bijgewerkt",
+    "sections": [
+      {
+        "h": "In het kort",
+        "p": [
+          "Text to Link draait in uw browser. De tekst en URL's die u invoert, worden op uw apparaat verwerkt en nooit naar een server verzonden. Geen accounts en geen advertenties."
+        ]
+      },
+      {
+        "h": "Wat wordt opgeslagen op uw apparaat",
+        "p": [
+          "Uw browser bewaart een paar kleine gegevens: uw thema (ttl-theme), gekozen formaat en opties maar niet uw tekst (ttl-settings), en uw analysekeuze (ttl-consent).",
+          "De site wordt ook opgeslagen in de service worker-cache van uw browser om offline te werken. U kunt dit op elk moment wissen via uw browserinstellingen."
+        ]
+      },
+      {
+        "h": "Analyse",
+        "p": [
+          "We gebruiken Google Analytics 4 om bezoeken te tellen en te zien welke functies worden gebruikt. Het ontvangt nooit ingevoerde teksten of URL's. Advertentiefuncties zijn uitgeschakeld.",
+          "Opslag voor analyse wordt standaard geweigerd. Totdat u op Accepteren klikt, worden er geen analyse-cookies geplaatst. De Google-tag wordt geladen vanaf googletagmanager.com.",
+          "Als u op Accepteren klikt, plaatst Google Analytics cookies (_ga en _ga_*) en verzamelt het pseudonieme gebruiksgegevens zoals bezochte pagina's, locatie bij benadering en browsertype."
+        ]
+      },
+      {
+        "h": "Hosting",
+        "p": [
+          "De site wordt gehost op GitHub Pages. GitHub kan technische gegevens zoals uw IP-adres registreren wanneer uw browser een pagina opvraagt, zoals beschreven in de privacyverklaring van GitHub."
+        ]
+      },
+      {
+        "h": "Links, QR-codes en externe sites",
+        "p": [
+          "QR-codes worden in uw browser gegenereerd. De knop Link testen opent het ingevoerde adres in een nieuw tabblad, zodat de geopende site uw bezoek ziet. Wij zien dit niet."
+        ]
+      },
+      {
+        "h": "Uw rechten en contact",
+        "p": [
+          "U kunt analyse hieronder op elk moment accepteren of weigeren. Afhankelijk van waar u woont, heeft u mogelijk recht op inzage, correctie of verwijdering van persoonsgegevens.",
+          "Vragen of verzoeken: open een issue op github.com/text-to-link/text-to-link.github.io/issues. Als dit beleid wijzigt, wordt de datum hierboven bijgewerkt."
+        ]
+      }
+    ],
+    "choice_h2": "Uw analysekeuze",
+    "choice_p": "Kies of Google Analytics cookies mag plaatsen en gebruiksgegevens mag verzamelen. U kunt dit op elk moment wijzigen.",
+    "back": "Terug naar de generator"
+  }
+}

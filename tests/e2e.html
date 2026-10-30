@@ -194,7 +194,7 @@ async function run() {
   eq('empty clipboard shows fallback hint', pasteBtn.textContent, 'Press Ctrl+V');
 
   // seo bits of every language, home and privacy pages
-  var langs = ['', 'uk/', 'es/', 'pt/', 'de/', 'fr/', 'pl/'];
+  var langs = ['', 'uk/', 'es/', 'pt/', 'de/', 'fr/', 'pl/', 'zh/', 'ar/', 'id/', 'ja/', 'hi/', 'it/', 'tr/', 'nl/', 'ko/'];
   for (var lang of langs) {
     for (var page of ['', 'privacy/']) {
       var path = '/' + lang + page, label = path;

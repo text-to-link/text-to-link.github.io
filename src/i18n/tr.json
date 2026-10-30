@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "lang": "tr",
+    "dir": "ltr",
+    "locale": "tr_TR",
+    "lang_short": "TR",
+    "native": "Türkçe",
+    "title": "Metinden Bağlantı Oluşturucu: HTML, Markdown ve Vurgu",
+    "description": "Ücretsiz metinden bağlantı oluşturucu: HTML, Markdown veya BBCode bağlantılar, sayfada vurgulanmış metne bağlantı, izleme temizleme ve QR kodları.",
+    "og_alt": "Text to Link – metinden tıklanabilir bağlantı oluşturucu"
+  },
+  "ui": {
+    "skip": "Araca geç",
+    "nav_label": "Site",
+    "language": "Dil",
+    "theme_toggle": "Açık / koyu temayı değiştir",
+    "h1": "Metinden Bağlantı Oluşturucu",
+    "lead": "Herhangi bir metni tıklanabilir bağlantıya dönüştürün. HTML, Markdown veya BBCode alın, sayfadaki vurgulanan metne doğrudan bağlantı verin ve tarayıcınızda ücretsiz QR kod oluşturun.",
+    "tool_label": "Metinden bağlantı oluşturucu",
+    "modes_label": "Mod",
+    "mode_single": "Tek bağlantı",
+    "mode_linkify": "URL'leri tıklanabilir yap",
+    "mode_bulk": "Toplu bağlantılar",
+    "label_text": "Bağlantı metni",
+    "ph_text": "Yazının tamamını oku",
+    "label_url": "URL",
+    "label_paste": "URL içeren metin",
+    "ph_paste": "Metni yapıştırın. İçindeki her URL bağlantıya dönüşür, örneğin https://example.com/yazi",
+    "label_bulk": "Her satıra bir bağlantı",
+    "ph_bulk": "Örnek site | https://example.com\nhttps://example.org/sayfa",
+    "hint_bulk": "Her satırda \"metin | url\" veya yalnızca URL kullanın. Geçersiz URL içeren satırlar atlanır.",
+    "adv_toggle": "Gelişmiş seçenekler",
+    "adv_link": "Bağlantı",
+    "opt_newtab": "Yeni sekmede aç",
+    "opt_title": "Başlık (ipucu)",
+    "adv_url": "URL",
+    "opt_params": "Sorgu parametreleri",
+    "params_keep": "Hepsini koru",
+    "params_tracking": "Yalnızca izlemeyi kaldır (utm_*, fbclid, gclid…)",
+    "params_all": "\"?\" sonrasını tamamen kaldır",
+    "opt_hash": "#çapayı kaldır",
+    "opt_shorten": "Kısa URL göster (https://, www. olmadan)",
+    "opt_list": "Liste olarak çıktı ver",
+    "adv_highlight": "Sayfadaki metni vurgula",
+    "hl_help": "Bağlantı açıldığında tarayıcının kaydırıp vurgulayacağı metni ekleyin.",
+    "hl_add": "Başka bir vurgu ekle",
+    "hl_support": "Chrome, Edge, Safari 16.1+ ve Firefox 131+'de çalışır. Diğer tarayıcılar sayfayı vurgusuz açar.",
+    "hl_start": "Vurgulanacak metin",
+    "hl_until": "…kadar (uzun bir pasajın isteğe bağlı sonu)",
+    "hl_prefix": "Hemen öncesindeki metin (isteğe bağlı)",
+    "hl_suffix": "Hemen sonrasındaki metin (isteğe bağlı)",
+    "hl_precise": "Tam eşleşme",
+    "hl_remove": "Vurguyu kaldır",
+    "label_result": "Sonuç",
+    "formats_label": "Çıktı biçimi",
+    "btn_copy": "Kopyala",
+    "btn_copy_rich": "Zengin bağlantı olarak kopyala",
+    "btn_test": "Bağlantıyı sına",
+    "btn_qr": "QR kodu",
+    "btn_clear": "Temizle",
+    "qr_title": "QR kodu",
+    "qr_help": "Bağlantıyı açmak için telefon kamerasıyla tarayın.",
+    "qr_dl_svg": "SVG İndir",
+    "qr_dl_png": "PNG İndir",
+    "label_preview": "Önizleme",
+    "privacy_badge": "Tamamen tarayıcınızda çalışır. Metniniz ve bağlantılarınız asla sunucuya yüklenmez.",
+    "how_h2": "Metin bağlantıya nasıl dönüştürülür",
+    "about_h2": "Metin için ücretsiz bağlantı oluşturucu",
+    "hl_h2": "Sayfada vurgulanan metne nasıl bağlantı verilir",
+    "faq_h2": "Sıkça sorulan sorular",
+    "footer_text": "Text to Link – ücretsiz çevrim içi bağlantı araçları.",
+    "footer_source": "GitHub'da kaynak kodu",
+    "consent_label": "Analitik onayı",
+    "consent_text": "İnsanların hangi araçlara ihtiyaç duyduğunu anlamak için Google Analytics kullanıyoruz. Onay vermediğiniz sürece kapalı kalır.",
+    "consent_accept": "Kabul et",
+    "consent_decline": "Reddet",
+    "btn_paste": "Yapıştır",
+    "btn_clear_all": "Tümünü temizle",
+    "examples_label": "Bir örnek deneyin:",
+    "mode_hint_single": "Metninizden ve bir URL'den tek bağlantı oluşturun. Nereden başlayacağınızı bilmiyor musunuz? Bir örnek deneyin.",
+    "mode_hint_linkify": "Herhangi bir metin yapıştırın: içindeki her URL tıklanabilir bağlantıya dönüşür.",
+    "mode_hint_bulk": "Aynı anda birçok satırı bağlantıya dönüştürün. Her satıra \"metin | url\" biçiminde bir bağlantı.",
+    "tip_copy": "Kodu kopyala (Ctrl+Enter)",
+    "tip_copy_rich": "Gmail, Google Docs, Notion veya Slack'e yapıştırmak için tıklanabilir bağlantıyı kopyala",
+    "tip_test": "Kontrol etmek için bağlantıyı yeni sekmede aç",
+    "footer_privacy": "Gizlilik"
+  },
+  "how": [
+    {
+      "t": "Bağlantı metnini girin",
+      "d": "İnsanların göreceği ve tıklayacağı sözcükleri yazın, örneğin \"Yazının tamamını oku\"."
+    },
+    {
+      "t": "URL'yi yapıştırın",
+      "d": "Adresi ekleyin. Eksikse https:// ekleriz ve izleme parametrelerini kaldırabiliriz."
+    },
+    {
+      "t": "Biçim seçin ve kopyalayın",
+      "d": "HTML, Markdown, BBCode, reST, AsciiDoc, Slack, Textile veya Org seçin, kodu kopyalayın veya e-posta ve belgelere yapıştırmak için zengin bağlantı kopyalayın."
+    }
+  ],
+  "about": [
+    "Text to Link, metin için ücretsiz bağlantı oluşturucudur. Göstermek istediğiniz sözcükleri yazın, adresi yapıştırın ve HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile veya Org-mode biçiminde hazır bir bağlantı alın. Blog gönderileri, e-postalar, forum imzaları, belgeler ve sosyal medya profilleri için idealdir.",
+    "Metin bağlantısı oluşturucu, URL metin oluşturucu ve makale bağlantısı oluşturucu olarak çalışır: başlık ekleyin, yeni sekmede açın, nofollow, sponsored veya ugc olarak işaretleyin, utm_ parametrelerini temizleyin ve Gmail, Google Docs, Notion veya Slack'e tıklanabilir metin olarak yapıştırmak üzere kopyalayın.",
+    "Birden fazla bağlantıya mı ihtiyacınız var? Metni bağlantıya dönüştür modunda bütün bir paragrafı yapıştırın veya Toplu bağlantılar ile \"metin | url\" satırlarını hazır bir HTML listesine dönüştürün. Her şey tarayıcınızda çalışır, gizliliğiniz tamamen korunur."
+  ],
+  "hl_text": [
+    "Metin parçası bağlantısı (text fragment link), bir web sayfasını açar, ilgili bölüme kaydırır ve orayı vurgular. Gelişmiş seçenekleri açın, \"Sayfadaki metni vurgula\" alanını bulun, tam metni girin ve oluşturucu URL'nize #:~:text= kısmını eklesin.",
+    "Daha uzun bir pasajı vurgulamak için \"kadar\" alanını doldurun: tarayıcı başlangıçtan bitiş sözcüklerine kadar her yeri vurgular. Aynı sözcükler birden çok geçiyorsa, Tam eşleşme seçeneğiyle hemen öncesi veya sonrasındaki metni belirtebilirsiniz.",
+    "Vurgulu bağlantılar Chrome, Edge, Safari 16.1+ ve Firefox 131+'de çalışır. Diğer tarayıcılarda sayfa vurgusuz açılır. Metin sayfada görünür olmalı ve büyük/küçük harf fark etmeksizin tam eşleşmelidir."
+  ],
+  "faq": [
+    {
+      "q": "Metni nasıl bağlantıya dönüştürebilirim?",
+      "a": "Bağlantı metnini yazın, URL'yi yapıştırın, HTML, Markdown veya başka bir biçim seçip Kopyala'ya basın. Metin, bağlantının tıklanabilir kısmı olur."
+    },
+    {
+      "q": "HTML, Markdown ve BBCode bağlantıları arasındaki fark nedir?",
+      "a": "HTML bağlantıları web sitelerinde ve e-posta şablonlarında, Markdown bağlantıları GitHub, Reddit, Notion ve belgelerde, BBCode bağlantıları ise forumlarda kullanılır."
+    },
+    {
+      "q": "Sayfadaki vurgulanmış metne nasıl bağlantı veririm?",
+      "a": "Gelişmiş seçenekleri açın, \"Sayfadaki metni vurgula\" altına vurgulanacak sözcükleri yazın ve sonucu kopyalayın. Bağlantı #:~:text= ile biter."
+    },
+    {
+      "q": "URL'den utm ve diğer izleme parametrelerini kaldırabilir miyim?",
+      "a": "Evet. Gelişmiş seçeneklerde utm_*, fbclid, gclid gibi parametreleri kaldırmak için \"Yalnızca izlemeyi kaldır\"ı seçin veya soru işaretinden sonrasını temizleyin."
+    },
+    {
+      "q": "Gmail veya Google Docs'a tıklanabilir bağlantıyı nasıl yapıştırırım?",
+      "a": "\"Zengin bağlantı olarak kopyala\"ya basın ve yapıştırın. Metniniz kod düzenlemeye gerek kalmadan tıklanabilir olarak gelir."
+    },
+    {
+      "q": "Oluşturucuyu alanları önceden doldurulmuş olarak açabilir miyim?",
+      "a": "Evet. Adrese parametre ekleyin: ?url=https://example.com&text=Baglantim&fmt=markdown. Akıllı telefonlarda siteyi uygulama olarak yükleyip doğrudan paylaşabilirsiniz."
+    },
+    {
+      "q": "Bağlantım için QR kodu oluşturabilir miyim?",
+      "a": "Evet. Sonucun altındaki \"QR kodu\"na basın, denemek için tarayın ve SVG veya PNG olarak indirin. Tamamen tarayıcınızda üretilir."
+    },
+    {
+      "q": "Çevrim dışı çalışır mı?",
+      "a": "Evet. İlk ziyaretten sonra site tarayıcınız tarafından kaydedilir, böylece internet bağlantısı olmadan da bağlantı oluşturabilirsiniz."
+    },
+    {
+      "q": "Araç ücretsiz ve gizliliğe uygun mu?",
+      "a": "Evet. Tamamen ücretsizdir, kayıt gerektirmez ve tarayıcınızda çalışır: verileriniz asla bir sunucuya iletilmez."
+    }
+  ],
+  "js": {
+    "err_url_invalid": "Bu geçerli bir URL gibi görünmüyor.",
+    "count_label": "Bulunan bağlantı: {n}",
+    "no_links": "Metinde bağlantı bulunamadı. Bağlantılar http://, https:// veya www. ile başlar.",
+    "bulk_errors": "Geçersiz URL içeren satırlar atlandı: {lines}",
+    "example_text": "Örnek",
+    "copied": "Kopyalandı!",
+    "copied_rich": "Zengin bağlantı olarak kopyalandı!",
+    "copy_failed": "Kopyalanamadı. Metni seçip manuel olarak kopyalayın.",
+    "qr_help": "Bağlantıyı açmak için telefon kamerasıyla tarayın.",
+    "qr_need_url": "QR kodu oluşturmak için geçerli bir URL girin.",
+    "qr_too_long": "Bu URL bir QR kodu için fazla uzun. Vurgu metnini veya URL'yi kısaltın.",
+    "qr_error": "QR kod oluşturucu yüklenemedi. Bağlantınızı kontrol edin.",
+    "paste_fallback": "Ctrl+V tuşlarına basın",
+    "example_note": "Bu bir örnektir. Kendi bağlantınız için yukarıdaki alanları doldurun.",
+    "fmt_hint": {
+      "html": "HTML: web siteleri, bloglar ve e-posta şablonları için.",
+      "markdown": "Markdown: GitHub, Reddit, Notion, Obsidian ve README dosyaları için.",
+      "bbcode": "BBCode: forumlar ve mesaj panoları için.",
+      "url": "URL: yalnızca nihai web adresi. Metin modunda içindeki tüm URL'leri ayıklar.",
+      "rst": "reStructuredText: Sphinx ve Python belgeleri için.",
+      "asciidoc": "AsciiDoc: Asciidoctor ve teknik belgeler için.",
+      "slack": "Slack: botlar, web kancaları ve iş akışları için mrkdwn. Sohbetlerde \"Zengin bağlantı olarak kopyala\"yı kullanın.",
+      "textile": "Textile: Redmine, Jira (eski düzenleyici) ve diğer Textile araçları için.",
+      "org": "Org: Emacs Org-mode notları ve ajandaları için."
+    },
+    "examples": {
+      "single": [
+        {
+          "label": "Basit bağlantı",
+          "text": "Yazının tamamını oku",
+          "url": "https://example.com/blog/my-article"
+        },
+        {
+          "label": "İzlemeyi kaldır",
+          "text": "Bahar indirimi",
+          "url": "https://shop.example.com/sale?utm_source=newsletter&utm_medium=email&utm_campaign=spring&fbclid=IwAR0abc&color=blue",
+          "params": "tracking"
+        },
+        {
+          "label": "Metni vurgula",
+          "text": "Köprü nedir?",
+          "url": "https://en.wikipedia.org/wiki/Hyperlink",
+          "hl": [
+            {
+              "start": "hyperlink, or simply a link",
+              "until": "clicking or tapping"
+            }
+          ]
+        },
+        {
+          "label": "Sponsorlu bağlantı",
+          "text": "Ortaklık teklifi",
+          "url": "https://partner.example.com/?ref=blog",
+          "newTab": true,
+          "nofollow": true,
+          "sponsored": true
+        },
+        {
+          "label": "Forum (BBCode)",
+          "text": "GitHub'daki projem",
+          "url": "https://github.com/text-to-link/text-to-link.github.io",
+          "fmt": "bbcode"
+        }
+      ],
+      "linkify": [
+        {
+          "label": "Paragraf",
+          "text": "Merhaba ekip! Taslak https://docs.example.com/draft adresinde ve pano www.example.com/board adresinde. Sorularınız için kanala yazın (https://chat.example.com/help)."
+        },
+        {
+          "label": "Bülten bağlantılarını temizle",
+          "text": "İndirim: https://shop.example.com/sale?utm_source=mail&utm_campaign=spring\nYeni: https://shop.example.com/new?fbclid=IwAR0abc&size=m",
+          "params": "tracking",
+          "shorten": true
+        },
+        {
+          "label": "URL'leri ayıkla",
+          "text": "Kaynaklar: bkz. https://example.com/a, ayrıca www.example.org/b ve https://example.net/c.",
+          "fmt": "url"
+        }
+      ],
+      "bulk": [
+        {
+          "label": "Kaynak listesi",
+          "text": "MDN Web Docs | https://developer.mozilla.org\nGitHub | https://github.com\nhttps://example.com/page",
+          "list": true
+        },
+        {
+          "label": "Markdown listesi",
+          "text": "MDN Web Docs | https://developer.mozilla.org\nGitHub | https://github.com\nhttps://example.com/page",
+          "list": true,
+          "fmt": "markdown"
+        },
+        {
+          "label": "İzlemeli bağlantılar",
+          "text": "Bülten | https://example.com/?utm_source=a&id=7\nBlog | https://example.org/post?fbclid=IwAR0",
+          "params": "tracking"
+        }
+      ]
+    }
+  },
+  "privacy": {
+    "title": "Gizlilik Politikası – Text to Link",
+    "description": "Text to Link'in cihazınızda neleri sakladığı, hangi analizleri kullandığı ve tercihlerinizi nasıl değiştireceğiniz.",
+    "h1": "Gizlilik Politikası",
+    "updated_label": "Son güncelleme",
+    "sections": [
+      {
+        "h": "Kısaca",
+        "p": [
+          "Text to Link tarayıcınızda çalışır. Girdiğiniz metin ve URL'ler cihazınızda işlenir ve asla bir sunucuya gönderilmez. Hesap veya reklam yoktur."
+        ]
+      },
+      {
+        "h": "Cihazınızda neler saklanır",
+        "p": [
+          "Tarayıcınız bu site için birkaç küçük veriyi saklar: temanız (ttl-theme), metniniz hariç çıktı biçiminiz ve ayarlarınız (ttl-settings) ve analitik onay tercihiniz (ttl-consent).",
+          "Site ayrıca internet bağlantısı olmadan açılabilmesi için tarayıcınızın service worker önbelleğine kaydedilir. Tarayıcı ayarlarından bunları dilediğiniz zaman silebilirsiniz."
+        ]
+      },
+      {
+        "h": "Analitik",
+        "p": [
+          "Ziyaretleri saymak ve hangi araçların kullanıldığını anlamak için Google Analytics 4 kullanıyoruz. Girdiğiniz metinleri veya URL'leri asla almaz. Reklam özellikleri kapalıdır.",
+          "Analitik depolaması varsayılan olarak reddedilir. Kabul et'e basana kadar analitik çerezi yerleştirilmez. Google etiketi googletagmanager.com üzerinden yüklenir.",
+          "Kabul et'e basarsanız Google Analytics çerezler (_ga ve _ga_*) ayarlar ve ziyaret edilen sayfalar, yaklaşık konum ve cihaz türü gibi takma adlı kullanım verilerini toplar."
+        ]
+      },
+      {
+        "h": "Barındırma",
+        "p": [
+          "Site GitHub Pages üzerinde barındırılmaktadır. Tarayıcınız bir sayfa istediğinde GitHub, IP adresiniz gibi teknik verileri kaydedebilir."
+        ]
+      },
+      {
+        "h": "Bağlantılar, QR kodları ve harici siteler",
+        "p": [
+          "QR kodları tarayıcınızda oluşturulur. Bağlantıyı sına düğmesi adresi yeni sekmede açar, bu nedenle ziyaret ettiğiniz site ziyaretinizi görür. Biz görmeyiz."
+        ]
+      },
+      {
+        "h": "Haklarınız ve iletişim",
+        "p": [
+          "Analitiği aşağıdan dilediğiniz zaman kabul edebilir veya reddedebilirsiniz. Yaşadığınız yere bağlı olarak kişisel verilerinize erişme veya silinmesini isteme hakkınız olabilir.",
+          "Sorularınız için: github.com/text-to-link/text-to-link.github.io/issues adresinden bir issue açabilirsiniz. Bu politika değiştiğinde yukarıdaki tarih güncellenir."
+        ]
+      }
+    ],
+    "choice_h2": "Analitik tercihiniz",
+    "choice_p": "Google Analytics'in çerez depolamasına ve kullanım verisi toplamasına izin verip vermeyeceğinizi seçin. Bunu istediğiniz zaman değiştirebilirsiniz.",
+    "back": "Oluşturucuya dön"
+  }
+}

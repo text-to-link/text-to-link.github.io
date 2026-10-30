@@ -1,6 +1,6 @@
 /* text-to-link service worker: the pages and assets of this build are precached,
    at runtime the network wins and the cache is the offline fallback. */
-var CACHE = 'ttl-f4672b4a';
+var CACHE = 'ttl-f9f721f3';
 var PRECACHE = [
   "/",
   "/privacy/",
@@ -16,6 +16,24 @@ var PRECACHE = [
   "/fr/privacy/",
   "/pl/",
   "/pl/privacy/",
+  "/zh/",
+  "/zh/privacy/",
+  "/ar/",
+  "/ar/privacy/",
+  "/id/",
+  "/id/privacy/",
+  "/ja/",
+  "/ja/privacy/",
+  "/hi/",
+  "/hi/privacy/",
+  "/it/",
+  "/it/privacy/",
+  "/tr/",
+  "/tr/privacy/",
+  "/nl/",
+  "/nl/privacy/",
+  "/ko/",
+  "/ko/privacy/",
   "/assets/style.css?v=736df128",
   "/assets/chrome.js?v=6a15fe14",
   "/assets/core.js?v=429b31f6",

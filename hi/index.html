@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="hi" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>टेक्स्ट से लिंक जेनरेटर: HTML, Markdown और हाइलाइट</title>
+<meta name="description" content="मुफ़्त टेक्स्ट से लिंक जेनरेटर: HTML, Markdown, BBCode लिंक बनाएं, हाइलाइट किए गए टेक्स्ट का लिंक दें, ट्रैकिंग हटाएं और QR कोड बनाएं।">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b1117" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://text-to-link.github.io/hi/">
+<link rel="alternate" hreflang="en" href="https://text-to-link.github.io/">
+<link rel="alternate" hreflang="uk" href="https://text-to-link.github.io/uk/">
+<link rel="alternate" hreflang="es" href="https://text-to-link.github.io/es/">
+<link rel="alternate" hreflang="pt" href="https://text-to-link.github.io/pt/">
+<link rel="alternate" hreflang="de" href="https://text-to-link.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://text-to-link.github.io/fr/">
+<link rel="alternate" hreflang="pl" href="https://text-to-link.github.io/pl/">
+<link rel="alternate" hreflang="zh" href="https://text-to-link.github.io/zh/">
+<link rel="alternate" hreflang="ar" href="https://text-to-link.github.io/ar/">
+<link rel="alternate" hreflang="id" href="https://text-to-link.github.io/id/">
+<link rel="alternate" hreflang="ja" href="https://text-to-link.github.io/ja/">
+<link rel="alternate" hreflang="hi" href="https://text-to-link.github.io/hi/">
+<link rel="alternate" hreflang="it" href="https://text-to-link.github.io/it/">
+<link rel="alternate" hreflang="tr" href="https://text-to-link.github.io/tr/">
+<link rel="alternate" hreflang="nl" href="https://text-to-link.github.io/nl/">
+<link rel="alternate" hreflang="ko" href="https://text-to-link.github.io/ko/">
+<link rel="alternate" hreflang="x-default" href="https://text-to-link.github.io/">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Text to Link">
+<meta property="og:title" content="टेक्स्ट से लिंक जेनरेटर: HTML, Markdown और हाइलाइट">
+<meta property="og:description" content="मुफ़्त टेक्स्ट से लिंक जेनरेटर: HTML, Markdown, BBCode लिंक बनाएं, हाइलाइट किए गए टेक्स्ट का लिंक दें, ट्रैकिंग हटाएं और QR कोड बनाएं।">
+<meta property="og:url" content="https://text-to-link.github.io/hi/">
+<meta property="og:image" content="https://text-to-link.github.io/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Text to Link – टेक्स्ट से क्लिक करने योग्य लिंक जेनरेटर">
+<meta property="og:locale" content="hi_IN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="uk_UA">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="ar_SA">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="टेक्स्ट से लिंक जेनरेटर: HTML, Markdown और हाइलाइट">
+<meta name="twitter:description" content="मुफ़्त टेक्स्ट से लिंक जेनरेटर: HTML, Markdown, BBCode लिंक बनाएं, हाइलाइट किए गए टेक्स्ट का लिंक दें, ट्रैकिंग हटाएं और QR कोड बनाएं।">
+<meta name="twitter:image" content="https://text-to-link.github.io/og-image.png">
+<meta name="twitter:image:alt" content="Text to Link – टेक्स्ट से क्लिक करने योग्य लिंक जेनरेटर">
+
+<script>try{var t=localStorage.getItem('ttl-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "@id": "https://text-to-link.github.io/hi/#app", "name": "Text to Link", "url": "https://text-to-link.github.io/hi/", "description": "मुफ़्त टेक्स्ट से लिंक जेनरेटर: HTML, Markdown, BBCode लिंक बनाएं, हाइलाइट किए गए टेक्स्ट का लिंक दें, ट्रैकिंग हटाएं और QR कोड बनाएं।", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "inLanguage": "hi", "image": "https://text-to-link.github.io/og-image.png", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "featureList": ["HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile और Org-mode लिंक", "टेक्स्ट हाइलाइट लिंक", "ट्रैकिंग पैरामीटर हटाना", "QR कोड जेनरेटर"]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "टेक्स्ट को लिंक में कैसे बदलें?", "acceptedAnswer": {"@type": "Answer", "text": "लिंक टेक्स्ट टाइप करें, URL पेस्ट करें, HTML या Markdown चुनें और कॉपी दबाएं। टेक्स्ट लिंक का क्लिक करने योग्य हिस्सा बन जाता है।"}}, {"@type": "Question", "name": "HTML, Markdown और BBCode लिंक में क्या अंतर है?", "acceptedAnswer": {"@type": "Answer", "text": "HTML लिंक वेबसाइटों और ईमेल में उपयोग होते हैं, Markdown लिंक GitHub, Reddit, Notion और डॉक्स में, और BBCode लिंक फ़ोरम पर इस्तेमाल होते हैं।"}}, {"@type": "Question", "name": "वेब पेज पर हाइलाइट किए गए टेक्स्ट का लिंक कैसे बनाएं?", "acceptedAnswer": {"@type": "Answer", "text": "उन्नत विकल्प खोलें, \"पेज पर टेक्स्ट हाइलाइट करें\" के तहत शब्द दर्ज करें और परिणाम कॉपी करें। लिंक #:~:text= के साथ समाप्त होता है।"}}, {"@type": "Question", "name": "क्या मैं URL से utm और ट्रैकिंग पैरामीटर हटा सकता हूं?", "acceptedAnswer": {"@type": "Answer", "text": "हाँ। उन्नत विकल्पों में utm_*, fbclid, gclid आदि को हटाने के लिए \"केवल ट्रैकिंग हटाएं\" चुनें या प्रश्न चिह्न के बाद सब कुछ साफ़ करें।"}}, {"@type": "Question", "name": "Gmail या Google Docs में क्लिक करने योग्य लिंक कैसे पेस्ट करें?", "acceptedAnswer": {"@type": "Answer", "text": "\"रिच लिंक के रूप में कॉपी करें\" दबाएं और पेस्ट करें। आपका टेक्स्ट बिना किसी कोड के सीधे क्लिक करने योग्य रूप में पेस्ट होगा।"}}, {"@type": "Question", "name": "क्या मैं पहले से भरे फ़ील्ड के साथ जेनरेटर खोल सकता हूं?", "acceptedAnswer": {"@type": "Answer", "text": "हाँ। पते में पैरामीटर जोड़ें: ?url=https://example.com&text=मेरालिंक&fmt=markdown। फ़ोन पर आप इसे ऐप के रूप में भी इंस्टॉल कर सकते हैं।"}}, {"@type": "Question", "name": "क्या मैं अपने लिंक के लिए QR कोड बना सकता हूं?", "acceptedAnswer": {"@type": "Answer", "text": "हाँ। परिणाम के नीचे \"QR कोड\" दबाएं, जांचने के लिए स्कैन करें और SVG या PNG के रूप में डाउनलोड करें। यह आपके ब्राउज़र में बनता है।"}}, {"@type": "Question", "name": "क्या यह ऑफ़लाइन काम करता है?", "acceptedAnswer": {"@type": "Answer", "text": "हाँ। पहली बार विज़िट करने के बाद साइट आपके ब्राउज़र में सहेजी जाती है, जिससे आप बिना इंटरनेट के भी लिंक बना सकते हैं।"}}, {"@type": "Question", "name": "क्या यह टूल मुफ़्त और सुरक्षित है?", "acceptedAnswer": {"@type": "Answer", "text": "हाँ। यह पूरी तरह से मुफ़्त है, किसी साइन-अप की आवश्यकता नहीं है और सब कुछ आपके ब्राउज़र में चलता है: आपका डेटा कभी सर्वर पर नहीं भेजा जाता है।"}}]}]}</script>
+
+<!-- Google tag (gtag.js) with Consent Mode: analytics storage stays denied until the visitor accepts -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  var ttlConsent = '';
+  try { ttlConsent = localStorage.getItem('ttl-consent') || ''; } catch (e) {}
+  gtag('consent', 'default', {
+    analytics_storage: ttlConsent === 'granted' ? 'granted' : 'denied',
+    ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-X7MFHDKBP2');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X7MFHDKBP2"></script>
+
+<link rel="stylesheet" href="/assets/style.css?v=736df128">
+</head>
+<body>
+<a class="skip" href="#tool">टूल पर जाएं</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="logo" href="/hi/" aria-label="Text to Link">
+      <svg width="26" height="26" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M7.775 3.275a.75.75 0 0 0 1.06 1.06l1.25-1.25a2 2 0 1 1 2.83 2.83l-2.5 2.5a2 2 0 0 1-2.83 0 .75.75 0 0 0-1.06 1.06 3.5 3.5 0 0 0 4.95 0l2.5-2.5a3.5 3.5 0 0 0-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 0 1 0-2.83l2.5-2.5a2 2 0 0 1 2.83 0 .75.75 0 0 0 1.06-1.06 3.5 3.5 0 0 0-4.95 0l-2.5 2.5a3.5 3.5 0 0 0 4.95 4.95l1.25-1.25a.75.75 0 0 0-1.06-1.06l-1.25 1.25a2 2 0 0 1-2.83 0z"/></svg>
+      <span>text-to-link</span>
+    </a>
+    <nav class="bar-actions" aria-label="साइट">
+      <details class="lang" id="lang-menu">
+        <summary aria-label="भाषा">
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM5.78 8.75a9.64 9.64 0 0 0 1.363 4.177c.255.426.542.832.857 1.215.245-.296.551-.705.857-1.215A9.64 9.64 0 0 0 10.22 8.75Zm4.44-1.5a9.64 9.64 0 0 0-1.363-4.177c-.307-.51-.612-.919-.857-1.215a9.927 9.927 0 0 0-.857 1.215A9.64 9.64 0 0 0 5.78 7.25Zm-5.944 1.5H1.543a6.507 6.507 0 0 0 4.666 5.5c-.123-.181-.24-.365-.352-.552-.715-1.192-1.437-2.874-1.581-4.948Zm-2.733-1.5h2.733c.144-2.074.866-3.756 1.58-4.948.12-.197.237-.381.353-.552a6.507 6.507 0 0 0-4.666 5.5Zm10.181 1.5c-.144 2.074-.866 3.756-1.58 4.948-.12.197-.237.381-.353.552a6.507 6.507 0 0 0 4.666-5.5Zm2.733-1.5a6.507 6.507 0 0 0-4.666-5.5c.123.181.24.365.353.552.714 1.192 1.436 2.874 1.58 4.948Z"/></svg>
+          <span>HI</span>
+        </summary>
+        <ul>
+          <li><a href="/" hreflang="en" lang="en">English</a></li>
+          <li><a href="/uk/" hreflang="uk" lang="uk">Українська</a></li>
+          <li><a href="/es/" hreflang="es" lang="es">Español</a></li>
+          <li><a href="/pt/" hreflang="pt" lang="pt">Português</a></li>
+          <li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li>
+          <li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li>
+          <li><a href="/pl/" hreflang="pl" lang="pl">Polski</a></li>
+          <li><a href="/zh/" hreflang="zh" lang="zh">中文</a></li>
+          <li><a href="/ar/" hreflang="ar" lang="ar">العربية</a></li>
+          <li><a href="/id/" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+          <li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li>
+          <li><a href="/hi/" hreflang="hi" lang="hi" aria-current="page">हिन्दी</a></li>
+          <li><a href="/it/" hreflang="it" lang="it">Italiano</a></li>
+          <li><a href="/tr/" hreflang="tr" lang="tr">Türkçe</a></li>
+          <li><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></li>
+          <li><a href="/ko/" hreflang="ko" lang="ko">한국어</a></li>
+        </ul>
+      </details>
+      <button type="button" class="icon-btn" id="theme-toggle" aria-label="लाइट / डार्क थीम बदलें" title="लाइट / डार्क थीम बदलें">
+        <svg class="i-sun" width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-1.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm5.657-8.157a.75.75 0 0 1 0 1.061l-1.061 1.06a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.06-1.06a.75.75 0 0 1 1.06 0Zm-9.193 9.193a.75.75 0 0 1 0 1.06l-1.06 1.061a.75.75 0 1 1-1.061-1.06l1.06-1.061a.75.75 0 0 1 1.061 0ZM8 0a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 8 0ZM3 8a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 3 8Zm13 0a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 16 8Zm-8 5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 13Zm3.536-1.464a.75.75 0 0 1 1.06 0l1.061 1.06a.75.75 0 0 1-1.06 1.061l-1.061-1.06a.75.75 0 0 1 0-1.061ZM2.343 2.343a.75.75 0 0 1 1.061 0l1.06 1.061a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-1.06-1.06a.75.75 0 0 1 0-1.06Z"/></svg>
+        <svg class="i-moon" width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M9.598 1.591a.749.749 0 0 1 .785-.175 7.001 7.001 0 1 1-8.967 8.967.75.75 0 0 1 .961-.96 5.5 5.5 0 0 0 7.046-7.046.75.75 0 0 1 .175-.786Zm1.616 1.945a7 7 0 0 1-7.678 7.678 5.499 5.499 0 1 0 7.678-7.678Z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>टेक्स्ट से लिंक जेनरेटर</h1>
+    <p class="lead">किसी भी टेक्स्ट को क्लिक करने योग्य लिंक में बदलें। HTML, Markdown या BBCode कोड प्राप्त करें, पेज पर हाइलाइट किए गए टेक्स्ट का सीधा लिंक बनाएं और ब्राउज़र में मुफ़्त QR कोड बनाएं।</p>
+  </section>
+
+  <section class="card tool" id="tool" aria-label="टेक्स्ट से लिंक जेनरेटर">
+    <div class="tabs modes" role="tablist" aria-label="मोड">
+      <button type="button" role="tab" class="tab" data-mode="single" aria-selected="true">एकल लिंक</button>
+      <button type="button" role="tab" class="tab" data-mode="linkify" aria-selected="false" tabindex="-1">URL को लिंक बनाएं</button>
+      <button type="button" role="tab" class="tab" data-mode="bulk" aria-selected="false" tabindex="-1">एक साथ कई लिंक</button>
+    </div>
+
+    <div class="card-body">
+      <p class="hint mode-hint" data-modes="single">अपने टेक्स्ट और URL से एक लिंक बनाएं। समझ नहीं आ रहा कहां से शुरू करें? उदाहरण देखें।</p>
+      <p class="hint mode-hint" data-modes="linkify" hidden>कोई भी टेक्स्ट पेस्ट करें: उसमें मौजूद हर URL क्लिक करने योग्य लिंक बन जाता है।</p>
+      <p class="hint mode-hint" data-modes="bulk" hidden>एक साथ कई पंक्तियों को लिंक में बदलें। &quot;टेक्स्ट | url&quot; के रूप में लिखें।</p>
+      <div class="examples" role="group" aria-label="एक उदाहरण आज़माएं:">
+        <span class="examples-label">एक उदाहरण आज़माएं:</span>
+        <span class="chips" id="examples"></span>
+      </div>
+
+      <div class="field" data-modes="single">
+        <div class="label-row"><label for="in-text">लिंक टेक्स्ट</label><span class="mini-actions"><button type="button" class="btn-mini" data-paste="in-text">पेस्ट करें</button><button type="button" class="btn-mini" data-clear="in-text">साफ़ करें</button></span></div>
+        <input id="in-text" type="text" autocomplete="off" spellcheck="false" placeholder="पूरा लेख पढ़ें">
+      </div>
+      <div class="field" data-modes="single">
+        <div class="label-row"><label for="in-url">URL</label><span class="mini-actions"><button type="button" class="btn-mini" data-paste="in-url">पेस्ट करें</button><button type="button" class="btn-mini" data-clear="in-url">साफ़ करें</button></span></div>
+        <input id="in-url" type="text" inputmode="url" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="https://example.com/page" aria-describedby="url-error">
+        <p class="error" id="url-error" role="alert" hidden></p>
+      </div>
+
+      <div class="field" data-modes="linkify" hidden>
+        <div class="label-row"><label for="in-paste">URL वाला टेक्स्ट</label><span class="mini-actions"><button type="button" class="btn-mini" data-paste="in-paste">पेस्ट करें</button><button type="button" class="btn-mini" data-clear="in-paste">साफ़ करें</button></span></div>
+        <textarea id="in-paste" rows="6" spellcheck="false" placeholder="कोई भी टेक्स्ट पेस्ट करें। उसमें मौजूद हर URL एक लिंक बन जाएगा, जैसे https://example.com/article"></textarea>
+      </div>
+
+      <div class="field" data-modes="bulk" hidden>
+        <div class="label-row"><label for="in-bulk">प्रति पंक्ति एक लिंक</label><span class="mini-actions"><button type="button" class="btn-mini" data-paste="in-bulk">पेस्ट करें</button><button type="button" class="btn-mini" data-clear="in-bulk">साफ़ करें</button></span></div>
+        <textarea id="in-bulk" rows="6" spellcheck="false" placeholder="उदाहरण साइट | https://example.com
+https://example.org/page" aria-describedby="bulk-hint"></textarea>
+        <p class="hint" id="bulk-hint">हर पंक्ति में &quot;टेक्स्ट | url&quot; या सिर्फ URL लिखें। अमान्य URL वाली पंक्तियों को छोड़ दिया जाएगा।</p>
+      </div>
+
+      <details class="advanced" id="advanced">
+        <summary>उन्नत विकल्प</summary>
+        <div class="adv-grid">
+          <fieldset>
+            <legend>लिंक विकल्प</legend>
+            <label class="check"><input type="checkbox" id="o-newtab"> <span>नए टैब में खोलें</span></label>
+            <label class="check"><input type="checkbox" id="o-nofollow"> <span>nofollow</span></label>
+            <label class="check"><input type="checkbox" id="o-sponsored"> <span>sponsored</span></label>
+            <label class="check"><input type="checkbox" id="o-ugc"> <span>ugc</span></label>
+            <div class="field" data-modes="single">
+              <label for="o-title">शीर्षक (tooltip)</label>
+              <input id="o-title" type="text" autocomplete="off">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>URL विकल्प</legend>
+            <div class="field">
+              <label for="o-params">क्वेरी पैरामीटर</label>
+              <select id="o-params">
+                <option value="keep">सभी बनाए रखें</option>
+                <option value="tracking">केवल ट्रैकिंग हटाएं (utm_*, fbclid, gclid…)</option>
+                <option value="all">&quot;?&quot; के बाद सब कुछ हटाएं</option>
+              </select>
+            </div>
+            <label class="check"><input type="checkbox" id="o-hash"> <span>#एंकर हटाएं</span></label>
+            <label class="check" data-modes="linkify bulk" hidden><input type="checkbox" id="o-shorten"> <span>छोटा URL दिखाएं (https://, www. के बिना)</span></label>
+            <label class="check" data-modes="bulk" hidden><input type="checkbox" id="o-list"> <span>सूची के रूप में आउटपुट दें</span></label>
+          </fieldset>
+
+          <fieldset class="adv-wide" data-modes="single">
+            <legend>पेज पर टेक्स्ट हाइलाइट करें</legend>
+            <p class="hint">वह टेक्स्ट जोड़ें जिस पर लिंक खोलने पर ब्राउज़र स्क्रॉल करके हाइलाइट करेगा।</p>
+            <div id="hl-list"></div>
+            <button type="button" class="btn btn-small" id="hl-add">एक और हाइलाइट जोड़ें</button>
+            <p class="hint">Chrome, Edge, Safari 16.1+ और Firefox 131+ में काम करता है। अन्य ब्राउज़र बिना हाइलाइट के पेज खोलते हैं।</p>
+          </fieldset>
+        </div>
+      </details>
+
+      <div class="result">
+        <div class="result-head">
+          <h2 class="result-title">परिणाम</h2>
+          <div class="tabs formats" role="tablist" aria-label="आउटपुट फ़ॉर्मेट">
+            <button type="button" role="tab" class="tab" data-fmt="html" aria-selected="true">HTML</button>
+            <button type="button" role="tab" class="tab" data-fmt="markdown" aria-selected="false" tabindex="-1">Markdown</button>
+            <button type="button" role="tab" class="tab" data-fmt="bbcode" aria-selected="false" tabindex="-1">BBCode</button>
+            <button type="button" role="tab" class="tab" data-fmt="url" aria-selected="false" tabindex="-1">URL</button>
+            <button type="button" role="tab" class="tab" data-fmt="rst" aria-selected="false" tabindex="-1">reST</button>
+            <button type="button" role="tab" class="tab" data-fmt="asciidoc" aria-selected="false" tabindex="-1">AsciiDoc</button>
+            <button type="button" role="tab" class="tab" data-fmt="slack" aria-selected="false" tabindex="-1">Slack</button>
+            <button type="button" role="tab" class="tab" data-fmt="textile" aria-selected="false" tabindex="-1">Textile</button>
+            <button type="button" role="tab" class="tab" data-fmt="org" aria-selected="false" tabindex="-1">Org</button>
+          </div>
+        </div>
+        <pre class="output"><code id="out" class="is-placeholder"></code></pre>
+        <p class="hint" id="fmt-hint"></p>
+        <p class="warn" id="warn" role="status" hidden></p>
+
+        <div class="actions">
+          <button type="button" class="btn btn-primary" id="btn-copy" title="कोड कॉपी करें (Ctrl+Enter)" disabled>कॉपी करें</button>
+          <button type="button" class="btn" id="btn-copy-rich" title="Gmail, Google Docs, Notion या Slack में पेस्ट करने के लिए क्लिक करने योग्य लिंक कॉपी करें" disabled>रिच लिंक के रूप में कॉपी करें</button>
+          <button type="button" class="btn" id="btn-test" data-modes="single" title="जांचने के लिए लिंक को नए टैब में खोलें" disabled>लिंक जांचें</button>
+          <button type="button" class="btn" id="btn-qr" data-modes="single" aria-expanded="false" aria-controls="qr-panel" data-src="/assets/qrcode.js?v=6e6189e2" disabled>QR कोड</button>
+          <button type="button" class="btn btn-ghost" id="btn-clear">सब साफ़ करें</button>
+          <span class="status" id="status" role="status" aria-live="polite"></span>
+        </div>
+
+        <div class="qr" id="qr-panel" hidden>
+          <div class="qr-box" id="qr-svg" role="img" aria-label="QR कोड"></div>
+          <div class="qr-side">
+            <h3>QR कोड</h3>
+            <p class="hint" id="qr-msg">लिंक खोलने के लिए फ़ोन के कैमरे से स्कैन करें।</p>
+            <div class="actions">
+              <button type="button" class="btn btn-small" id="qr-dl-svg">SVG डाउनलोड करें</button>
+              <button type="button" class="btn btn-small" id="qr-dl-png">PNG डाउनलोड करें</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-wrap" id="preview-wrap" hidden>
+          <h3 class="preview-title">पूर्वावलोकन</h3>
+          <div class="preview" id="preview"></div>
+        </div>
+      </div>
+    </div>
+    <p class="privacy-note">
+      <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M4 4a4 4 0 0 1 8 0v2h.25c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 12.25 15h-8.5A1.75 1.75 0 0 1 2 13.25v-5.5C2 6.784 2.784 6 3.75 6H4Zm8.25 3.5h-8.5a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25ZM10.5 6V4a2.5 2.5 0 1 0-5 0v2Z"/></svg>
+      पूरी तरह से आपके ब्राउज़र में चलता है। आपका टेक्स्ट और लिंक कभी अपलोड नहीं किए जाते हैं।
+    </p>
+  </section>
+
+  <section class="prose" id="how">
+    <h2>टेक्स्ट को लिंक में कैसे बदलें</h2>
+    <ol class="steps">
+      <li><div><strong>लिंक टेक्स्ट दर्ज करें</strong><span>वे शब्द लिखें जो लोग देखेंगे और क्लिक करेंगे, जैसे &quot;पूरा लेख पढ़ें&quot;।</span></div></li>
+      <li><div><strong>URL पेस्ट करें</strong><span>वेब पता दर्ज करें। यदि https:// नहीं है तो हम जोड़ देंगे और ट्रैकिंग पैरामीटर भी हटा सकते हैं।</span></div></li>
+      <li><div><strong>फ़ॉर्मेट चुनें और कॉपी करें</strong><span>HTML, Markdown, BBCode, reST, AsciiDoc, Slack, Textile या Org चुनें, फिर कोड कॉपी करें या रिच लिंक कॉपी करें।</span></div></li>
+    </ol>
+  </section>
+
+  <section class="prose" id="about">
+    <h2>टेक्स्ट के लिए मुफ़्त लिंक निर्माता</h2>
+    <p>Text to Link टेक्स्ट से लिंक बनाने का एक मुफ़्त टूल है। जो शब्द आप दिखाना चाहते हैं उन्हें लिखें, वेब पता पेस्ट करें और HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile या Org-mode में तुरंत उपयोग योग्य लिंक प्राप्त करें। यह ब्लॉग पोस्ट, ईमेल, फ़ोरम, दस्तावेज़ और सोशल प्रोफाइल के लिए उपयुक्त है।</p>
+    <p>यह टेक्स्ट लिंक जेनरेटर, URL टेक्स्ट जेनरेटर और आर्टिकल लिंक जेनरेटर के रूप में काम करता है: शीर्षक जोड़ें, नए टैब में खोलें, nofollow, sponsored या ugc चिह्नित करें, utm_ पैरामीटर हटाएं और Gmail, Google Docs, Notion या Slack में पेस्ट करने के लिए कॉपी करें।</p>
+    <p>एक से अधिक लिंक चाहिए? पूरा पैराग्राफ पेस्ट करें और मोड बदलें, या बल्क मोड से पंक्तियों को HTML सूची में बदलें। सब कुछ आपके ब्राउज़र में स्थानीय रूप से चलता है, इसलिए आपकी गोपनीयता सुरक्षित रहती है।</p>
+  </section>
+
+  <section class="prose" id="highlight-links">
+    <h2>पेज पर हाइलाइट किए गए टेक्स्ट का लिंक कैसे बनाएं</h2>
+    <p>टेक्स्ट फ्रैगमेंट लिंक (Text Fragment Link) किसी वेब पेज को खोलता है, संबंधित हिस्से तक स्क्रॉल करता है और उसे हाइलाइट करता है। उन्नत विकल्प खोलें, &quot;पेज पर टेक्स्ट हाइलाइट करें&quot; में सटीक शब्द लिखें और जेनरेटर आपके URL में #:~:text= जोड़ देगा।</p>
+    <p>लंबे अंश को हाइलाइट करने के लिए &quot;तक&quot; फ़ील्ड भरें: ब्राउज़र शुरू से अंत तक सब कुछ हाइलाइट करेगा। यदि वही शब्द बार-बार आते हैं, तो आगे या पीछे के शब्द जोड़ने के लिए सटीक मिलान का उपयोग करें।</p>
+    <p>हाइलाइट लिंक Chrome, Edge, Safari 16.1+ और Firefox 131+ में काम करते हैं। अन्य ब्राउज़रों में पेज बिना हाइलाइट के सामान्य रूप से खुलता है।</p>
+    <p><code class="sample">https://example.com/article#:~:text=quick%20brown,lazy%20dog</code></p>
+  </section>
+
+  <section class="prose" id="faq">
+    <h2>अक्सर पूछे जाने वाले प्रश्न</h2>
+    <details class="faq-item"><summary>टेक्स्ट को लिंक में कैसे बदलें?</summary><p>लिंक टेक्स्ट टाइप करें, URL पेस्ट करें, HTML या Markdown चुनें और कॉपी दबाएं। टेक्स्ट लिंक का क्लिक करने योग्य हिस्सा बन जाता है।</p></details>
+    <details class="faq-item"><summary>HTML, Markdown और BBCode लिंक में क्या अंतर है?</summary><p>HTML लिंक वेबसाइटों और ईमेल में उपयोग होते हैं, Markdown लिंक GitHub, Reddit, Notion और डॉक्स में, और BBCode लिंक फ़ोरम पर इस्तेमाल होते हैं।</p></details>
+    <details class="faq-item"><summary>वेब पेज पर हाइलाइट किए गए टेक्स्ट का लिंक कैसे बनाएं?</summary><p>उन्नत विकल्प खोलें, &quot;पेज पर टेक्स्ट हाइलाइट करें&quot; के तहत शब्द दर्ज करें और परिणाम कॉपी करें। लिंक #:~:text= के साथ समाप्त होता है।</p></details>
+    <details class="faq-item"><summary>क्या मैं URL से utm और ट्रैकिंग पैरामीटर हटा सकता हूं?</summary><p>हाँ। उन्नत विकल्पों में utm_*, fbclid, gclid आदि को हटाने के लिए &quot;केवल ट्रैकिंग हटाएं&quot; चुनें या प्रश्न चिह्न के बाद सब कुछ साफ़ करें।</p></details>
+    <details class="faq-item"><summary>Gmail या Google Docs में क्लिक करने योग्य लिंक कैसे पेस्ट करें?</summary><p>&quot;रिच लिंक के रूप में कॉपी करें&quot; दबाएं और पेस्ट करें। आपका टेक्स्ट बिना किसी कोड के सीधे क्लिक करने योग्य रूप में पेस्ट होगा।</p></details>
+    <details class="faq-item"><summary>क्या मैं पहले से भरे फ़ील्ड के साथ जेनरेटर खोल सकता हूं?</summary><p>हाँ। पते में पैरामीटर जोड़ें: ?url=https://example.com&amp;text=मेरालिंक&amp;fmt=markdown। फ़ोन पर आप इसे ऐप के रूप में भी इंस्टॉल कर सकते हैं।</p></details>
+    <details class="faq-item"><summary>क्या मैं अपने लिंक के लिए QR कोड बना सकता हूं?</summary><p>हाँ। परिणाम के नीचे &quot;QR कोड&quot; दबाएं, जांचने के लिए स्कैन करें और SVG या PNG के रूप में डाउनलोड करें। यह आपके ब्राउज़र में बनता है।</p></details>
+    <details class="faq-item"><summary>क्या यह ऑफ़लाइन काम करता है?</summary><p>हाँ। पहली बार विज़िट करने के बाद साइट आपके ब्राउज़र में सहेजी जाती है, जिससे आप बिना इंटरनेट के भी लिंक बना सकते हैं।</p></details>
+    <details class="faq-item"><summary>क्या यह टूल मुफ़्त और सुरक्षित है?</summary><p>हाँ। यह पूरी तरह से मुफ़्त है, किसी साइन-अप की आवश्यकता नहीं है और सब कुछ आपके ब्राउज़र में चलता है: आपका डेटा कभी सर्वर पर नहीं भेजा जाता है।</p></details>
+  </section>
+</main>
+
+<template id="hl-template">
+  <div class="hl-row">
+    <div class="hl-grid">
+      <label><span>हाइलाइट करने के लिए टेक्स्ट</span><input type="text" class="hl-start" autocomplete="off" spellcheck="false"></label>
+      <label><span>…तक (लंबे अंश का वैकल्पिक अंत)</span><input type="text" class="hl-until" autocomplete="off" spellcheck="false"></label>
+    </div>
+    <details class="hl-precise">
+      <summary>सटीक मिलान</summary>
+      <div class="hl-grid">
+        <label><span>ठीक पहले का टेक्स्ट (वैकल्पिक)</span><input type="text" class="hl-prefix" autocomplete="off" spellcheck="false"></label>
+        <label><span>ठीक बाद का टेक्स्ट (वैकल्पिक)</span><input type="text" class="hl-suffix" autocomplete="off" spellcheck="false"></label>
+      </div>
+    </details>
+    <button type="button" class="btn btn-small btn-ghost hl-remove">हाइलाइट हटाएं</button>
+  </div>
+</template>
+
+
+
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <p>Text to Link – मुफ़्त ऑनलाइन लिंक टूल्स। <a href="https://github.com/text-to-link/text-to-link.github.io" rel="noopener">GitHub पर सोर्स कोड</a> · <a href="/hi/privacy/">गोपनीयता</a></p>
+    <ul class="foot-langs" aria-label="भाषा">
+      <li><a href="/" hreflang="en" lang="en">English</a></li>
+      <li><a href="/uk/" hreflang="uk" lang="uk">Українська</a></li>
+      <li><a href="/es/" hreflang="es" lang="es">Español</a></li>
+      <li><a href="/pt/" hreflang="pt" lang="pt">Português</a></li>
+      <li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li>
+      <li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li>
+      <li><a href="/pl/" hreflang="pl" lang="pl">Polski</a></li>
+      <li><a href="/zh/" hreflang="zh" lang="zh">中文</a></li>
+      <li><a href="/ar/" hreflang="ar" lang="ar">العربية</a></li>
+      <li><a href="/id/" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+      <li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li>
+      <li><a href="/hi/" hreflang="hi" lang="hi" aria-current="page">हिन्दी</a></li>
+      <li><a href="/it/" hreflang="it" lang="it">Italiano</a></li>
+      <li><a href="/tr/" hreflang="tr" lang="tr">Türkçe</a></li>
+      <li><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></li>
+      <li><a href="/ko/" hreflang="ko" lang="ko">한국어</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="consent" id="consent" role="dialog" aria-label="एनालिटिक्स सहमति" hidden>
+  <p>हम यह समझने के लिए Google Analytics का उपयोग करते हैं कि लोगों को किन टूल्स की आवश्यकता है। सहमति मिलने तक यह बंद रहता है। <a href="/hi/privacy/">गोपनीयता</a></p>
+  <div class="actions">
+    <button type="button" class="btn btn-primary btn-small" id="consent-accept">स्वीकार करें</button>
+    <button type="button" class="btn btn-small" id="consent-decline">अस्वीकार करें</button>
+  </div>
+</div>
+
+<script src="/assets/chrome.js?v=6a15fe14"></script>
+<script>window.TTL_I18N = {"err_url_invalid": "यह एक मान्य URL नहीं लगता है।", "count_label": "मिले लिंक: {n}", "no_links": "टेक्स्ट में कोई लिंक नहीं मिला। लिंक http://, https:// या www. से शुरू होते हैं।", "bulk_errors": "अमान्य URL वाली पंक्तियों को छोड़ दिया गया: {lines}", "example_text": "उदाहरण", "copied": "कॉपी किया गया!", "copied_rich": "रिच लिंक के रूप में कॉपी किया गया!", "copy_failed": "कॉपी नहीं हो सका। टेक्स्ट का चयन करें और मैन्युअल रूप से कॉपी करें।", "qr_help": "लिंक खोलने के लिए फ़ोन के कैमरे से स्कैन करें।", "qr_need_url": "QR कोड बनाने के लिए एक मान्य URL दर्ज करें।", "qr_too_long": "यह URL QR कोड के लिए बहुत लंबा है। टेक्स्ट या URL छोटा करें।", "qr_error": "QR कोड जेनरेटर लोड नहीं हो सका। अपना इंटरनेट जांचें।", "paste_fallback": "Ctrl+V दबाएं", "example_note": "यह एक उदाहरण है। अपना लिंक प्राप्त करने के लिए ऊपर फ़ील्ड भरें।", "fmt_hint": {"html": "HTML: वेबसाइटों, ब्लॉगों और ईमेल टेम्पलेट्स के लिए।", "markdown": "Markdown: GitHub, Reddit, Notion, Obsidian और README फाइलों के लिए।", "bbcode": "BBCode: फ़ोरम और संदेश बोर्डों के लिए।", "url": "URL: केवल अंतिम वेब पता। टेक्स्ट मोड में यह सभी URL निकालता है।", "rst": "reStructuredText: Sphinx और Python दस्तावेज़ों के लिए।", "asciidoc": "AsciiDoc: Asciidoctor और तकनीकी दस्तावेज़ीकरण के लिए।", "slack": "Slack: बॉट्स और वर्कफ़्लो के लिए mrkdwn। चैट में \"रिच लिंक के रूप में कॉपी करें\" का उपयोग करें।", "textile": "Textile: Redmine, Jira और अन्य Textile टूल्स के लिए।", "org": "Org: Emacs Org-mode नोट्स और एजेंडा के लिए।"}, "examples": {"single": [{"label": "सरल लिंक", "text": "पूरा लेख पढ़ें", "url": "https://example.com/blog/my-article"}, {"label": "ट्रैकिंग हटाएं", "text": "वसंत सेल", "url": "https://shop.example.com/sale?utm_source=newsletter&utm_medium=email&utm_campaign=spring&fbclid=IwAR0abc&color=blue", "params": "tracking"}, {"label": "टेक्स्ट हाइलाइट करें", "text": "हाइपरलिंक क्या है?", "url": "https://en.wikipedia.org/wiki/Hyperlink", "hl": [{"start": "hyperlink, or simply a link", "until": "clicking or tapping"}]}, {"label": "प्रायोजित लिंक", "text": "पार्टनर ऑफ़र", "url": "https://partner.example.com/?ref=blog", "newTab": true, "nofollow": true, "sponsored": true}, {"label": "फ़ोरम (BBCode)", "text": "GitHub पर मेरा प्रोजेक्ट", "url": "https://github.com/text-to-link/text-to-link.github.io", "fmt": "bbcode"}], "linkify": [{"label": "पैराग्राफ", "text": "नमस्ते टीम! ड्राफ्ट https://docs.example.com/draft पर है और बोर्ड www.example.com/board पर है। सवाल? चैनल (https://chat.example.com/help) में पूछें।"}, {"label": "न्यूज़लेटर लिंक साफ़ करें", "text": "सेल: https://shop.example.com/sale?utm_source=mail&utm_campaign=spring\nनया: https://shop.example.com/new?fbclid=IwAR0abc&size=m", "params": "tracking", "shorten": true}, {"label": "URL निकालें", "text": "स्रोत: https://example.com/a देखें, साथ ही www.example.org/b और https://example.net/c।", "fmt": "url"}], "bulk": [{"label": "संसाधन सूची", "text": "MDN Web Docs | https://developer.mozilla.org\nGitHub | https://github.com\nhttps://example.com/page", "list": true}, {"label": "Markdown सूची", "text": "MDN Web Docs | https://developer.mozilla.org\nGitHub | https://github.com\nhttps://example.com/page", "list": true, "fmt": "markdown"}, {"label": "ट्रैकिंग के साथ", "text": "न्यूज़लेटर | https://example.com/?utm_source=a&id=7\nब्लॉग | https://example.org/post?fbclid=IwAR0", "params": "tracking"}]}};</script>
+<script src="/assets/core.js?v=429b31f6"></script>
+<script src="/assets/app.js?v=d1877d73"></script>
+</body>
+</html>

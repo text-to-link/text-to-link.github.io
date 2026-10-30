@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>テキストリンク作成ツール：HTML・Markdown・強調リンク</title>
+<meta name="description" content="無料のテキストリンク作成ツール：HTML、Markdown、BBCodeリンクの生成、特定テキストの強調リンク作成、追跡パラメータ削除、QRコード作成。">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b1117" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://text-to-link.github.io/ja/">
+<link rel="alternate" hreflang="en" href="https://text-to-link.github.io/">
+<link rel="alternate" hreflang="uk" href="https://text-to-link.github.io/uk/">
+<link rel="alternate" hreflang="es" href="https://text-to-link.github.io/es/">
+<link rel="alternate" hreflang="pt" href="https://text-to-link.github.io/pt/">
+<link rel="alternate" hreflang="de" href="https://text-to-link.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://text-to-link.github.io/fr/">
+<link rel="alternate" hreflang="pl" href="https://text-to-link.github.io/pl/">
+<link rel="alternate" hreflang="zh" href="https://text-to-link.github.io/zh/">
+<link rel="alternate" hreflang="ar" href="https://text-to-link.github.io/ar/">
+<link rel="alternate" hreflang="id" href="https://text-to-link.github.io/id/">
+<link rel="alternate" hreflang="ja" href="https://text-to-link.github.io/ja/">
+<link rel="alternate" hreflang="hi" href="https://text-to-link.github.io/hi/">
+<link rel="alternate" hreflang="it" href="https://text-to-link.github.io/it/">
+<link rel="alternate" hreflang="tr" href="https://text-to-link.github.io/tr/">
+<link rel="alternate" hreflang="nl" href="https://text-to-link.github.io/nl/">
+<link rel="alternate" hreflang="ko" href="https://text-to-link.github.io/ko/">
+<link rel="alternate" hreflang="x-default" href="https://text-to-link.github.io/">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Text to Link">
+<meta property="og:title" content="テキストリンク作成ツール：HTML・Markdown・強調リンク">
+<meta property="og:description" content="無料のテキストリンク作成ツール：HTML、Markdown、BBCodeリンクの生成、特定テキストの強調リンク作成、追跡パラメータ削除、QRコード作成。">
+<meta property="og:url" content="https://text-to-link.github.io/ja/">
+<meta property="og:image" content="https://text-to-link.github.io/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Text to Link – テキストからクリック可能なリンクを無料作成">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="uk_UA">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="ar_SA">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="テキストリンク作成ツール：HTML・Markdown・強調リンク">
+<meta name="twitter:description" content="無料のテキストリンク作成ツール：HTML、Markdown、BBCodeリンクの生成、特定テキストの強調リンク作成、追跡パラメータ削除、QRコード作成。">
+<meta name="twitter:image" content="https://text-to-link.github.io/og-image.png">
+<meta name="twitter:image:alt" content="Text to Link – テキストからクリック可能なリンクを無料作成">
+
+<script>try{var t=localStorage.getItem('ttl-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "@id": "https://text-to-link.github.io/ja/#app", "name": "Text to Link", "url": "https://text-to-link.github.io/ja/", "description": "無料のテキストリンク作成ツール：HTML、Markdown、BBCodeリンクの生成、特定テキストの強調リンク作成、追跡パラメータ削除、QRコード作成。", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "inLanguage": "ja", "image": "https://text-to-link.github.io/og-image.png", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "featureList": ["HTML、Markdown、BBCode、reStructuredText、AsciiDoc、Slack、Textile、Org-modeリンク", "テキスト強調表示リンク", "追跡パラメータ削除", "QRコードジェネレーター"]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "テキストをリンクに変換するにはどうすればいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "表示したい文言を入力し、URLを貼り付け、HTMLやMarkdownなどの形式を選んで「コピー」を押すだけです。"}}, {"@type": "Question", "name": "HTML、Markdown、BBCodeリンクの違いは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "HTMLはWebページやメールテンプレート用、MarkdownはGitHubやNotion、ドキュメント用、BBCodeは各種掲示板用です。"}}, {"@type": "Question", "name": "Webページ内の特定テキストを強調するリンクは作れますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。詳細設定の「ページ内のテキストを強調表示」に文言を入力して生成すると、#:~:text=が付いたURLが完成します。"}}, {"@type": "Question", "name": "URLからutmなどの追跡パラメータを削除できますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。詳細設定で「追跡パラメータのみ削除」を選ぶと、utm_*やfbclid、gclidなどの不要なパラメータを除去できます。"}}, {"@type": "Question", "name": "GmailやGoogle Docsにリンク付きテキストを直接貼るには？", "acceptedAnswer": {"@type": "Answer", "text": "「リッチリンクとしてコピー」を押して貼り付けてください。コードを編集することなく、青いリンク付きテキストとして貼り付けられます。"}}, {"@type": "Question", "name": "URLパラメータであらかじめ値を入力した状態で開けますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。?url=https://example.com&text=サンプル&fmt=markdown のように指定できます。スマートフォンではPWAとしてインストールも可能です。"}}, {"@type": "Question", "name": "作成したリンクのQRコードは作れますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。結果の下にある「QRコード」ボタンから生成し、SVGまたはPNGでダウンロードできます。"}}, {"@type": "Question", "name": "オフラインでも利用できますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。初回アクセス時にブラウザにキャッシュされるため、インターネット接続がない環境でも動作します。"}}, {"@type": "Question", "name": "安全性とプライバシーは確保されていますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。登録不要の完全無料ツールであり、すべての処理がお使いのブラウザ内で行われるため、データがサーバーに送信されることはありません。"}}]}]}</script>
+
+<!-- Google tag (gtag.js) with Consent Mode: analytics storage stays denied until the visitor accepts -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  var ttlConsent = '';
+  try { ttlConsent = localStorage.getItem('ttl-consent') || ''; } catch (e) {}
+  gtag('consent', 'default', {
+    analytics_storage: ttlConsent === 'granted' ? 'granted' : 'denied',
+    ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-X7MFHDKBP2');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X7MFHDKBP2"></script>
+
+<link rel="stylesheet" href="/assets/style.css?v=736df128">
+</head>
+<body>
+<a class="skip" href="#tool">ツールへスキップ</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="logo" href="/ja/" aria-label="Text to Link">
+      <svg width="26" height="26" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M7.775 3.275a.75.75 0 0 0 1.06 1.06l1.25-1.25a2 2 0 1 1 2.83 2.83l-2.5 2.5a2 2 0 0 1-2.83 0 .75.75 0 0 0-1.06 1.06 3.5 3.5 0 0 0 4.95 0l2.5-2.5a3.5 3.5 0 0 0-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 0 1 0-2.83l2.5-2.5a2 2 0 0 1 2.83 0 .75.75 0 0 0 1.06-1.06 3.5 3.5 0 0 0-4.95 0l-2.5 2.5a3.5 3.5 0 0 0 4.95 4.95l1.25-1.25a.75.75 0 0 0-1.06-1.06l-1.25 1.25a2 2 0 0 1-2.83 0z"/></svg>
+      <span>text-to-link</span>
+    </a>
+    <nav class="bar-actions" aria-label="サイト">
+      <details class="lang" id="lang-menu">
+        <summary aria-label="言語">
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM5.78 8.75a9.64 9.64 0 0 0 1.363 4.177c.255.426.542.832.857 1.215.245-.296.551-.705.857-1.215A9.64 9.64 0 0 0 10.22 8.75Zm4.44-1.5a9.64 9.64 0 0 0-1.363-4.177c-.307-.51-.612-.919-.857-1.215a9.927 9.927 0 0 0-.857 1.215A9.64 9.64 0 0 0 5.78 7.25Zm-5.944 1.5H1.543a6.507 6.507 0 0 0 4.666 5.5c-.123-.181-.24-.365-.352-.552-.715-1.192-1.437-2.874-1.581-4.948Zm-2.733-1.5h2.733c.144-2.074.866-3.756 1.58-4.948.12-.197.237-.381.353-.552a6.507 6.507 0 0 0-4.666 5.5Zm10.181 1.5c-.144 2.074-.866 3.756-1.58 4.948-.12.197-.237.381-.353.552a6.507 6.507 0 0 0 4.666-5.5Zm2.733-1.5a6.507 6.507 0 0 0-4.666-5.5c.123.181.24.365.353.552.714 1.192 1.436 2.874 1.58 4.948Z"/></svg>
+          <span>JA</span>
+        </summary>
+        <ul>
+          <li><a href="/" hreflang="en" lang="en">English</a></li>
+          <li><a href="/uk/" hreflang="uk" lang="uk">Українська</a></li>
+          <li><a href="/es/" hreflang="es" lang="es">Español</a></li>
+          <li><a href="/pt/" hreflang="pt" lang="pt">Português</a></li>
+          <li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li>
+          <li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li>
+          <li><a href="/pl/" hreflang="pl" lang="pl">Polski</a></li>
+          <li><a href="/zh/" hreflang="zh" lang="zh">中文</a></li>
+          <li><a href="/ar/" hreflang="ar" lang="ar">العربية</a></li>
+          <li><a href="/id/" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+          <li><a href="/ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a></li>
+          <li><a href="/hi/" hreflang="hi" lang="hi">हिन्दी</a></li>
+          <li><a href="/it/" hreflang="it" lang="it">Italiano</a></li>
+          <li><a href="/tr/" hreflang="tr" lang="tr">Türkçe</a></li>
+          <li><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></li>
+          <li><a href="/ko/" hreflang="ko" lang="ko">한국어</a></li>
+        </ul>
+      </details>
+      <button type="button" class="icon-btn" id="theme-toggle" aria-label="ライト / ダークテーマの切り替え" title="ライト / ダークテーマの切り替え">
+        <svg class="i-sun" width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-1.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm5.657-8.157a.75.75 0 0 1 0 1.061l-1.061 1.06a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.06-1.06a.75.75 0 0 1 1.06 0Zm-9.193 9.193a.75.75 0 0 1 0 1.06l-1.06 1.061a.75.75 0 1 1-1.061-1.06l1.06-1.061a.75.75 0 0 1 1.061 0ZM8 0a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 8 0ZM3 8a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 3 8Zm13 0a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 16 8Zm-8 5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 13Zm3.536-1.464a.75.75 0 0 1 1.06 0l1.061 1.06a.75.75 0 0 1-1.06 1.061l-1.061-1.06a.75.75 0 0 1 0-1.061ZM2.343 2.343a.75.75 0 0 1 1.061 0l1.06 1.061a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-1.06-1.06a.75.75 0 0 1 0-1.06Z"/></svg>
+        <svg class="i-moon" width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M9.598 1.591a.749.749 0 0 1 .785-.175 7.001 7.001 0 1 1-8.967 8.967.75.75 0 0 1 .961-.96 5.5 5.5 0 0 0 7.046-7.046.75.75 0 0 1 .175-.786Zm1.616 1.945a7 7 0 0 1-7.678 7.678 5.499 5.499 0 1 0 7.678-7.678Z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>テキストリンク作成ツール</h1>
+    <p class="lead">あらゆるテキストをクリック可能なリンクに変換。HTML、Markdown、BBCode、Webページ内の強調表示リンク、QRコードをブラウザ上で無料作成できます。</p>
+  </section>
+
+  <section class="card tool" id="tool" aria-label="テキストリンク作成ツール">
+    <div class="tabs modes" role="tablist" aria-label="モード">
+      <button type="button" role="tab" class="tab" data-mode="single" aria-selected="true">単一リンク</button>
+      <button type="button" role="tab" class="tab" data-mode="linkify" aria-selected="false" tabindex="-1">URLを自動リンク化</button>
+      <button type="button" role="tab" class="tab" data-mode="bulk" aria-selected="false" tabindex="-1">一括リンク作成</button>
+    </div>
+
+    <div class="card-body">
+      <p class="hint mode-hint" data-modes="single">テキストとURLからリンクを1つ作成します。使い方がわからない場合はサンプルをお試しください。</p>
+      <p class="hint mode-hint" data-modes="linkify" hidden>文章を貼り付けると、含まれるすべてのURLがクリック可能なリンクに自動変換されます。</p>
+      <p class="hint mode-hint" data-modes="bulk" hidden>複数行を一度にリンク化。「テキスト | URL」の形式で入力してください。</p>
+      <div class="examples" role="group" aria-label="サンプルを試す：">
+        <span class="examples-label">サンプルを試す：</span>
+        <span class="chips" id="examples"></span>
+      </div>
+
+      <div class="field" data-modes="single">
+        <div class="label-row"><label for="in-text">リンクテキスト</label><span class="mini-actions"><button type="button" class="btn-mini" data-paste="in-text">貼り付け</button><button type="button" class="btn-mini" data-clear="in-text">クリア</button></span></div>
+        <input id="in-text" type="text" autocomplete="off" spellcheck="false" placeholder="記事の全文を読む">
+      </div>
+      <div class="field" data-modes="single">
+        <div class="label-row"><label for="in-url">URL</label><span class="mini-actions"><button type="button" class="btn-mini" data-paste="in-url">貼り付け</button><button type="button" class="btn-mini" data-clear="in-url">クリア</button></span></div>
+        <input id="in-url" type="text" inputmode="url" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="https://example.com/page" aria-describedby="url-error">
+        <p class="error" id="url-error" role="alert" hidden></p>
+      </div>
+
+      <div class="field" data-modes="linkify" hidden>
+        <div class="label-row"><label for="in-paste">URLを含むテキスト</label><span class="mini-actions"><button type="button" class="btn-mini" data-paste="in-paste">貼り付け</button><button type="button" class="btn-mini" data-clear="in-paste">クリア</button></span></div>
+        <textarea id="in-paste" rows="6" spellcheck="false" placeholder="文章を貼り付けてください。含まれるすべてのURLがリンクに変換されます（例：https://example.com/article）"></textarea>
+      </div>
+
+      <div class="field" data-modes="bulk" hidden>
+        <div class="label-row"><label for="in-bulk">1行につき1つのリンク</label><span class="mini-actions"><button type="button" class="btn-mini" data-paste="in-bulk">貼り付け</button><button type="button" class="btn-mini" data-clear="in-bulk">クリア</button></span></div>
+        <textarea id="in-bulk" rows="6" spellcheck="false" placeholder="サンプルサイト | https://example.com
+https://example.org/page" aria-describedby="bulk-hint"></textarea>
+        <p class="hint" id="bulk-hint">1行ごとに「テキスト | URL」の形式で入力するか、URLのみを入力してください。無効なURLの行はスキップされます。</p>
+      </div>
+
+      <details class="advanced" id="advanced">
+        <summary>詳細設定</summary>
+        <div class="adv-grid">
+          <fieldset>
+            <legend>リンク設定</legend>
+            <label class="check"><input type="checkbox" id="o-newtab"> <span>新しいタブで開く</span></label>
+            <label class="check"><input type="checkbox" id="o-nofollow"> <span>nofollow</span></label>
+            <label class="check"><input type="checkbox" id="o-sponsored"> <span>sponsored</span></label>
+            <label class="check"><input type="checkbox" id="o-ugc"> <span>ugc</span></label>
+            <div class="field" data-modes="single">
+              <label for="o-title">タイトル属性 (tooltip)</label>
+              <input id="o-title" type="text" autocomplete="off">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>URL設定</legend>
+            <div class="field">
+              <label for="o-params">クエリパラメータ</label>
+              <select id="o-params">
+                <option value="keep">すべて保持する</option>
+                <option value="tracking">追跡パラメータのみ削除 (utm_*, fbclid, gclid…)</option>
+                <option value="all">「?」以降をすべて削除</option>
+              </select>
+            </div>
+            <label class="check"><input type="checkbox" id="o-hash"> <span>#アンカーを削除</span></label>
+            <label class="check" data-modes="linkify bulk" hidden><input type="checkbox" id="o-shorten"> <span>短いURLを表示（https://やwww.を省略）</span></label>
+            <label class="check" data-modes="bulk" hidden><input type="checkbox" id="o-list"> <span>リスト形式で出力</span></label>
+          </fieldset>
+
+          <fieldset class="adv-wide" data-modes="single">
+            <legend>ページ内のテキストを強調表示</legend>
+            <p class="hint">リンクを開いたときにブラウザが自動スクロールして強調表示するテキストを指定します。</p>
+            <div id="hl-list"></div>
+            <button type="button" class="btn btn-small" id="hl-add">別の強調箇所を追加</button>
+            <p class="hint">Chrome、Edge、Safari 16.1+、Firefox 131+で動作します。他のブラウザでは強調表示なしでページが開きます。</p>
+          </fieldset>
+        </div>
+      </details>
+
+      <div class="result">
+        <div class="result-head">
+          <h2 class="result-title">生成結果</h2>
+          <div class="tabs formats" role="tablist" aria-label="出力形式">
+            <button type="button" role="tab" class="tab" data-fmt="html" aria-selected="true">HTML</button>
+            <button type="button" role="tab" class="tab" data-fmt="markdown" aria-selected="false" tabindex="-1">Markdown</button>
+            <button type="button" role="tab" class="tab" data-fmt="bbcode" aria-selected="false" tabindex="-1">BBCode</button>
+            <button type="button" role="tab" class="tab" data-fmt="url" aria-selected="false" tabindex="-1">URL</button>
+            <button type="button" role="tab" class="tab" data-fmt="rst" aria-selected="false" tabindex="-1">reST</button>
+            <button type="button" role="tab" class="tab" data-fmt="asciidoc" aria-selected="false" tabindex="-1">AsciiDoc</button>
+            <button type="button" role="tab" class="tab" data-fmt="slack" aria-selected="false" tabindex="-1">Slack</button>
+            <button type="button" role="tab" class="tab" data-fmt="textile" aria-selected="false" tabindex="-1">Textile</button>
+            <button type="button" role="tab" class="tab" data-fmt="org" aria-selected="false" tabindex="-1">Org</button>
+          </div>
+        </div>
+        <pre class="output"><code id="out" class="is-placeholder"></code></pre>
+        <p class="hint" id="fmt-hint"></p>
+        <p class="warn" id="warn" role="status" hidden></p>
+
+        <div class="actions">
+          <button type="button" class="btn btn-primary" id="btn-copy" title="コードをコピー (Ctrl+Enter)" disabled>コピー</button>
+          <button type="button" class="btn" id="btn-copy-rich" title="Gmail、Google Docs、Notion、Slackに直接貼り付け可能なリンクをコピー" disabled>リッチリンクとしてコピー</button>
+          <button type="button" class="btn" id="btn-test" data-modes="single" title="新しいタブでリンクを開いて動作を確認" disabled>リンクを確認</button>
+          <button type="button" class="btn" id="btn-qr" data-modes="single" aria-expanded="false" aria-controls="qr-panel" data-src="/assets/qrcode.js?v=6e6189e2" disabled>QRコード</button>
+          <button type="button" class="btn btn-ghost" id="btn-clear">すべてクリア</button>
+          <span class="status" id="status" role="status" aria-live="polite"></span>
+        </div>
+
+        <div class="qr" id="qr-panel" hidden>
+          <div class="qr-box" id="qr-svg" role="img" aria-label="QRコード"></div>
+          <div class="qr-side">
+            <h3>QRコード</h3>
+            <p class="hint" id="qr-msg">スマートフォンのカメラで読み取ってリンクを開きます。</p>
+            <div class="actions">
+              <button type="button" class="btn btn-small" id="qr-dl-svg">SVGを保存</button>
+              <button type="button" class="btn btn-small" id="qr-dl-png">PNGを保存</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-wrap" id="preview-wrap" hidden>
+          <h3 class="preview-title">プレビュー</h3>
+          <div class="preview" id="preview"></div>
+        </div>
+      </div>
+    </div>
+    <p class="privacy-note">
+      <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M4 4a4 4 0 0 1 8 0v2h.25c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 12.25 15h-8.5A1.75 1.75 0 0 1 2 13.25v-5.5C2 6.784 2.784 6 3.75 6H4Zm8.25 3.5h-8.5a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25ZM10.5 6V4a2.5 2.5 0 1 0-5 0v2Z"/></svg>
+      ブラウザ内ですべて処理されます。入力された文章やリンクが外部へ送信されることはありません。
+    </p>
+  </section>
+
+  <section class="prose" id="how">
+    <h2>テキストをリンクに変換する方法</h2>
+    <ol class="steps">
+      <li><div><strong>リンクテキストを入力</strong><span>読者がクリックする文言を入力します（例：「記事の全文を読む」）。</span></div></li>
+      <li><div><strong>URLを入力</strong><span>Webアドレスを貼り付けます。https://がない場合は自動補完され、追跡パラメータの削除も可能です。</span></div></li>
+      <li><div><strong>形式を選んでコピー</strong><span>HTML、Markdown、BBCode、reST、AsciiDoc、Slack、Textile、Orgから選択してコピーします。</span></div></li>
+    </ol>
+  </section>
+
+  <section class="prose" id="about">
+    <h2>無料のテキストリンク生成ツール</h2>
+    <p>Text to Linkは、文章から手軽にリンクを作成できる無料ツールです。表示したい文言とWebアドレスを入力するだけで、HTML、Markdown、BBCode、reStructuredText、AsciiDoc、Slack、Textile、Org-modeのリンクコードを素早く生成できます。ブログ記事、メール、掲示板、技術ドキュメントに最適です。</p>
+    <p>タイトル属性の付加、新しいタブで開く設定、nofollow/sponsored/ugc属性の追加、utm_などの追跡パラメータの自動除去に対応。Gmail、Google Docs、Notion、Slackへそのまま貼り付けられるリッチテキスト形式のコピーも可能です。</p>
+    <p>複数のリンクを一括作成したい場合も、「URLを自動リンク化」モードで文章内のURLをすべてリンクに変換したり、「一括リンク作成」モードでHTMLリストを生成したりできます。すべてブラウザ上で処理されるため安心です。</p>
+  </section>
+
+  <section class="prose" id="highlight-links">
+    <h2>Webページ内の指定テキストを強調表示するリンクの作り方</h2>
+    <p>テキストフラグメント（Text Fragment）リンクを使用すると、Webページを開いた際に目的の文章まで自動スクロールし、ハイライト表示させることができます。詳細設定の「ページ内のテキストを強調表示」に文言を入力すると、URLの末尾に #:~:text= が付加されます。</p>
+    <p>長文を指定したい場合は「終了テキスト」を入力することで、開始から終了までの範囲を強調できます。同じ文言が複数ある場合は「完全一致（文脈指定）」で前後の単語を指定してください。</p>
+    <p>この機能はChrome、Edge、Safari 16.1+、Firefox 131+で動作します。未対応のブラウザでも通常のページとして問題なく開きます。</p>
+    <p><code class="sample">https://example.com/article#:~:text=quick%20brown,lazy%20dog</code></p>
+  </section>
+
+  <section class="prose" id="faq">
+    <h2>よくある質問</h2>
+    <details class="faq-item"><summary>テキストをリンクに変換するにはどうすればいいですか？</summary><p>表示したい文言を入力し、URLを貼り付け、HTMLやMarkdownなどの形式を選んで「コピー」を押すだけです。</p></details>
+    <details class="faq-item"><summary>HTML、Markdown、BBCodeリンクの違いは何ですか？</summary><p>HTMLはWebページやメールテンプレート用、MarkdownはGitHubやNotion、ドキュメント用、BBCodeは各種掲示板用です。</p></details>
+    <details class="faq-item"><summary>Webページ内の特定テキストを強調するリンクは作れますか？</summary><p>はい。詳細設定の「ページ内のテキストを強調表示」に文言を入力して生成すると、#:~:text=が付いたURLが完成します。</p></details>
+    <details class="faq-item"><summary>URLからutmなどの追跡パラメータを削除できますか？</summary><p>はい。詳細設定で「追跡パラメータのみ削除」を選ぶと、utm_*やfbclid、gclidなどの不要なパラメータを除去できます。</p></details>
+    <details class="faq-item"><summary>GmailやGoogle Docsにリンク付きテキストを直接貼るには？</summary><p>「リッチリンクとしてコピー」を押して貼り付けてください。コードを編集することなく、青いリンク付きテキストとして貼り付けられます。</p></details>
+    <details class="faq-item"><summary>URLパラメータであらかじめ値を入力した状態で開けますか？</summary><p>はい。?url=https://example.com&amp;text=サンプル&amp;fmt=markdown のように指定できます。スマートフォンではPWAとしてインストールも可能です。</p></details>
+    <details class="faq-item"><summary>作成したリンクのQRコードは作れますか？</summary><p>はい。結果の下にある「QRコード」ボタンから生成し、SVGまたはPNGでダウンロードできます。</p></details>
+    <details class="faq-item"><summary>オフラインでも利用できますか？</summary><p>はい。初回アクセス時にブラウザにキャッシュされるため、インターネット接続がない環境でも動作します。</p></details>
+    <details class="faq-item"><summary>安全性とプライバシーは確保されていますか？</summary><p>はい。登録不要の完全無料ツールであり、すべての処理がお使いのブラウザ内で行われるため、データがサーバーに送信されることはありません。</p></details>
+  </section>
+</main>
+
+<template id="hl-template">
+  <div class="hl-row">
+    <div class="hl-grid">
+      <label><span>強調表示する開始テキスト</span><input type="text" class="hl-start" autocomplete="off" spellcheck="false"></label>
+      <label><span>…終了テキスト（長い文章の末尾、省略可能）</span><input type="text" class="hl-until" autocomplete="off" spellcheck="false"></label>
+    </div>
+    <details class="hl-precise">
+      <summary>完全一致（文脈指定）</summary>
+      <div class="hl-grid">
+        <label><span>直前のテキスト（省略可能）</span><input type="text" class="hl-prefix" autocomplete="off" spellcheck="false"></label>
+        <label><span>直後のテキスト（省略可能）</span><input type="text" class="hl-suffix" autocomplete="off" spellcheck="false"></label>
+      </div>
+    </details>
+    <button type="button" class="btn btn-small btn-ghost hl-remove">強調表示を削除</button>
+  </div>
+</template>
+
+
+
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <p>Text to Link – 無料のオンラインリンクツール。 <a href="https://github.com/text-to-link/text-to-link.github.io" rel="noopener">GitHubソースコード</a> · <a href="/ja/privacy/">プライバシー</a></p>
+    <ul class="foot-langs" aria-label="言語">
+      <li><a href="/" hreflang="en" lang="en">English</a></li>
+      <li><a href="/uk/" hreflang="uk" lang="uk">Українська</a></li>
+      <li><a href="/es/" hreflang="es" lang="es">Español</a></li>
+      <li><a href="/pt/" hreflang="pt" lang="pt">Português</a></li>
+      <li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li>
+      <li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li>
+      <li><a href="/pl/" hreflang="pl" lang="pl">Polski</a></li>
+      <li><a href="/zh/" hreflang="zh" lang="zh">中文</a></li>
+      <li><a href="/ar/" hreflang="ar" lang="ar">العربية</a></li>
+      <li><a href="/id/" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+      <li><a href="/ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a></li>
+      <li><a href="/hi/" hreflang="hi" lang="hi">हिन्दी</a></li>
+      <li><a href="/it/" hreflang="it" lang="it">Italiano</a></li>
+      <li><a href="/tr/" hreflang="tr" lang="tr">Türkçe</a></li>
+      <li><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></li>
+      <li><a href="/ko/" hreflang="ko" lang="ko">한국어</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="consent" id="consent" role="dialog" aria-label="アクセス解析の同意" hidden>
+  <p>本サイトでは需要把握のためにGoogle Analyticsを使用しています。同意いただくまで無効化されています。 <a href="/ja/privacy/">プライバシー</a></p>
+  <div class="actions">
+    <button type="button" class="btn btn-primary btn-small" id="consent-accept">同意する</button>
+    <button type="button" class="btn btn-small" id="consent-decline">拒否する</button>
+  </div>
+</div>
+
+<script src="/assets/chrome.js?v=6a15fe14"></script>
+<script>window.TTL_I18N = {"err_url_invalid": "有効なURLの形式ではありません。", "count_label": "見つかったリンク：{n}件", "no_links": "テキスト内にURLが見つかりませんでした。URLは http://、https://、www. のいずれかで始まる必要があります。", "bulk_errors": "無効なURLを含む行をスキップしました：{lines}", "example_text": "サンプル", "copied": "コピーしました！", "copied_rich": "リッチリンクとしてコピーしました！", "copy_failed": "コピーに失敗しました。テキストを手動で選択してコピーしてください。", "qr_help": "スマートフォンのカメラで読み取ってリンクを開きます。", "qr_need_url": "QRコードを作成するには有効なURLを入力してください。", "qr_too_long": "URLが長すぎるためQRコードを作成できません。テキストまたはURLを短くしてください。", "qr_error": "QRコード生成モジュールの読み込みに失敗しました。接続を確認してください。", "paste_fallback": "Ctrl+Vで貼り付けてください", "example_note": "これはサンプルです。上記の入力欄に記入して独自のリンクを作成してください。", "fmt_hint": {"html": "HTML：Webサイト、ブログ、メールテンプレート用。", "markdown": "Markdown：GitHub、Reddit、Notion、Obsidian、README用。", "bbcode": "BBCode：各種掲示板・オンラインコミュニティ用。", "url": "URL：変換後のWebアドレスのみを出力。テキストモードではURLを一括抽出します。", "rst": "reStructuredText：SphinxやPython公式ドキュメント用。", "asciidoc": "AsciiDoc：Asciidoctorや技術マニュアル用。", "slack": "Slack：ボットやWebhook用。チャット欄では「リッチリンクとしてコピー」をご利用ください。", "textile": "Textile：RedmineやJira（クラシックエディタ）用。", "org": "Org：Emacs Org-modeのメモやアジェンダ用。"}, "examples": {"single": [{"label": "基本リンク", "text": "記事の全文を読む", "url": "https://example.com/blog/my-article"}, {"label": "追跡削除", "text": "スプリングセール開催中", "url": "https://shop.example.com/sale?utm_source=newsletter&utm_medium=email&utm_campaign=spring&fbclid=IwAR0abc&color=blue", "params": "tracking"}, {"label": "テキスト強調", "text": "ハイパーリンクとは？", "url": "https://en.wikipedia.org/wiki/Hyperlink", "hl": [{"start": "hyperlink, or simply a link", "until": "clicking or tapping"}]}, {"label": "広告リンク", "text": "パートナー特別プラン", "url": "https://partner.example.com/?ref=blog", "newTab": true, "nofollow": true, "sponsored": true}, {"label": "掲示板形式 (BBCode)", "text": "GitHubプロジェクト", "url": "https://github.com/text-to-link/text-to-link.github.io", "fmt": "bbcode"}], "linkify": [{"label": "文章テキスト", "text": "チームの皆様、下書きは https://docs.example.com/draft にあり、カンバンは www.example.com/board です。質問があればチャンネル (https://chat.example.com/help) までどうぞ。"}, {"label": "メルマガURL整理", "text": "セール情報：https://shop.example.com/sale?utm_source=mail&utm_campaign=spring\n新着アイテム：https://shop.example.com/new?fbclid=IwAR0abc&size=m", "params": "tracking", "shorten": true}, {"label": "URL一括抽出", "text": "参考リンク：https://example.com/a 、www.example.org/b 、https://example.net/c を参照。", "fmt": "url"}], "bulk": [{"label": "リソース一覧", "text": "MDN Web Docs | https://developer.mozilla.org\nGitHub | https://github.com\nhttps://example.com/page", "list": true}, {"label": "Markdownリスト", "text": "MDN Web Docs | https://developer.mozilla.org\nGitHub | https://github.com\nhttps://example.com/page", "list": true, "fmt": "markdown"}, {"label": "追跡パラメータ付き", "text": "メルマガ | https://example.com/?utm_source=a&id=7\n公式ブログ | https://example.org/post?fbclid=IwAR0", "params": "tracking"}]}};</script>
+<script src="/assets/core.js?v=429b31f6"></script>
+<script src="/assets/app.js?v=d1877d73"></script>
+</body>
+</html>

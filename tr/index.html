@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="tr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Metinden Bağlantı Oluşturucu: HTML, Markdown ve Vurgu</title>
+<meta name="description" content="Ücretsiz metinden bağlantı oluşturucu: HTML, Markdown veya BBCode bağlantılar, sayfada vurgulanmış metne bağlantı, izleme temizleme ve QR kodları.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b1117" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://text-to-link.github.io/tr/">
+<link rel="alternate" hreflang="en" href="https://text-to-link.github.io/">
+<link rel="alternate" hreflang="uk" href="https://text-to-link.github.io/uk/">
+<link rel="alternate" hreflang="es" href="https://text-to-link.github.io/es/">
+<link rel="alternate" hreflang="pt" href="https://text-to-link.github.io/pt/">
+<link rel="alternate" hreflang="de" href="https://text-to-link.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://text-to-link.github.io/fr/">
+<link rel="alternate" hreflang="pl" href="https://text-to-link.github.io/pl/">
+<link rel="alternate" hreflang="zh" href="https://text-to-link.github.io/zh/">
+<link rel="alternate" hreflang="ar" href="https://text-to-link.github.io/ar/">
+<link rel="alternate" hreflang="id" href="https://text-to-link.github.io/id/">
+<link rel="alternate" hreflang="ja" href="https://text-to-link.github.io/ja/">
+<link rel="alternate" hreflang="hi" href="https://text-to-link.github.io/hi/">
+<link rel="alternate" hreflang="it" href="https://text-to-link.github.io/it/">
+<link rel="alternate" hreflang="tr" href="https://text-to-link.github.io/tr/">
+<link rel="alternate" hreflang="nl" href="https://text-to-link.github.io/nl/">
+<link rel="alternate" hreflang="ko" href="https://text-to-link.github.io/ko/">
+<link rel="alternate" hreflang="x-default" href="https://text-to-link.github.io/">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Text to Link">
+<meta property="og:title" content="Metinden Bağlantı Oluşturucu: HTML, Markdown ve Vurgu">
+<meta property="og:description" content="Ücretsiz metinden bağlantı oluşturucu: HTML, Markdown veya BBCode bağlantılar, sayfada vurgulanmış metne bağlantı, izleme temizleme ve QR kodları.">
+<meta property="og:url" content="https://text-to-link.github.io/tr/">
+<meta property="og:image" content="https://text-to-link.github.io/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Text to Link – metinden tıklanabilir bağlantı oluşturucu">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="uk_UA">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="ar_SA">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Metinden Bağlantı Oluşturucu: HTML, Markdown ve Vurgu">
+<meta name="twitter:description" content="Ücretsiz metinden bağlantı oluşturucu: HTML, Markdown veya BBCode bağlantılar, sayfada vurgulanmış metne bağlantı, izleme temizleme ve QR kodları.">
+<meta name="twitter:image" content="https://text-to-link.github.io/og-image.png">
+<meta name="twitter:image:alt" content="Text to Link – metinden tıklanabilir bağlantı oluşturucu">
+
+<script>try{var t=localStorage.getItem('ttl-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "@id": "https://text-to-link.github.io/tr/#app", "name": "Text to Link", "url": "https://text-to-link.github.io/tr/", "description": "Ücretsiz metinden bağlantı oluşturucu: HTML, Markdown veya BBCode bağlantılar, sayfada vurgulanmış metne bağlantı, izleme temizleme ve QR kodları.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "inLanguage": "tr", "image": "https://text-to-link.github.io/og-image.png", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "featureList": ["HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile ve Org-mode bağlantıları", "Metin vurgulama bağlantıları", "İzleme parametresi temizleme", "QR kod oluşturucu"]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Metni nasıl bağlantıya dönüştürebilirim?", "acceptedAnswer": {"@type": "Answer", "text": "Bağlantı metnini yazın, URL'yi yapıştırın, HTML, Markdown veya başka bir biçim seçip Kopyala'ya basın. Metin, bağlantının tıklanabilir kısmı olur."}}, {"@type": "Question", "name": "HTML, Markdown ve BBCode bağlantıları arasındaki fark nedir?", "acceptedAnswer": {"@type": "Answer", "text": "HTML bağlantıları web sitelerinde ve e-posta şablonlarında, Markdown bağlantıları GitHub, Reddit, Notion ve belgelerde, BBCode bağlantıları ise forumlarda kullanılır."}}, {"@type": "Question", "name": "Sayfadaki vurgulanmış metne nasıl bağlantı veririm?", "acceptedAnswer": {"@type": "Answer", "text": "Gelişmiş seçenekleri açın, \"Sayfadaki metni vurgula\" altına vurgulanacak sözcükleri yazın ve sonucu kopyalayın. Bağlantı #:~:text= ile biter."}}, {"@type": "Question", "name": "URL'den utm ve diğer izleme parametrelerini kaldırabilir miyim?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Gelişmiş seçeneklerde utm_*, fbclid, gclid gibi parametreleri kaldırmak için \"Yalnızca izlemeyi kaldır\"ı seçin veya soru işaretinden sonrasını temizleyin."}}, {"@type": "Question", "name": "Gmail veya Google Docs'a tıklanabilir bağlantıyı nasıl yapıştırırım?", "acceptedAnswer": {"@type": "Answer", "text": "\"Zengin bağlantı olarak kopyala\"ya basın ve yapıştırın. Metniniz kod düzenlemeye gerek kalmadan tıklanabilir olarak gelir."}}, {"@type": "Question", "name": "Oluşturucuyu alanları önceden doldurulmuş olarak açabilir miyim?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Adrese parametre ekleyin: ?url=https://example.com&text=Baglantim&fmt=markdown. Akıllı telefonlarda siteyi uygulama olarak yükleyip doğrudan paylaşabilirsiniz."}}, {"@type": "Question", "name": "Bağlantım için QR kodu oluşturabilir miyim?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Sonucun altındaki \"QR kodu\"na basın, denemek için tarayın ve SVG veya PNG olarak indirin. Tamamen tarayıcınızda üretilir."}}, {"@type": "Question", "name": "Çevrim dışı çalışır mı?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. İlk ziyaretten sonra site tarayıcınız tarafından kaydedilir, böylece internet bağlantısı olmadan da bağlantı oluşturabilirsiniz."}}, {"@type": "Question", "name": "Araç ücretsiz ve gizliliğe uygun mu?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Tamamen ücretsizdir, kayıt gerektirmez ve tarayıcınızda çalışır: verileriniz asla bir sunucuya iletilmez."}}]}]}</script>
+
+<!-- Google tag (gtag.js) with Consent Mode: analytics storage stays denied until the visitor accepts -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  var ttlConsent = '';
+  try { ttlConsent = localStorage.getItem('ttl-consent') || ''; } catch (e) {}
+  gtag('consent', 'default', {
+    analytics_storage: ttlConsent === 'granted' ? 'granted' : 'denied',
+    ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-X7MFHDKBP2');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X7MFHDKBP2"></script>
+
+<link rel="stylesheet" href="/assets/style.css?v=736df128">
+</head>
+<body>
+<a class="skip" href="#tool">Araca geç</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="logo" href="/tr/" aria-label="Text to Link">
+      <svg width="26" height="26" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M7.775 3.275a.75.75 0 0 0 1.06 1.06l1.25-1.25a2 2 0 1 1 2.83 2.83l-2.5 2.5a2 2 0 0 1-2.83 0 .75.75 0 0 0-1.06 1.06 3.5 3.5 0 0 0 4.95 0l2.5-2.5a3.5 3.5 0 0 0-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 0 1 0-2.83l2.5-2.5a2 2 0 0 1 2.83 0 .75.75 0 0 0 1.06-1.06 3.5 3.5 0 0 0-4.95 0l-2.5 2.5a3.5 3.5 0 0 0 4.95 4.95l1.25-1.25a.75.75 0 0 0-1.06-1.06l-1.25 1.25a2 2 0 0 1-2.83 0z"/></svg>
+      <span>text-to-link</span>
+    </a>
+    <nav class="bar-actions" aria-label="Site">
+      <details class="lang" id="lang-menu">
+        <summary aria-label="Dil">
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM5.78 8.75a9.64 9.64 0 0 0 1.363 4.177c.255.426.542.832.857 1.215.245-.296.551-.705.857-1.215A9.64 9.64 0 0 0 10.22 8.75Zm4.44-1.5a9.64 9.64 0 0 0-1.363-4.177c-.307-.51-.612-.919-.857-1.215a9.927 9.927 0 0 0-.857 1.215A9.64 9.64 0 0 0 5.78 7.25Zm-5.944 1.5H1.543a6.507 6.507 0 0 0 4.666 5.5c-.123-.181-.24-.365-.352-.552-.715-1.192-1.437-2.874-1.581-4.948Zm-2.733-1.5h2.733c.144-2.074.866-3.756 1.58-4.948.12-.197.237-.381.353-.552a6.507 6.507 0 0 0-4.666 5.5Zm10.181 1.5c-.144 2.074-.866 3.756-1.58 4.948-.12.197-.237.381-.353.552a6.507 6.507 0 0 0 4.666-5.5Zm2.733-1.5a6.507 6.507 0 0 0-4.666-5.5c.123.181.24.365.353.552.714 1.192 1.436 2.874 1.58 4.948Z"/></svg>
+          <span>TR</span>
+        </summary>
+        <ul>
+          <li><a href="/" hreflang="en" lang="en">English</a></li>
+          <li><a href="/uk/" hreflang="uk" lang="uk">Українська</a></li>
+          <li><a href="/es/" hreflang="es" lang="es">Español</a></li>
+          <li><a href="/pt/" hreflang="pt" lang="pt">Português</a></li>
+          <li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li>
+          <li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li>
+          <li><a href="/pl/" hreflang="pl" lang="pl">Polski</a></li>
+          <li><a href="/zh/" hreflang="zh" lang="zh">中文</a></li>
+          <li><a href="/ar/" hreflang="ar" lang="ar">العربية</a></li>
+          <li><a href="/id/" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+          <li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li>
+          <li><a href="/hi/" hreflang="hi" lang="hi">हिन्दी</a></li>
+          <li><a href="/it/" hreflang="it" lang="it">Italiano</a></li>
+          <li><a href="/tr/" hreflang="tr" lang="tr" aria-current="page">Türkçe</a></li>
+          <li><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></li>
+          <li><a href="/ko/" hreflang="ko" lang="ko">한국어</a></li>
+        </ul>
+      </details>
+      <button type="button" class="icon-btn" id="theme-toggle" aria-label="Açık / koyu temayı değiştir" title="Açık / koyu temayı değiştir">
+        <svg class="i-sun" width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-1.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm5.657-8.157a.75.75 0 0 1 0 1.061l-1.061 1.06a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.06-1.06a.75.75 0 0 1 1.06 0Zm-9.193 9.193a.75.75 0 0 1 0 1.06l-1.06 1.061a.75.75 0 1 1-1.061-1.06l1.06-1.061a.75.75 0 0 1 1.061 0ZM8 0a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 8 0ZM3 8a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 3 8Zm13 0a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 16 8Zm-8 5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 13Zm3.536-1.464a.75.75 0 0 1 1.06 0l1.061 1.06a.75.75 0 0 1-1.06 1.061l-1.061-1.06a.75.75 0 0 1 0-1.061ZM2.343 2.343a.75.75 0 0 1 1.061 0l1.06 1.061a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-1.06-1.06a.75.75 0 0 1 0-1.06Z"/></svg>
+        <svg class="i-moon" width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M9.598 1.591a.749.749 0 0 1 .785-.175 7.001 7.001 0 1 1-8.967 8.967.75.75 0 0 1 .961-.96 5.5 5.5 0 0 0 7.046-7.046.75.75 0 0 1 .175-.786Zm1.616 1.945a7 7 0 0 1-7.678 7.678 5.499 5.499 0 1 0 7.678-7.678Z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Metinden Bağlantı Oluşturucu</h1>
+    <p class="lead">Herhangi bir metni tıklanabilir bağlantıya dönüştürün. HTML, Markdown veya BBCode alın, sayfadaki vurgulanan metne doğrudan bağlantı verin ve tarayıcınızda ücretsiz QR kod oluşturun.</p>
+  </section>
+
+  <section class="card tool" id="tool" aria-label="Metinden bağlantı oluşturucu">
+    <div class="tabs modes" role="tablist" aria-label="Mod">
+      <button type="button" role="tab" class="tab" data-mode="single" aria-selected="true">Tek bağlantı</button>
+      <button type="button" role="tab" class="tab" data-mode="linkify" aria-selected="false" tabindex="-1">URL&#x27;leri tıklanabilir yap</button>
+      <button type="button" role="tab" class="tab" data-mode="bulk" aria-selected="false" tabindex="-1">Toplu bağlantılar</button>
+    </div>
+
+    <div class="card-body">
+      <p class="hint mode-hint" data-modes="single">Metninizden ve bir URL&#x27;den tek bağlantı oluşturun. Nereden başlayacağınızı bilmiyor musunuz? Bir örnek deneyin.</p>
+      <p class="hint mode-hint" data-modes="linkify" hidden>Herhangi bir metin yapıştırın: içindeki her URL tıklanabilir bağlantıya dönüşür.</p>
+      <p class="hint mode-hint" data-modes="bulk" hidden>Aynı anda birçok satırı bağlantıya dönüştürün. Her satıra &quot;metin | url&quot; biçiminde bir bağlantı.</p>
+      <div class="examples" role="group" aria-label="Bir örnek deneyin:">
+        <span class="examples-label">Bir örnek deneyin:</span>
+        <span class="chips" id="examples"></span>
+      </div>
+
+      <div class="field" data-modes="single">
+        <div class="label-row"><label for="in-text">Bağlantı metni</label><span class="mini-actions"><button type="button" class="btn-mini" data-paste="in-text">Yapıştır</button><button type="button" class="btn-mini" data-clear="in-text">Temizle</button></span></div>
+        <input id="in-text" type="text" autocomplete="off" spellcheck="false" placeholder="Yazının tamamını oku">
+      </div>
+      <div class="field" data-modes="single">
+        <div class="label-row"><label for="in-url">URL</label><span class="mini-actions"><button type="button" class="btn-mini" data-paste="in-url">Yapıştır</button><button type="button" class="btn-mini" data-clear="in-url">Temizle</button></span></div>
+        <input id="in-url" type="text" inputmode="url" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="https://example.com/page" aria-describedby="url-error">
+        <p class="error" id="url-error" role="alert" hidden></p>
+      </div>
+
+      <div class="field" data-modes="linkify" hidden>
+        <div class="label-row"><label for="in-paste">URL içeren metin</label><span class="mini-actions"><button type="button" class="btn-mini" data-paste="in-paste">Yapıştır</button><button type="button" class="btn-mini" data-clear="in-paste">Temizle</button></span></div>
+        <textarea id="in-paste" rows="6" spellcheck="false" placeholder="Metni yapıştırın. İçindeki her URL bağlantıya dönüşür, örneğin https://example.com/yazi"></textarea>
+      </div>
+
+      <div class="field" data-modes="bulk" hidden>
+        <div class="label-row"><label for="in-bulk">Her satıra bir bağlantı</label><span class="mini-actions"><button type="button" class="btn-mini" data-paste="in-bulk">Yapıştır</button><button type="button" class="btn-mini" data-clear="in-bulk">Temizle</button></span></div>
+        <textarea id="in-bulk" rows="6" spellcheck="false" placeholder="Örnek site | https://example.com
+https://example.org/sayfa" aria-describedby="bulk-hint"></textarea>
+        <p class="hint" id="bulk-hint">Her satırda &quot;metin | url&quot; veya yalnızca URL kullanın. Geçersiz URL içeren satırlar atlanır.</p>
+      </div>
+
+      <details class="advanced" id="advanced">
+        <summary>Gelişmiş seçenekler</summary>
+        <div class="adv-grid">
+          <fieldset>
+            <legend>Bağlantı</legend>
+            <label class="check"><input type="checkbox" id="o-newtab"> <span>Yeni sekmede aç</span></label>
+            <label class="check"><input type="checkbox" id="o-nofollow"> <span>nofollow</span></label>
+            <label class="check"><input type="checkbox" id="o-sponsored"> <span>sponsored</span></label>
+            <label class="check"><input type="checkbox" id="o-ugc"> <span>ugc</span></label>
+            <div class="field" data-modes="single">
+              <label for="o-title">Başlık (ipucu)</label>
+              <input id="o-title" type="text" autocomplete="off">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>URL</legend>
+            <div class="field">
+              <label for="o-params">Sorgu parametreleri</label>
+              <select id="o-params">
+                <option value="keep">Hepsini koru</option>
+                <option value="tracking">Yalnızca izlemeyi kaldır (utm_*, fbclid, gclid…)</option>
+                <option value="all">&quot;?&quot; sonrasını tamamen kaldır</option>
+              </select>
+            </div>
+            <label class="check"><input type="checkbox" id="o-hash"> <span>#çapayı kaldır</span></label>
+            <label class="check" data-modes="linkify bulk" hidden><input type="checkbox" id="o-shorten"> <span>Kısa URL göster (https://, www. olmadan)</span></label>
+            <label class="check" data-modes="bulk" hidden><input type="checkbox" id="o-list"> <span>Liste olarak çıktı ver</span></label>
+          </fieldset>
+
+          <fieldset class="adv-wide" data-modes="single">
+            <legend>Sayfadaki metni vurgula</legend>
+            <p class="hint">Bağlantı açıldığında tarayıcının kaydırıp vurgulayacağı metni ekleyin.</p>
+            <div id="hl-list"></div>
+            <button type="button" class="btn btn-small" id="hl-add">Başka bir vurgu ekle</button>
+            <p class="hint">Chrome, Edge, Safari 16.1+ ve Firefox 131+&#x27;de çalışır. Diğer tarayıcılar sayfayı vurgusuz açar.</p>
+          </fieldset>
+        </div>
+      </details>
+
+      <div class="result">
+        <div class="result-head">
+          <h2 class="result-title">Sonuç</h2>
+          <div class="tabs formats" role="tablist" aria-label="Çıktı biçimi">
+            <button type="button" role="tab" class="tab" data-fmt="html" aria-selected="true">HTML</button>
+            <button type="button" role="tab" class="tab" data-fmt="markdown" aria-selected="false" tabindex="-1">Markdown</button>
+            <button type="button" role="tab" class="tab" data-fmt="bbcode" aria-selected="false" tabindex="-1">BBCode</button>
+            <button type="button" role="tab" class="tab" data-fmt="url" aria-selected="false" tabindex="-1">URL</button>
+            <button type="button" role="tab" class="tab" data-fmt="rst" aria-selected="false" tabindex="-1">reST</button>
+            <button type="button" role="tab" class="tab" data-fmt="asciidoc" aria-selected="false" tabindex="-1">AsciiDoc</button>
+            <button type="button" role="tab" class="tab" data-fmt="slack" aria-selected="false" tabindex="-1">Slack</button>
+            <button type="button" role="tab" class="tab" data-fmt="textile" aria-selected="false" tabindex="-1">Textile</button>
+            <button type="button" role="tab" class="tab" data-fmt="org" aria-selected="false" tabindex="-1">Org</button>
+          </div>
+        </div>
+        <pre class="output"><code id="out" class="is-placeholder"></code></pre>
+        <p class="hint" id="fmt-hint"></p>
+        <p class="warn" id="warn" role="status" hidden></p>
+
+        <div class="actions">
+          <button type="button" class="btn btn-primary" id="btn-copy" title="Kodu kopyala (Ctrl+Enter)" disabled>Kopyala</button>
+          <button type="button" class="btn" id="btn-copy-rich" title="Gmail, Google Docs, Notion veya Slack&#x27;e yapıştırmak için tıklanabilir bağlantıyı kopyala" disabled>Zengin bağlantı olarak kopyala</button>
+          <button type="button" class="btn" id="btn-test" data-modes="single" title="Kontrol etmek için bağlantıyı yeni sekmede aç" disabled>Bağlantıyı sına</button>
+          <button type="button" class="btn" id="btn-qr" data-modes="single" aria-expanded="false" aria-controls="qr-panel" data-src="/assets/qrcode.js?v=6e6189e2" disabled>QR kodu</button>
+          <button type="button" class="btn btn-ghost" id="btn-clear">Tümünü temizle</button>
+          <span class="status" id="status" role="status" aria-live="polite"></span>
+        </div>
+
+        <div class="qr" id="qr-panel" hidden>
+          <div class="qr-box" id="qr-svg" role="img" aria-label="QR kodu"></div>
+          <div class="qr-side">
+            <h3>QR kodu</h3>
+            <p class="hint" id="qr-msg">Bağlantıyı açmak için telefon kamerasıyla tarayın.</p>
+            <div class="actions">
+              <button type="button" class="btn btn-small" id="qr-dl-svg">SVG İndir</button>
+              <button type="button" class="btn btn-small" id="qr-dl-png">PNG İndir</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-wrap" id="preview-wrap" hidden>
+          <h3 class="preview-title">Önizleme</h3>
+          <div class="preview" id="preview"></div>
+        </div>
+      </div>
+    </div>
+    <p class="privacy-note">
+      <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M4 4a4 4 0 0 1 8 0v2h.25c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 12.25 15h-8.5A1.75 1.75 0 0 1 2 13.25v-5.5C2 6.784 2.784 6 3.75 6H4Zm8.25 3.5h-8.5a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25ZM10.5 6V4a2.5 2.5 0 1 0-5 0v2Z"/></svg>
+      Tamamen tarayıcınızda çalışır. Metniniz ve bağlantılarınız asla sunucuya yüklenmez.
+    </p>
+  </section>
+
+  <section class="prose" id="how">
+    <h2>Metin bağlantıya nasıl dönüştürülür</h2>
+    <ol class="steps">
+      <li><div><strong>Bağlantı metnini girin</strong><span>İnsanların göreceği ve tıklayacağı sözcükleri yazın, örneğin &quot;Yazının tamamını oku&quot;.</span></div></li>
+      <li><div><strong>URL&#x27;yi yapıştırın</strong><span>Adresi ekleyin. Eksikse https:// ekleriz ve izleme parametrelerini kaldırabiliriz.</span></div></li>
+      <li><div><strong>Biçim seçin ve kopyalayın</strong><span>HTML, Markdown, BBCode, reST, AsciiDoc, Slack, Textile veya Org seçin, kodu kopyalayın veya e-posta ve belgelere yapıştırmak için zengin bağlantı kopyalayın.</span></div></li>
+    </ol>
+  </section>
+
+  <section class="prose" id="about">
+    <h2>Metin için ücretsiz bağlantı oluşturucu</h2>
+    <p>Text to Link, metin için ücretsiz bağlantı oluşturucudur. Göstermek istediğiniz sözcükleri yazın, adresi yapıştırın ve HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile veya Org-mode biçiminde hazır bir bağlantı alın. Blog gönderileri, e-postalar, forum imzaları, belgeler ve sosyal medya profilleri için idealdir.</p>
+    <p>Metin bağlantısı oluşturucu, URL metin oluşturucu ve makale bağlantısı oluşturucu olarak çalışır: başlık ekleyin, yeni sekmede açın, nofollow, sponsored veya ugc olarak işaretleyin, utm_ parametrelerini temizleyin ve Gmail, Google Docs, Notion veya Slack&#x27;e tıklanabilir metin olarak yapıştırmak üzere kopyalayın.</p>
+    <p>Birden fazla bağlantıya mı ihtiyacınız var? Metni bağlantıya dönüştür modunda bütün bir paragrafı yapıştırın veya Toplu bağlantılar ile &quot;metin | url&quot; satırlarını hazır bir HTML listesine dönüştürün. Her şey tarayıcınızda çalışır, gizliliğiniz tamamen korunur.</p>
+  </section>
+
+  <section class="prose" id="highlight-links">
+    <h2>Sayfada vurgulanan metne nasıl bağlantı verilir</h2>
+    <p>Metin parçası bağlantısı (text fragment link), bir web sayfasını açar, ilgili bölüme kaydırır ve orayı vurgular. Gelişmiş seçenekleri açın, &quot;Sayfadaki metni vurgula&quot; alanını bulun, tam metni girin ve oluşturucu URL&#x27;nize #:~:text= kısmını eklesin.</p>
+    <p>Daha uzun bir pasajı vurgulamak için &quot;kadar&quot; alanını doldurun: tarayıcı başlangıçtan bitiş sözcüklerine kadar her yeri vurgular. Aynı sözcükler birden çok geçiyorsa, Tam eşleşme seçeneğiyle hemen öncesi veya sonrasındaki metni belirtebilirsiniz.</p>
+    <p>Vurgulu bağlantılar Chrome, Edge, Safari 16.1+ ve Firefox 131+&#x27;de çalışır. Diğer tarayıcılarda sayfa vurgusuz açılır. Metin sayfada görünür olmalı ve büyük/küçük harf fark etmeksizin tam eşleşmelidir.</p>
+    <p><code class="sample">https://example.com/article#:~:text=quick%20brown,lazy%20dog</code></p>
+  </section>
+
+  <section class="prose" id="faq">
+    <h2>Sıkça sorulan sorular</h2>
+    <details class="faq-item"><summary>Metni nasıl bağlantıya dönüştürebilirim?</summary><p>Bağlantı metnini yazın, URL&#x27;yi yapıştırın, HTML, Markdown veya başka bir biçim seçip Kopyala&#x27;ya basın. Metin, bağlantının tıklanabilir kısmı olur.</p></details>
+    <details class="faq-item"><summary>HTML, Markdown ve BBCode bağlantıları arasındaki fark nedir?</summary><p>HTML bağlantıları web sitelerinde ve e-posta şablonlarında, Markdown bağlantıları GitHub, Reddit, Notion ve belgelerde, BBCode bağlantıları ise forumlarda kullanılır.</p></details>
+    <details class="faq-item"><summary>Sayfadaki vurgulanmış metne nasıl bağlantı veririm?</summary><p>Gelişmiş seçenekleri açın, &quot;Sayfadaki metni vurgula&quot; altına vurgulanacak sözcükleri yazın ve sonucu kopyalayın. Bağlantı #:~:text= ile biter.</p></details>
+    <details class="faq-item"><summary>URL&#x27;den utm ve diğer izleme parametrelerini kaldırabilir miyim?</summary><p>Evet. Gelişmiş seçeneklerde utm_*, fbclid, gclid gibi parametreleri kaldırmak için &quot;Yalnızca izlemeyi kaldır&quot;ı seçin veya soru işaretinden sonrasını temizleyin.</p></details>
+    <details class="faq-item"><summary>Gmail veya Google Docs&#x27;a tıklanabilir bağlantıyı nasıl yapıştırırım?</summary><p>&quot;Zengin bağlantı olarak kopyala&quot;ya basın ve yapıştırın. Metniniz kod düzenlemeye gerek kalmadan tıklanabilir olarak gelir.</p></details>
+    <details class="faq-item"><summary>Oluşturucuyu alanları önceden doldurulmuş olarak açabilir miyim?</summary><p>Evet. Adrese parametre ekleyin: ?url=https://example.com&amp;text=Baglantim&amp;fmt=markdown. Akıllı telefonlarda siteyi uygulama olarak yükleyip doğrudan paylaşabilirsiniz.</p></details>
+    <details class="faq-item"><summary>Bağlantım için QR kodu oluşturabilir miyim?</summary><p>Evet. Sonucun altındaki &quot;QR kodu&quot;na basın, denemek için tarayın ve SVG veya PNG olarak indirin. Tamamen tarayıcınızda üretilir.</p></details>
+    <details class="faq-item"><summary>Çevrim dışı çalışır mı?</summary><p>Evet. İlk ziyaretten sonra site tarayıcınız tarafından kaydedilir, böylece internet bağlantısı olmadan da bağlantı oluşturabilirsiniz.</p></details>
+    <details class="faq-item"><summary>Araç ücretsiz ve gizliliğe uygun mu?</summary><p>Evet. Tamamen ücretsizdir, kayıt gerektirmez ve tarayıcınızda çalışır: verileriniz asla bir sunucuya iletilmez.</p></details>
+  </section>
+</main>
+
+<template id="hl-template">
+  <div class="hl-row">
+    <div class="hl-grid">
+      <label><span>Vurgulanacak metin</span><input type="text" class="hl-start" autocomplete="off" spellcheck="false"></label>
+      <label><span>…kadar (uzun bir pasajın isteğe bağlı sonu)</span><input type="text" class="hl-until" autocomplete="off" spellcheck="false"></label>
+    </div>
+    <details class="hl-precise">
+      <summary>Tam eşleşme</summary>
+      <div class="hl-grid">
+        <label><span>Hemen öncesindeki metin (isteğe bağlı)</span><input type="text" class="hl-prefix" autocomplete="off" spellcheck="false"></label>
+        <label><span>Hemen sonrasındaki metin (isteğe bağlı)</span><input type="text" class="hl-suffix" autocomplete="off" spellcheck="false"></label>
+      </div>
+    </details>
+    <button type="button" class="btn btn-small btn-ghost hl-remove">Vurguyu kaldır</button>
+  </div>
+</template>
+
+
+
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <p>Text to Link – ücretsiz çevrim içi bağlantı araçları. <a href="https://github.com/text-to-link/text-to-link.github.io" rel="noopener">GitHub&#x27;da kaynak kodu</a> · <a href="/tr/privacy/">Gizlilik</a></p>
+    <ul class="foot-langs" aria-label="Dil">
+      <li><a href="/" hreflang="en" lang="en">English</a></li>
+      <li><a href="/uk/" hreflang="uk" lang="uk">Українська</a></li>
+      <li><a href="/es/" hreflang="es" lang="es">Español</a></li>
+      <li><a href="/pt/" hreflang="pt" lang="pt">Português</a></li>
+      <li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li>
+      <li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li>
+      <li><a href="/pl/" hreflang="pl" lang="pl">Polski</a></li>
+      <li><a href="/zh/" hreflang="zh" lang="zh">中文</a></li>
+      <li><a href="/ar/" hreflang="ar" lang="ar">العربية</a></li>
+      <li><a href="/id/" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+      <li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li>
+      <li><a href="/hi/" hreflang="hi" lang="hi">हिन्दी</a></li>
+      <li><a href="/it/" hreflang="it" lang="it">Italiano</a></li>
+      <li><a href="/tr/" hreflang="tr" lang="tr" aria-current="page">Türkçe</a></li>
+      <li><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></li>
+      <li><a href="/ko/" hreflang="ko" lang="ko">한국어</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="consent" id="consent" role="dialog" aria-label="Analitik onayı" hidden>
+  <p>İnsanların hangi araçlara ihtiyaç duyduğunu anlamak için Google Analytics kullanıyoruz. Onay vermediğiniz sürece kapalı kalır. <a href="/tr/privacy/">Gizlilik</a></p>
+  <div class="actions">
+    <button type="button" class="btn btn-primary btn-small" id="consent-accept">Kabul et</button>
+    <button type="button" class="btn btn-small" id="consent-decline">Reddet</button>
+  </div>
+</div>
+
+<script src="/assets/chrome.js?v=6a15fe14"></script>
+<script>window.TTL_I18N = {"err_url_invalid": "Bu geçerli bir URL gibi görünmüyor.", "count_label": "Bulunan bağlantı: {n}", "no_links": "Metinde bağlantı bulunamadı. Bağlantılar http://, https:// veya www. ile başlar.", "bulk_errors": "Geçersiz URL içeren satırlar atlandı: {lines}", "example_text": "Örnek", "copied": "Kopyalandı!", "copied_rich": "Zengin bağlantı olarak kopyalandı!", "copy_failed": "Kopyalanamadı. Metni seçip manuel olarak kopyalayın.", "qr_help": "Bağlantıyı açmak için telefon kamerasıyla tarayın.", "qr_need_url": "QR kodu oluşturmak için geçerli bir URL girin.", "qr_too_long": "Bu URL bir QR kodu için fazla uzun. Vurgu metnini veya URL'yi kısaltın.", "qr_error": "QR kod oluşturucu yüklenemedi. Bağlantınızı kontrol edin.", "paste_fallback": "Ctrl+V tuşlarına basın", "example_note": "Bu bir örnektir. Kendi bağlantınız için yukarıdaki alanları doldurun.", "fmt_hint": {"html": "HTML: web siteleri, bloglar ve e-posta şablonları için.", "markdown": "Markdown: GitHub, Reddit, Notion, Obsidian ve README dosyaları için.", "bbcode": "BBCode: forumlar ve mesaj panoları için.", "url": "URL: yalnızca nihai web adresi. Metin modunda içindeki tüm URL'leri ayıklar.", "rst": "reStructuredText: Sphinx ve Python belgeleri için.", "asciidoc": "AsciiDoc: Asciidoctor ve teknik belgeler için.", "slack": "Slack: botlar, web kancaları ve iş akışları için mrkdwn. Sohbetlerde \"Zengin bağlantı olarak kopyala\"yı kullanın.", "textile": "Textile: Redmine, Jira (eski düzenleyici) ve diğer Textile araçları için.", "org": "Org: Emacs Org-mode notları ve ajandaları için."}, "examples": {"single": [{"label": "Basit bağlantı", "text": "Yazının tamamını oku", "url": "https://example.com/blog/my-article"}, {"label": "İzlemeyi kaldır", "text": "Bahar indirimi", "url": "https://shop.example.com/sale?utm_source=newsletter&utm_medium=email&utm_campaign=spring&fbclid=IwAR0abc&color=blue", "params": "tracking"}, {"label": "Metni vurgula", "text": "Köprü nedir?", "url": "https://en.wikipedia.org/wiki/Hyperlink", "hl": [{"start": "hyperlink, or simply a link", "until": "clicking or tapping"}]}, {"label": "Sponsorlu bağlantı", "text": "Ortaklık teklifi", "url": "https://partner.example.com/?ref=blog", "newTab": true, "nofollow": true, "sponsored": true}, {"label": "Forum (BBCode)", "text": "GitHub'daki projem", "url": "https://github.com/text-to-link/text-to-link.github.io", "fmt": "bbcode"}], "linkify": [{"label": "Paragraf", "text": "Merhaba ekip! Taslak https://docs.example.com/draft adresinde ve pano www.example.com/board adresinde. Sorularınız için kanala yazın (https://chat.example.com/help)."}, {"label": "Bülten bağlantılarını temizle", "text": "İndirim: https://shop.example.com/sale?utm_source=mail&utm_campaign=spring\nYeni: https://shop.example.com/new?fbclid=IwAR0abc&size=m", "params": "tracking", "shorten": true}, {"label": "URL'leri ayıkla", "text": "Kaynaklar: bkz. https://example.com/a, ayrıca www.example.org/b ve https://example.net/c.", "fmt": "url"}], "bulk": [{"label": "Kaynak listesi", "text": "MDN Web Docs | https://developer.mozilla.org\nGitHub | https://github.com\nhttps://example.com/page", "list": true}, {"label": "Markdown listesi", "text": "MDN Web Docs | https://developer.mozilla.org\nGitHub | https://github.com\nhttps://example.com/page", "list": true, "fmt": "markdown"}, {"label": "İzlemeli bağlantılar", "text": "Bülten | https://example.com/?utm_source=a&id=7\nBlog | https://example.org/post?fbclid=IwAR0", "params": "tracking"}]}};</script>
+<script src="/assets/core.js?v=429b31f6"></script>
+<script src="/assets/app.js?v=d1877d73"></script>
+</body>
+</html>

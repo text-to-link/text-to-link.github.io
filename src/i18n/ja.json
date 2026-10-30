@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "lang": "ja",
+    "dir": "ltr",
+    "locale": "ja_JP",
+    "lang_short": "JA",
+    "native": "日本語",
+    "title": "テキストリンク作成ツール：HTML・Markdown・強調リンク",
+    "description": "無料のテキストリンク作成ツール：HTML、Markdown、BBCodeリンクの生成、特定テキストの強調リンク作成、追跡パラメータ削除、QRコード作成。",
+    "og_alt": "Text to Link – テキストからクリック可能なリンクを無料作成"
+  },
+  "ui": {
+    "skip": "ツールへスキップ",
+    "nav_label": "サイト",
+    "language": "言語",
+    "theme_toggle": "ライト / ダークテーマの切り替え",
+    "h1": "テキストリンク作成ツール",
+    "lead": "あらゆるテキストをクリック可能なリンクに変換。HTML、Markdown、BBCode、Webページ内の強調表示リンク、QRコードをブラウザ上で無料作成できます。",
+    "tool_label": "テキストリンク作成ツール",
+    "modes_label": "モード",
+    "mode_single": "単一リンク",
+    "mode_linkify": "URLを自動リンク化",
+    "mode_bulk": "一括リンク作成",
+    "label_text": "リンクテキスト",
+    "ph_text": "記事の全文を読む",
+    "label_url": "URL",
+    "label_paste": "URLを含むテキスト",
+    "ph_paste": "文章を貼り付けてください。含まれるすべてのURLがリンクに変換されます（例：https://example.com/article）",
+    "label_bulk": "1行につき1つのリンク",
+    "ph_bulk": "サンプルサイト | https://example.com\nhttps://example.org/page",
+    "hint_bulk": "1行ごとに「テキスト | URL」の形式で入力するか、URLのみを入力してください。無効なURLの行はスキップされます。",
+    "adv_toggle": "詳細設定",
+    "adv_link": "リンク設定",
+    "opt_newtab": "新しいタブで開く",
+    "opt_title": "タイトル属性 (tooltip)",
+    "adv_url": "URL設定",
+    "opt_params": "クエリパラメータ",
+    "params_keep": "すべて保持する",
+    "params_tracking": "追跡パラメータのみ削除 (utm_*, fbclid, gclid…)",
+    "params_all": "「?」以降をすべて削除",
+    "opt_hash": "#アンカーを削除",
+    "opt_shorten": "短いURLを表示（https://やwww.を省略）",
+    "opt_list": "リスト形式で出力",
+    "adv_highlight": "ページ内のテキストを強調表示",
+    "hl_help": "リンクを開いたときにブラウザが自動スクロールして強調表示するテキストを指定します。",
+    "hl_add": "別の強調箇所を追加",
+    "hl_support": "Chrome、Edge、Safari 16.1+、Firefox 131+で動作します。他のブラウザでは強調表示なしでページが開きます。",
+    "hl_start": "強調表示する開始テキスト",
+    "hl_until": "…終了テキスト（長い文章の末尾、省略可能）",
+    "hl_prefix": "直前のテキスト（省略可能）",
+    "hl_suffix": "直後のテキスト（省略可能）",
+    "hl_precise": "完全一致（文脈指定）",
+    "hl_remove": "強調表示を削除",
+    "label_result": "生成結果",
+    "formats_label": "出力形式",
+    "btn_copy": "コピー",
+    "btn_copy_rich": "リッチリンクとしてコピー",
+    "btn_test": "リンクを確認",
+    "btn_qr": "QRコード",
+    "btn_clear": "クリア",
+    "qr_title": "QRコード",
+    "qr_help": "スマートフォンのカメラで読み取ってリンクを開きます。",
+    "qr_dl_svg": "SVGを保存",
+    "qr_dl_png": "PNGを保存",
+    "label_preview": "プレビュー",
+    "privacy_badge": "ブラウザ内ですべて処理されます。入力された文章やリンクが外部へ送信されることはありません。",
+    "how_h2": "テキストをリンクに変換する方法",
+    "about_h2": "無料のテキストリンク生成ツール",
+    "hl_h2": "Webページ内の指定テキストを強調表示するリンクの作り方",
+    "faq_h2": "よくある質問",
+    "footer_text": "Text to Link – 無料のオンラインリンクツール。",
+    "footer_source": "GitHubソースコード",
+    "consent_label": "アクセス解析の同意",
+    "consent_text": "本サイトでは需要把握のためにGoogle Analyticsを使用しています。同意いただくまで無効化されています。",
+    "consent_accept": "同意する",
+    "consent_decline": "拒否する",
+    "btn_paste": "貼り付け",
+    "btn_clear_all": "すべてクリア",
+    "examples_label": "サンプルを試す：",
+    "mode_hint_single": "テキストとURLからリンクを1つ作成します。使い方がわからない場合はサンプルをお試しください。",
+    "mode_hint_linkify": "文章を貼り付けると、含まれるすべてのURLがクリック可能なリンクに自動変換されます。",
+    "mode_hint_bulk": "複数行を一度にリンク化。「テキスト | URL」の形式で入力してください。",
+    "tip_copy": "コードをコピー (Ctrl+Enter)",
+    "tip_copy_rich": "Gmail、Google Docs、Notion、Slackに直接貼り付け可能なリンクをコピー",
+    "tip_test": "新しいタブでリンクを開いて動作を確認",
+    "footer_privacy": "プライバシー"
+  },
+  "how": [
+    {
+      "t": "リンクテキストを入力",
+      "d": "読者がクリックする文言を入力します（例：「記事の全文を読む」）。"
+    },
+    {
+      "t": "URLを入力",
+      "d": "Webアドレスを貼り付けます。https://がない場合は自動補完され、追跡パラメータの削除も可能です。"
+    },
+    {
+      "t": "形式を選んでコピー",
+      "d": "HTML、Markdown、BBCode、reST、AsciiDoc、Slack、Textile、Orgから選択してコピーします。"
+    }
+  ],
+  "about": [
+    "Text to Linkは、文章から手軽にリンクを作成できる無料ツールです。表示したい文言とWebアドレスを入力するだけで、HTML、Markdown、BBCode、reStructuredText、AsciiDoc、Slack、Textile、Org-modeのリンクコードを素早く生成できます。ブログ記事、メール、掲示板、技術ドキュメントに最適です。",
+    "タイトル属性の付加、新しいタブで開く設定、nofollow/sponsored/ugc属性の追加、utm_などの追跡パラメータの自動除去に対応。Gmail、Google Docs、Notion、Slackへそのまま貼り付けられるリッチテキスト形式のコピーも可能です。",
+    "複数のリンクを一括作成したい場合も、「URLを自動リンク化」モードで文章内のURLをすべてリンクに変換したり、「一括リンク作成」モードでHTMLリストを生成したりできます。すべてブラウザ上で処理されるため安心です。"
+  ],
+  "hl_text": [
+    "テキストフラグメント（Text Fragment）リンクを使用すると、Webページを開いた際に目的の文章まで自動スクロールし、ハイライト表示させることができます。詳細設定の「ページ内のテキストを強調表示」に文言を入力すると、URLの末尾に #:~:text= が付加されます。",
+    "長文を指定したい場合は「終了テキスト」を入力することで、開始から終了までの範囲を強調できます。同じ文言が複数ある場合は「完全一致（文脈指定）」で前後の単語を指定してください。",
+    "この機能はChrome、Edge、Safari 16.1+、Firefox 131+で動作します。未対応のブラウザでも通常のページとして問題なく開きます。"
+  ],
+  "faq": [
+    {
+      "q": "テキストをリンクに変換するにはどうすればいいですか？",
+      "a": "表示したい文言を入力し、URLを貼り付け、HTMLやMarkdownなどの形式を選んで「コピー」を押すだけです。"
+    },
+    {
+      "q": "HTML、Markdown、BBCodeリンクの違いは何ですか？",
+      "a": "HTMLはWebページやメールテンプレート用、MarkdownはGitHubやNotion、ドキュメント用、BBCodeは各種掲示板用です。"
+    },
+    {
+      "q": "Webページ内の特定テキストを強調するリンクは作れますか？",
+      "a": "はい。詳細設定の「ページ内のテキストを強調表示」に文言を入力して生成すると、#:~:text=が付いたURLが完成します。"
+    },
+    {
+      "q": "URLからutmなどの追跡パラメータを削除できますか？",
+      "a": "はい。詳細設定で「追跡パラメータのみ削除」を選ぶと、utm_*やfbclid、gclidなどの不要なパラメータを除去できます。"
+    },
+    {
+      "q": "GmailやGoogle Docsにリンク付きテキストを直接貼るには？",
+      "a": "「リッチリンクとしてコピー」を押して貼り付けてください。コードを編集することなく、青いリンク付きテキストとして貼り付けられます。"
+    },
+    {
+      "q": "URLパラメータであらかじめ値を入力した状態で開けますか？",
+      "a": "はい。?url=https://example.com&text=サンプル&fmt=markdown のように指定できます。スマートフォンではPWAとしてインストールも可能です。"
+    },
+    {
+      "q": "作成したリンクのQRコードは作れますか？",
+      "a": "はい。結果の下にある「QRコード」ボタンから生成し、SVGまたはPNGでダウンロードできます。"
+    },
+    {
+      "q": "オフラインでも利用できますか？",
+      "a": "はい。初回アクセス時にブラウザにキャッシュされるため、インターネット接続がない環境でも動作します。"
+    },
+    {
+      "q": "安全性とプライバシーは確保されていますか？",
+      "a": "はい。登録不要の完全無料ツールであり、すべての処理がお使いのブラウザ内で行われるため、データがサーバーに送信されることはありません。"
+    }
+  ],
+  "js": {
+    "err_url_invalid": "有効なURLの形式ではありません。",
+    "count_label": "見つかったリンク：{n}件",
+    "no_links": "テキスト内にURLが見つかりませんでした。URLは http://、https://、www. のいずれかで始まる必要があります。",
+    "bulk_errors": "無効なURLを含む行をスキップしました：{lines}",
+    "example_text": "サンプル",
+    "copied": "コピーしました！",
+    "copied_rich": "リッチリンクとしてコピーしました！",
+    "copy_failed": "コピーに失敗しました。テキストを手動で選択してコピーしてください。",
+    "qr_help": "スマートフォンのカメラで読み取ってリンクを開きます。",
+    "qr_need_url": "QRコードを作成するには有効なURLを入力してください。",
+    "qr_too_long": "URLが長すぎるためQRコードを作成できません。テキストまたはURLを短くしてください。",
+    "qr_error": "QRコード生成モジュールの読み込みに失敗しました。接続を確認してください。",
+    "paste_fallback": "Ctrl+Vで貼り付けてください",
+    "example_note": "これはサンプルです。上記の入力欄に記入して独自のリンクを作成してください。",
+    "fmt_hint": {
+      "html": "HTML：Webサイト、ブログ、メールテンプレート用。",
+      "markdown": "Markdown：GitHub、Reddit、Notion、Obsidian、README用。",
+      "bbcode": "BBCode：各種掲示板・オンラインコミュニティ用。",
+      "url": "URL：変換後のWebアドレスのみを出力。テキストモードではURLを一括抽出します。",
+      "rst": "reStructuredText：SphinxやPython公式ドキュメント用。",
+      "asciidoc": "AsciiDoc：Asciidoctorや技術マニュアル用。",
+      "slack": "Slack：ボットやWebhook用。チャット欄では「リッチリンクとしてコピー」をご利用ください。",
+      "textile": "Textile：RedmineやJira（クラシックエディタ）用。",
+      "org": "Org：Emacs Org-modeのメモやアジェンダ用。"
+    },
+    "examples": {
+      "single": [
+        {
+          "label": "基本リンク",
+          "text": "記事の全文を読む",
+          "url": "https://example.com/blog/my-article"
+        },
+        {
+          "label": "追跡削除",
+          "text": "スプリングセール開催中",
+          "url": "https://shop.example.com/sale?utm_source=newsletter&utm_medium=email&utm_campaign=spring&fbclid=IwAR0abc&color=blue",
+          "params": "tracking"
+        },
+        {
+          "label": "テキスト強調",
+          "text": "ハイパーリンクとは？",
+          "url": "https://en.wikipedia.org/wiki/Hyperlink",
+          "hl": [
+            {
+              "start": "hyperlink, or simply a link",
+              "until": "clicking or tapping"
+            }
+          ]
+        },
+        {
+          "label": "広告リンク",
+          "text": "パートナー特別プラン",
+          "url": "https://partner.example.com/?ref=blog",
+          "newTab": true,
+          "nofollow": true,
+          "sponsored": true
+        },
+        {
+          "label": "掲示板形式 (BBCode)",
+          "text": "GitHubプロジェクト",
+          "url": "https://github.com/text-to-link/text-to-link.github.io",
+          "fmt": "bbcode"
+        }
+      ],
+      "linkify": [
+        {
+          "label": "文章テキスト",
+          "text": "チームの皆様、下書きは https://docs.example.com/draft にあり、カンバンは www.example.com/board です。質問があればチャンネル (https://chat.example.com/help) までどうぞ。"
+        },
+        {
+          "label": "メルマガURL整理",
+          "text": "セール情報：https://shop.example.com/sale?utm_source=mail&utm_campaign=spring\n新着アイテム：https://shop.example.com/new?fbclid=IwAR0abc&size=m",
+          "params": "tracking",
+          "shorten": true
+        },
+        {
+          "label": "URL一括抽出",
+          "text": "参考リンク：https://example.com/a 、www.example.org/b 、https://example.net/c を参照。",
+          "fmt": "url"
+        }
+      ],
+      "bulk": [
+        {
+          "label": "リソース一覧",
+          "text": "MDN Web Docs | https://developer.mozilla.org\nGitHub | https://github.com\nhttps://example.com/page",
+          "list": true
+        },
+        {
+          "label": "Markdownリスト",
+          "text": "MDN Web Docs | https://developer.mozilla.org\nGitHub | https://github.com\nhttps://example.com/page",
+          "list": true,
+          "fmt": "markdown"
+        },
+        {
+          "label": "追跡パラメータ付き",
+          "text": "メルマガ | https://example.com/?utm_source=a&id=7\n公式ブログ | https://example.org/post?fbclid=IwAR0",
+          "params": "tracking"
+        }
+      ]
+    }
+  },
+  "privacy": {
+    "title": "プライバシーポリシー – Text to Link",
+    "description": "Text to Linkが端末に保存するデータ、利用するアクセス解析、設定変更方法について。",
+    "h1": "プライバシーポリシー",
+    "updated_label": "最終更新日",
+    "sections": [
+      {
+        "h": "概要",
+        "p": [
+          "Text to Linkはお使いのブラウザ内ですべて完結します。入力されたテキストやURLは端末内で処理され、サーバーに送信されることは一切ありません。ユーザー登録や広告もありません。"
+        ]
+      },
+      {
+        "h": "端末に保存される情報",
+        "p": [
+          "快適にご利用いただくため、テーマ設定 (ttl-theme)、出力形式と設定（入力テキストは含みません、ttl-settings）、解析の同意状態 (ttl-consent) を保存します。",
+          "また、オフライン時でも利用できるようService Workerキャッシュに保存されます。これらはブラウザの設定からいつでも消去可能です。"
+        ]
+      },
+      {
+        "h": "アクセス解析について",
+        "p": [
+          "サイトの利用状況把握のためGoogle Analytics 4を使用しています。入力された文章やURLが送信されることはありません。広告機能はすべてオフになっています。",
+          "解析用ストレージは初期状態で拒否されています。「同意する」を押すまでCookieは設定されません。スクリプトはgoogletagmanager.comから読み込まれます。",
+          "同意いただいた場合、Google AnalyticsはCookie (_ga, _ga_*) を設定し、閲覧ページ、おおよその地域、端末情報などの匿名データを収集します。"
+        ]
+      },
+      {
+        "h": "ホスティング環境",
+        "p": [
+          "本サイトはGitHub Pagesでホストされています。ページリクエスト時にGitHubが技術ログ（IPアドレス等）を記録する場合があります。"
+        ]
+      },
+      {
+        "h": "外部リンクとQRコードのセキュリティ",
+        "p": [
+          "QRコードはブラウザ内で生成されます。「リンクを確認」ボタンで外部ページを開いた場合、そのサイト側には通常のアクセスとして記録されます。"
+        ]
+      },
+      {
+        "h": "利用者の権利と連絡先",
+        "p": [
+          "アクセス解析の同意はいつでも下記から変更できます。お住まいの地域に応じて、個人データに関する権利が認められる場合があります。",
+          "ご質問やご要望は github.com/text-to-link/text-to-link.github.io/issues までお寄せください。本方針を変更した場合は上記の日付が更新されます。"
+        ]
+      }
+    ],
+    "choice_h2": "アクセス解析の設定",
+    "choice_p": "Google AnalyticsによるCookieの保存および利用データの収集を許可するかどうかを選択してください。この設定はいつでも変更できます。",
+    "back": "ツールに戻る"
+  }
+}
