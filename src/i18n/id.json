@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "lang": "id",
+    "dir": "ltr",
+    "locale": "id_ID",
+    "lang_short": "ID",
+    "native": "Bahasa Indonesia",
+    "title": "Generator Teks ke Link: HTML, Markdown & Sorot Teks",
+    "description": "Generator teks ke link gratis: buat link HTML, Markdown, BBCode, link ke teks yang disorot, hapus parameter pelacakan, dan buat kode QR di browser.",
+    "og_alt": "Text to Link – pembuat link teks gratis yang dapat diklik"
+  },
+  "ui": {
+    "skip": "Lewati ke alat",
+    "nav_label": "Situs",
+    "language": "Bahasa",
+    "theme_toggle": "Ganti tema terang / gelap",
+    "h1": "Generator Teks ke Link",
+    "lead": "Ubah teks apa pun menjadi link yang dapat diklik. Dapatkan format HTML, Markdown, BBCode, link langsung ke teks yang disorot, dan kode QR gratis di browser Anda.",
+    "tool_label": "Generator teks ke link",
+    "modes_label": "Mode",
+    "mode_single": "Link tunggal",
+    "mode_linkify": "Jadikan URL dapat diklik",
+    "mode_bulk": "Daftar link",
+    "label_text": "Teks link",
+    "ph_text": "Baca artikel selengkapnya",
+    "label_url": "URL",
+    "label_paste": "Teks berisi URL",
+    "ph_paste": "Tempel teks apa saja. Setiap URL di dalamnya akan menjadi link, contoh: https://example.com/artikel",
+    "label_bulk": "Satu link per baris",
+    "ph_bulk": "Contoh situs | https://example.com\nhttps://example.org/halaman",
+    "hint_bulk": "Gunakan format \"teks | url\" per baris, atau URL saja. Baris dengan URL tidak valid akan dilewati.",
+    "adv_toggle": "Opsi lanjutan",
+    "adv_link": "Link",
+    "opt_newtab": "Buka di tab baru",
+    "opt_title": "Judul (tooltip)",
+    "adv_url": "URL",
+    "opt_params": "Parameter kueri",
+    "params_keep": "Pertahankan semua",
+    "params_tracking": "Hapus pelacakan saja (utm_*, fbclid, gclid…)",
+    "params_all": "Hapus semua setelah tanda \"?\"",
+    "opt_hash": "Hapus #jangkar",
+    "opt_shorten": "Tampilkan URL pendek (tanpa https://, www.)",
+    "opt_list": "Tampilkan sebagai daftar",
+    "adv_highlight": "Sorot teks di halaman",
+    "hl_help": "Tambahkan teks yang akan dituju dan disorot oleh browser saat link dibuka.",
+    "hl_add": "Tambah sorotan lain",
+    "hl_support": "Berfungsi di Chrome, Edge, Safari 16.1+, dan Firefox 131+. Browser lain membuka halaman tanpa sorotan.",
+    "hl_start": "Teks untuk disorot",
+    "hl_until": "…sampai (akhir kutipan panjang, opsional)",
+    "hl_prefix": "Teks tepat sebelumnya (opsional)",
+    "hl_suffix": "Teks tepat sesudahnya (opsional)",
+    "hl_precise": "Pencocokan persis",
+    "hl_remove": "Hapus sorotan",
+    "label_result": "Hasil",
+    "formats_label": "Format keluaran",
+    "btn_copy": "Salin",
+    "btn_copy_rich": "Salin sebagai link kaya",
+    "btn_test": "Uji link",
+    "btn_qr": "Kode QR",
+    "btn_clear": "Bersihkan",
+    "qr_title": "Kode QR",
+    "qr_help": "Pindai dengan kamera ponsel untuk membuka link.",
+    "qr_dl_svg": "Unduh SVG",
+    "qr_dl_png": "Unduh PNG",
+    "label_preview": "Pratinjau",
+    "privacy_badge": "Berjalan sepenuhnya di browser Anda. Teks dan link tidak pernah diunggah.",
+    "how_h2": "Cara mengubah teks menjadi link",
+    "about_h2": "Pembuat link teks gratis",
+    "hl_h2": "Cara membuat link ke teks yang disorot di halaman",
+    "faq_h2": "Pertanyaan yang sering diajukan",
+    "footer_text": "Text to Link – alat link online gratis.",
+    "footer_source": "Kode sumber di GitHub",
+    "consent_label": "Persetujuan analitik",
+    "consent_text": "Kami menggunakan Google Analytics untuk memahami alat yang dibutuhkan pengguna. Analitik nonaktif kecuali Anda setuju.",
+    "consent_accept": "Terima",
+    "consent_decline": "Tolak",
+    "btn_paste": "Tempel",
+    "btn_clear_all": "Hapus semua",
+    "examples_label": "Coba contoh:",
+    "mode_hint_single": "Buat satu link dari teks dan URL Anda. Bingung mulai dari mana? Coba contoh.",
+    "mode_hint_linkify": "Tempel teks apa saja: setiap URL di dalamnya akan menjadi link yang dapat diklik.",
+    "mode_hint_bulk": "Ubah banyak baris menjadi link sekaligus. Satu link per baris dengan format \"teks | url\".",
+    "tip_copy": "Salin kode (Ctrl+Enter)",
+    "tip_copy_rich": "Salin link yang dapat diklik untuk ditempel ke Gmail, Google Docs, Notion, atau Slack",
+    "tip_test": "Buka link di tab baru untuk memeriksanya",
+    "footer_privacy": "Privasi"
+  },
+  "how": [
+    {
+      "t": "Masukkan teks link",
+      "d": "Ketik kata yang akan dilihat dan diklik orang, contoh: \"Baca artikel selengkapnya\"."
+    },
+    {
+      "t": "Tempel URL",
+      "d": "Masukkan alamat web. Kami menambahkan https:// jika belum ada dan dapat menghapus parameter pelacakan."
+    },
+    {
+      "t": "Pilih format dan salin",
+      "d": "Pilih HTML, Markdown, BBCode, reST, AsciiDoc, Slack, Textile, atau Org, lalu salin kodenya atau salin sebagai link kaya."
+    }
+  ],
+  "about": [
+    "Text to Link adalah alat pembuat link teks gratis. Masukkan kata yang ingin ditampilkan, tempel alamat web, dan dapatkan link siap pakai dalam format HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile, atau Org-mode. Cocok untuk posting blog, email, tanda tangan forum, dan profil media sosial.",
+    "Alat ini berfungsi sebagai generator teks link, generator URL, dan pembuat link artikel: tambahkan judul, buka di tab baru, tandai sebagai nofollow, sponsored, atau ugc, bersihkan parameter utm_, dan salin sebagai link yang dapat diklik di Gmail, Google Docs, Notion, atau Slack.",
+    "Perlu banyak link? Tempel satu paragraf penuh dalam mode Jadikan URL dapat diklik, atau gunakan Daftar link untuk mengubah baris \"teks | url\" menjadi daftar HTML. Semuanya berjalan lokal di browser Anda untuk privasi penuh."
+  ],
+  "hl_text": [
+    "Link teks sorot (text fragment link) membuka halaman web, menggulir ke bagian tertentu, dan menandainya. Buka Opsi lanjutan, temukan \"Sorot teks di halaman\", masukkan kata yang tepat, dan generator akan menambahkan bagian #:~:text= ke URL Anda.",
+    "Untuk menyorot bagian yang panjang, isi bidang \"sampai\": browser akan menandai dari kata awal hingga akhir. Jika kata yang sama muncul lebih dari sekali, gunakan Pencocokan persis untuk menambahkan teks tepat sebelum atau sesudahnya.",
+    "Link dengan sorotan berfungsi di Chrome, Edge, Safari 16.1+, dan Firefox 131+. Di browser lain, halaman tetap terbuka normal tanpa sorotan teks."
+  ],
+  "faq": [
+    {
+      "q": "Bagaimana cara mengubah teks menjadi link?",
+      "a": "Ketik teks link, tempel URL, pilih format HTML, Markdown, atau lainnya, lalu klik Salin. Teks tersebut akan menjadi bagian yang dapat diklik."
+    },
+    {
+      "q": "Apa perbedaan antara link HTML, Markdown, dan BBCode?",
+      "a": "Link HTML digunakan di situs web dan template email, Markdown di GitHub, Reddit, Notion, dan dokumentasi, sedangkan BBCode di forum diskusi."
+    },
+    {
+      "q": "Bagaimana cara menautkan ke teks yang disorot di halaman web?",
+      "a": "Buka Opsi lanjutan, ketik kata di bawah \"Sorot teks di halaman\", lalu salin hasilnya. Link akan berakhiran #:~:text= diikuti teks Anda."
+    },
+    {
+      "q": "Bisakah saya menghapus parameter utm dan pelacak lainnya dari URL?",
+      "a": "Bisa. Di Opsi lanjutan, pilih \"Hapus pelacakan saja\" untuk menghapus utm_*, fbclid, gclid, atau hapus semua parameter setelah tanda tanya."
+    },
+    {
+      "q": "Bagaimana cara menempel link yang dapat diklik ke Gmail atau Google Docs?",
+      "a": "Klik \"Salin sebagai link kaya\", lalu tempel. Teks akan langsung dapat diklik tanpa perlu mengedit kode."
+    },
+    {
+      "q": "Bisakah generator dibuka dengan data yang sudah terisi otomatis?",
+      "a": "Bisa. Tambahkan parameter ke alamat web: ?url=https://example.com&text=Link%20Saya&fmt=markdown. Di ponsel pintar, Anda juga bisa memasangnya sebagai aplikasi."
+    },
+    {
+      "q": "Bisakah saya membuat kode QR untuk link saya?",
+      "a": "Bisa. Klik \"Kode QR\" di bawah hasil, pindai untuk menguji, dan unduh dalam format SVG atau PNG. Kode QR dibuat langsung di browser Anda."
+    },
+    {
+      "q": "Apakah alat ini berfungsi secara offline?",
+      "a": "Ya. Setelah kunjungan pertama, situs ini disimpan oleh browser Anda sehingga Anda dapat membuat link tanpa koneksi internet."
+    },
+    {
+      "q": "Apakah alat ini gratis dan menjaga privasi?",
+      "a": "Ya. Sepenuhnya gratis, tanpa perlu mendaftar, dan diproses langsung di browser Anda: data Anda tidak pernah dikirim ke server."
+    }
+  ],
+  "js": {
+    "err_url_invalid": "Tampaknya ini bukan URL yang valid.",
+    "count_label": "Link ditemukan: {n}",
+    "no_links": "Tidak ada link dalam teks. Link diawali dengan http://, https://, atau www.",
+    "bulk_errors": "Baris dengan URL tidak valid dilewati: {lines}",
+    "example_text": "Contoh",
+    "copied": "Tersalin!",
+    "copied_rich": "Tersalin sebagai link kaya!",
+    "copy_failed": "Gagal menyalin. Pilih teks dan salin secara manual.",
+    "qr_help": "Pindai dengan kamera ponsel untuk membuka link.",
+    "qr_need_url": "Masukkan URL yang valid untuk membuat kode QR.",
+    "qr_too_long": "URL ini terlalu panjang untuk kode QR. Perpendek teks atau URL Anda.",
+    "qr_error": "Gagal memuat generator kode QR. Periksa koneksi Anda.",
+    "paste_fallback": "Tekan Ctrl+V",
+    "example_note": "Ini adalah contoh. Isi bidang di atas untuk membuat link Anda sendiri.",
+    "fmt_hint": {
+      "html": "HTML: untuk situs web, blog, dan template email.",
+      "markdown": "Markdown: untuk GitHub, Reddit, Notion, Obsidian, dan file README.",
+      "bbcode": "BBCode: untuk forum dan papan pesan.",
+      "url": "URL: hanya alamat web akhir. Dalam mode teks, mengekstrak semua URL.",
+      "rst": "reStructuredText: untuk dokumentasi Sphinx dan Python.",
+      "asciidoc": "AsciiDoc: untuk Asciidoctor dan dokumentasi teknis.",
+      "slack": "Slack: mrkdwn untuk bot dan alur kerja. Dalam obrolan, gunakan \"Salin sebagai link kaya\".",
+      "textile": "Textile: untuk Redmine, Jira (editor lama), dan alat Textile lainnya.",
+      "org": "Org: untuk catatan dan agenda Emacs Org-mode."
+    },
+    "examples": {
+      "single": [
+        {
+          "label": "Link sederhana",
+          "text": "Baca artikel selengkapnya",
+          "url": "https://example.com/blog/my-article"
+        },
+        {
+          "label": "Hapus pelacakan",
+          "text": "Promo musim semi",
+          "url": "https://shop.example.com/sale?utm_source=newsletter&utm_medium=email&utm_campaign=spring&fbclid=IwAR0abc&color=blue",
+          "params": "tracking"
+        },
+        {
+          "label": "Sorot teks",
+          "text": "Apa itu hyperlink?",
+          "url": "https://en.wikipedia.org/wiki/Hyperlink",
+          "hl": [
+            {
+              "start": "hyperlink, or simply a link",
+              "until": "clicking or tapping"
+            }
+          ]
+        },
+        {
+          "label": "Link bersponsor",
+          "text": "Penawaran mitra",
+          "url": "https://partner.example.com/?ref=blog",
+          "newTab": true,
+          "nofollow": true,
+          "sponsored": true
+        },
+        {
+          "label": "Forum (BBCode)",
+          "text": "Proyek saya di GitHub",
+          "url": "https://github.com/text-to-link/text-to-link.github.io",
+          "fmt": "bbcode"
+        }
+      ],
+      "linkify": [
+        {
+          "label": "Paragraf",
+          "text": "Halo tim! Draf ada di https://docs.example.com/draft dan papan tugas di www.example.com/board. Ada pertanyaan? Tanyakan di channel (https://chat.example.com/help)."
+        },
+        {
+          "label": "Bersihkan link buletin",
+          "text": "Promo: https://shop.example.com/sale?utm_source=mail&utm_campaign=spring\nBaru: https://shop.example.com/new?fbclid=IwAR0abc&size=m",
+          "params": "tracking",
+          "shorten": true
+        },
+        {
+          "label": "Ekstrak URL",
+          "text": "Sumber: lihat https://example.com/a, juga www.example.org/b dan https://example.net/c.",
+          "fmt": "url"
+        }
+      ],
+      "bulk": [
+        {
+          "label": "Daftar sumber daya",
+          "text": "MDN Web Docs | https://developer.mozilla.org\nGitHub | https://github.com\nhttps://example.com/page",
+          "list": true
+        },
+        {
+          "label": "Daftar Markdown",
+          "text": "MDN Web Docs | https://developer.mozilla.org\nGitHub | https://github.com\nhttps://example.com/page",
+          "list": true,
+          "fmt": "markdown"
+        },
+        {
+          "label": "Dengan pelacak",
+          "text": "Buletin | https://example.com/?utm_source=a&id=7\nBlog | https://example.org/post?fbclid=IwAR0",
+          "params": "tracking"
+        }
+      ]
+    }
+  },
+  "privacy": {
+    "title": "Kebijakan Privasi – Text to Link",
+    "description": "Data yang disimpan Text to Link di perangkat Anda, analitik yang digunakan, dan cara mengubah pilihan Anda.",
+    "h1": "Kebijakan Privasi",
+    "updated_label": "Terakhir diperbarui",
+    "sections": [
+      {
+        "h": "Ringkasan",
+        "p": [
+          "Text to Link berjalan di browser Anda. Teks dan URL yang Anda masukkan diproses langsung di perangkat Anda dan tidak pernah dikirim ke server. Tanpa akun dan tanpa iklan."
+        ]
+      },
+      {
+        "h": "Apa yang disimpan di perangkat Anda",
+        "p": [
+          "Browser Anda menyimpan data kecil untuk situs ini: preferensi tema (ttl-theme), format dan opsi tanpa teks Anda (ttl-settings), dan pilihan persetujuan analitik (ttl-consent).",
+          "Situs ini juga disimpan dalam cache service worker browser Anda agar dapat diakses tanpa koneksi internet. Anda dapat menghapusnya kapan saja melalui pengaturan browser."
+        ]
+      },
+      {
+        "h": "Analitik",
+        "p": [
+          "Kami menggunakan Google Analytics 4 untuk menghitung kunjungan dan memahami fitur yang dibutuhkan. Data teks atau URL Anda tidak pernah dikirim. Fitur iklan dinonaktifkan.",
+          "Penyimpanan analitik ditolak secara default. Sebelum Anda mengklik Terima, tidak ada cookie analitik yang disetel. Tag Google dimuat dari googletagmanager.com.",
+          "Jika Anda mengklik Terima, Google Analytics menyetel cookie (_ga dan _ga_*) dan mengumpulkan data penggunaan anonim seperti halaman yang dikunjungi dan jenis perangkat."
+        ]
+      },
+      {
+        "h": "Hosting",
+        "p": [
+          "Situs ini di-hosting di GitHub Pages. GitHub dapat mencatat data teknis seperti alamat IP Anda saat browser meminta halaman, sebagaimana dijelaskan dalam pernyataan privasi GitHub."
+        ]
+      },
+      {
+        "h": "Link, kode QR, dan situs pihak ketiga",
+        "p": [
+          "Kode QR dibuat langsung di browser Anda. Tombol Uji link membuka alamat di tab baru, sehingga situs yang dituju akan melihat kunjungan Anda. Kami tidak dapat melihatnya."
+        ]
+      },
+      {
+        "h": "Hak Anda dan kontak",
+        "p": [
+          "Anda dapat menerima atau menolak analitik di bawah ini kapan saja. Bergantung pada lokasi Anda, Anda mungkin memiliki hak untuk mengakses atau menghapus data pribadi.",
+          "Pertanyaan atau permintaan: buat issue di github.com/text-to-link/text-to-link.github.io/issues. Tanggal di atas akan diperbarui jika ada perubahan kebijakan."
+        ]
+      }
+    ],
+    "choice_h2": "Pilihan analitik Anda",
+    "choice_p": "Pilih apakah Google Analytics diizinkan menyimpan cookie dan mengumpulkan data penggunaan. Anda dapat mengubah pilihan ini kapan saja.",
+    "back": "Kembali ke generator"
+  }
+}

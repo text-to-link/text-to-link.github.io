@@ -17,7 +17,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 SITE_URL = "https://text-to-link.github.io"
-LANGS = ["en", "uk", "es", "pt", "de", "fr", "pl"]  # the first one is the default (x-default, served at /)
+LANGS = [
+    "en", "uk", "es", "pt", "de", "fr", "pl",
+    "zh", "ar", "id", "ja", "hi", "it", "tr", "nl", "ko"
+]  # the first one is the default (x-default, served at /)
 PLACEHOLDER = re.compile(r"\{\{([\w.]+)\}\}")
 PAGES = ["home", "privacy"]
 PAGE_DIRS = {"home": "", "privacy": "privacy/"}
@@ -75,6 +78,106 @@ def load_translations():
     return data
 
 
+FEATURES = {
+    "en": [
+        "HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile and Org-mode links",
+        "Text fragment (highlight) links",
+        "Tracking parameter removal",
+        "QR code generator",
+    ],
+    "uk": [
+        "Посилання HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile та Org-mode",
+        "Посилання на виділений текст",
+        "Видалення параметрів трекінгу",
+        "Генератор QR-кодів",
+    ],
+    "es": [
+        "Enlaces HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile y Org-mode",
+        "Enlaces a texto resaltado",
+        "Eliminación de parámetros de seguimiento",
+        "Generador de códigos QR",
+    ],
+    "pt": [
+        "Links HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile e Org-mode",
+        "Links para texto destacado",
+        "Remoção de parâmetros de rastreamento",
+        "Gerador de códigos QR",
+    ],
+    "de": [
+        "HTML-, Markdown-, BBCode-, reStructuredText-, AsciiDoc-, Slack-, Textile- und Org-Mode-Links",
+        "Links zu hervorgehobenem Text",
+        "Entfernung von Tracking-Parametern",
+        "QR-Code-Generator",
+    ],
+    "fr": [
+        "Liens HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile et Org-mode",
+        "Liens vers du texte surligné",
+        "Suppression des paramètres de suivi",
+        "Générateur de codes QR",
+    ],
+    "pl": [
+        "Linki HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile i Org-mode",
+        "Linki do wyróżnionego tekstu",
+        "Usuwanie parametrów śledzenia",
+        "Generator kodów QR",
+    ],
+    "zh": [
+        "HTML、Markdown、BBCode、reStructuredText、AsciiDoc、Slack、Textile 和 Org-mode 链接",
+        "网页文本高亮定位链接",
+        "去除追踪参数",
+        "QR 二维码生成器",
+    ],
+    "ar": [
+        "روابط HTML وMarkdown وBBCode وreStructuredText وAsciiDoc وSlack وTextile وOrg-mode",
+        "روابط تمييز النصوص",
+        "إزالة معاملات التتبع",
+        "منشئ رموز QR",
+    ],
+    "id": [
+        "Link HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile, dan Org-mode",
+        "Link teks yang disorot",
+        "Penghapusan parameter pelacakan",
+        "Generator kode QR",
+    ],
+    "ja": [
+        "HTML、Markdown、BBCode、reStructuredText、AsciiDoc、Slack、Textile、Org-modeリンク",
+        "テキスト強調表示リンク",
+        "追跡パラメータ削除",
+        "QRコードジェネレーター",
+    ],
+    "hi": [
+        "HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile और Org-mode लिंक",
+        "टेक्स्ट हाइलाइट लिंक",
+        "ट्रैकिंग पैरामीटर हटाना",
+        "QR कोड जेनरेटर",
+    ],
+    "it": [
+        "Link HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile e Org-mode",
+        "Link a testo evidenziato",
+        "Rimozione dei parametri di tracciamento",
+        "Generatore di codici QR",
+    ],
+    "tr": [
+        "HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile ve Org-mode bağlantıları",
+        "Metin vurgulama bağlantıları",
+        "İzleme parametresi temizleme",
+        "QR kod oluşturucu",
+    ],
+    "nl": [
+        "HTML-, Markdown-, BBCode-, reStructuredText-, AsciiDoc-, Slack-, Textile- en Org-mode-links",
+        "Links naar gemarkeerde tekst",
+        "Trackingparameters verwijderen",
+        "QR-codegenerator",
+    ],
+    "ko": [
+        "HTML, 마크다운, BBCode, reStructuredText, AsciiDoc, Slack, Textile 및 Org-mode 링크",
+        "텍스트 강조 표시 링크",
+        "추적 파라미터 제거",
+        "QR 코드 생성기",
+    ],
+}
+
+
 def build_jsonld(t, lang):
     graph = [
         {
@@ -89,12 +192,7 @@ def build_jsonld(t, lang):
             "inLanguage": t["meta"]["lang"],
             "image": SITE_URL + "/og-image.png",
             "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
-            "featureList": [
-                "HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile and Org-mode links",
-                "Text fragment (highlight) links",
-                "Tracking parameter removal",
-                "QR code generator",
-            ],
+            "featureList": FEATURES.get(lang, FEATURES["en"]),
         },
         {
             "@type": "FAQPage",

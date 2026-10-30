@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="zh" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>文本转链接生成器：HTML、Markdown与高亮链接</title>
+<meta name="description" content="免费文本转链接生成器：生成HTML、Markdown、BBCode超链接，创建网页文本高亮定位链接，去除追踪参数并生成QR二维码。">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b1117" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://text-to-link.github.io/zh/">
+<link rel="alternate" hreflang="en" href="https://text-to-link.github.io/">
+<link rel="alternate" hreflang="uk" href="https://text-to-link.github.io/uk/">
+<link rel="alternate" hreflang="es" href="https://text-to-link.github.io/es/">
+<link rel="alternate" hreflang="pt" href="https://text-to-link.github.io/pt/">
+<link rel="alternate" hreflang="de" href="https://text-to-link.github.io/de/">
+<link rel="alternate" hreflang="fr" href="https://text-to-link.github.io/fr/">
+<link rel="alternate" hreflang="pl" href="https://text-to-link.github.io/pl/">
+<link rel="alternate" hreflang="zh" href="https://text-to-link.github.io/zh/">
+<link rel="alternate" hreflang="ar" href="https://text-to-link.github.io/ar/">
+<link rel="alternate" hreflang="id" href="https://text-to-link.github.io/id/">
+<link rel="alternate" hreflang="ja" href="https://text-to-link.github.io/ja/">
+<link rel="alternate" hreflang="hi" href="https://text-to-link.github.io/hi/">
+<link rel="alternate" hreflang="it" href="https://text-to-link.github.io/it/">
+<link rel="alternate" hreflang="tr" href="https://text-to-link.github.io/tr/">
+<link rel="alternate" hreflang="nl" href="https://text-to-link.github.io/nl/">
+<link rel="alternate" hreflang="ko" href="https://text-to-link.github.io/ko/">
+<link rel="alternate" hreflang="x-default" href="https://text-to-link.github.io/">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Text to Link">
+<meta property="og:title" content="文本转链接生成器：HTML、Markdown与高亮链接">
+<meta property="og:description" content="免费文本转链接生成器：生成HTML、Markdown、BBCode超链接，创建网页文本高亮定位链接，去除追踪参数并生成QR二维码。">
+<meta property="og:url" content="https://text-to-link.github.io/zh/">
+<meta property="og:image" content="https://text-to-link.github.io/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Text to Link – 免费文本转可点击链接生成器">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="uk_UA">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="ar_SA">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="文本转链接生成器：HTML、Markdown与高亮链接">
+<meta name="twitter:description" content="免费文本转链接生成器：生成HTML、Markdown、BBCode超链接，创建网页文本高亮定位链接，去除追踪参数并生成QR二维码。">
+<meta name="twitter:image" content="https://text-to-link.github.io/og-image.png">
+<meta name="twitter:image:alt" content="Text to Link – 免费文本转可点击链接生成器">
+
+<script>try{var t=localStorage.getItem('ttl-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebApplication", "@id": "https://text-to-link.github.io/zh/#app", "name": "Text to Link", "url": "https://text-to-link.github.io/zh/", "description": "免费文本转链接生成器：生成HTML、Markdown、BBCode超链接，创建网页文本高亮定位链接，去除追踪参数并生成QR二维码。", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "inLanguage": "zh", "image": "https://text-to-link.github.io/og-image.png", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "featureList": ["HTML、Markdown、BBCode、reStructuredText、AsciiDoc、Slack、Textile 和 Org-mode 链接", "网页文本高亮定位链接", "去除追踪参数", "QR 二维码生成器"]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "如何把普通文本转成超链接？", "acceptedAnswer": {"@type": "Answer", "text": "输入想要展示的文字，粘贴网址，选择 HTML、Markdown 或其他格式，点击“复制”即可。文字就会成为可点击的链接主体。"}}, {"@type": "Question", "name": "HTML、Markdown 和 BBCode 链接有什么区别？", "acceptedAnswer": {"@type": "Answer", "text": "HTML 链接主要用于网页和邮件模板；Markdown 链接广泛用于 GitHub、Reddit、Notion 及技术文档；BBCode 链接常见于论坛发帖。"}}, {"@type": "Question", "name": "怎样制作直接定位并高亮网页文字的链接？", "acceptedAnswer": {"@type": "Answer", "text": "展开高级选项，在“高亮页面中的文本”填入需标记的词句并复制生成的链接。链接末尾带有 #:~:text=，支持的浏览器会自动滚动并高亮该文本。"}}, {"@type": "Question", "name": "可以自动去除 URL 中的 utm 等追踪参数吗？", "acceptedAnswer": {"@type": "Answer", "text": "可以。在高级选项中选择“仅去除追踪参数”，即可一键清除 utm_*、fbclid、gclid 等常见追踪标识，或彻底清除问号后的所有参数。"}}, {"@type": "Question", "name": "如何将可点击链接直接粘贴到邮件或文档中？", "acceptedAnswer": {"@type": "Answer", "text": "点击“复制为富文本链接”后直接粘贴即可。文字会自带超链接，无需手动编辑代码。"}}, {"@type": "Question", "name": "可以通过网址参数预先填好内容吗？", "acceptedAnswer": {"@type": "Answer", "text": "可以。在网址后追加参数即可：?url=https://example.com&text=我的链接&fmt=markdown。在手机上还可以将本站安装为应用并直接分享网页至本工具。"}}, {"@type": "Question", "name": "可以为链接生成二维码吗？", "acceptedAnswer": {"@type": "Answer", "text": "可以。点击结果下方的“二维码”，扫码即可测试并支持免费下载 SVG 或 PNG 图片，全过程在本地浏览器完成。"}}, {"@type": "Question", "name": "该工具支持离线使用吗？", "acceptedAnswer": {"@type": "Answer", "text": "支持。首次访问后，Service Worker 会将页面缓存在本地，即使没有网络也能随时打开生成链接。"}}, {"@type": "Question", "name": "使用此工具是否安全并保护隐私？", "acceptedAnswer": {"@type": "Answer", "text": "是的。工具完全免费且免注册，所有处理都在浏览器内本地进行，您输入的文本和网址绝不会上传到服务器。"}}]}]}</script>
+
+<!-- Google tag (gtag.js) with Consent Mode: analytics storage stays denied until the visitor accepts -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  var ttlConsent = '';
+  try { ttlConsent = localStorage.getItem('ttl-consent') || ''; } catch (e) {}
+  gtag('consent', 'default', {
+    analytics_storage: ttlConsent === 'granted' ? 'granted' : 'denied',
+    ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-X7MFHDKBP2');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X7MFHDKBP2"></script>
+
+<link rel="stylesheet" href="/assets/style.css?v=736df128">
+</head>
+<body>
+<a class="skip" href="#tool">跳至工具</a>
+
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="logo" href="/zh/" aria-label="Text to Link">
+      <svg width="26" height="26" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M7.775 3.275a.75.75 0 0 0 1.06 1.06l1.25-1.25a2 2 0 1 1 2.83 2.83l-2.5 2.5a2 2 0 0 1-2.83 0 .75.75 0 0 0-1.06 1.06 3.5 3.5 0 0 0 4.95 0l2.5-2.5a3.5 3.5 0 0 0-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 0 1 0-2.83l2.5-2.5a2 2 0 0 1 2.83 0 .75.75 0 0 0 1.06-1.06 3.5 3.5 0 0 0-4.95 0l-2.5 2.5a3.5 3.5 0 0 0 4.95 4.95l1.25-1.25a.75.75 0 0 0-1.06-1.06l-1.25 1.25a2 2 0 0 1-2.83 0z"/></svg>
+      <span>text-to-link</span>
+    </a>
+    <nav class="bar-actions" aria-label="网站">
+      <details class="lang" id="lang-menu">
+        <summary aria-label="语言">
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM5.78 8.75a9.64 9.64 0 0 0 1.363 4.177c.255.426.542.832.857 1.215.245-.296.551-.705.857-1.215A9.64 9.64 0 0 0 10.22 8.75Zm4.44-1.5a9.64 9.64 0 0 0-1.363-4.177c-.307-.51-.612-.919-.857-1.215a9.927 9.927 0 0 0-.857 1.215A9.64 9.64 0 0 0 5.78 7.25Zm-5.944 1.5H1.543a6.507 6.507 0 0 0 4.666 5.5c-.123-.181-.24-.365-.352-.552-.715-1.192-1.437-2.874-1.581-4.948Zm-2.733-1.5h2.733c.144-2.074.866-3.756 1.58-4.948.12-.197.237-.381.353-.552a6.507 6.507 0 0 0-4.666 5.5Zm10.181 1.5c-.144 2.074-.866 3.756-1.58 4.948-.12.197-.237.381-.353.552a6.507 6.507 0 0 0 4.666-5.5Zm2.733-1.5a6.507 6.507 0 0 0-4.666-5.5c.123.181.24.365.353.552.714 1.192 1.436 2.874 1.58 4.948Z"/></svg>
+          <span>ZH</span>
+        </summary>
+        <ul>
+          <li><a href="/" hreflang="en" lang="en">English</a></li>
+          <li><a href="/uk/" hreflang="uk" lang="uk">Українська</a></li>
+          <li><a href="/es/" hreflang="es" lang="es">Español</a></li>
+          <li><a href="/pt/" hreflang="pt" lang="pt">Português</a></li>
+          <li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li>
+          <li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li>
+          <li><a href="/pl/" hreflang="pl" lang="pl">Polski</a></li>
+          <li><a href="/zh/" hreflang="zh" lang="zh" aria-current="page">中文</a></li>
+          <li><a href="/ar/" hreflang="ar" lang="ar">العربية</a></li>
+          <li><a href="/id/" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+          <li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li>
+          <li><a href="/hi/" hreflang="hi" lang="hi">हिन्दी</a></li>
+          <li><a href="/it/" hreflang="it" lang="it">Italiano</a></li>
+          <li><a href="/tr/" hreflang="tr" lang="tr">Türkçe</a></li>
+          <li><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></li>
+          <li><a href="/ko/" hreflang="ko" lang="ko">한국어</a></li>
+        </ul>
+      </details>
+      <button type="button" class="icon-btn" id="theme-toggle" aria-label="切换浅色/深色主题" title="切换浅色/深色主题">
+        <svg class="i-sun" width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-1.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm5.657-8.157a.75.75 0 0 1 0 1.061l-1.061 1.06a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.06-1.06a.75.75 0 0 1 1.06 0Zm-9.193 9.193a.75.75 0 0 1 0 1.06l-1.06 1.061a.75.75 0 1 1-1.061-1.06l1.06-1.061a.75.75 0 0 1 1.061 0ZM8 0a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V.75A.75.75 0 0 1 8 0ZM3 8a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 3 8Zm13 0a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 16 8Zm-8 5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 13Zm3.536-1.464a.75.75 0 0 1 1.06 0l1.061 1.06a.75.75 0 0 1-1.06 1.061l-1.061-1.06a.75.75 0 0 1 0-1.061ZM2.343 2.343a.75.75 0 0 1 1.061 0l1.06 1.061a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-1.06-1.06a.75.75 0 0 1 0-1.06Z"/></svg>
+        <svg class="i-moon" width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M9.598 1.591a.749.749 0 0 1 .785-.175 7.001 7.001 0 1 1-8.967 8.967.75.75 0 0 1 .961-.96 5.5 5.5 0 0 0 7.046-7.046.75.75 0 0 1 .175-.786Zm1.616 1.945a7 7 0 0 1-7.678 7.678 5.499 5.499 0 1 0 7.678-7.678Z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>文本转链接生成器</h1>
+    <p class="lead">将任意文本快速转换为可点击的超链接。获取HTML、Markdown或BBCode代码，直接链接到页面高亮文本，并在浏览器中免费生成二维码。</p>
+  </section>
+
+  <section class="card tool" id="tool" aria-label="文本转链接生成器">
+    <div class="tabs modes" role="tablist" aria-label="模式">
+      <button type="button" role="tab" class="tab" data-mode="single" aria-selected="true">单个链接</button>
+      <button type="button" role="tab" class="tab" data-mode="linkify" aria-selected="false" tabindex="-1">一键转换链接</button>
+      <button type="button" role="tab" class="tab" data-mode="bulk" aria-selected="false" tabindex="-1">批量链接</button>
+    </div>
+
+    <div class="card-body">
+      <p class="hint mode-hint" data-modes="single">输入文本和网址生成单个超链接。不知道如何开始？点击示例体验。</p>
+      <p class="hint mode-hint" data-modes="linkify" hidden>粘贴任意文字：其中的所有网址都将自动转为可点击的超链接。</p>
+      <p class="hint mode-hint" data-modes="bulk" hidden>一次性将多行文本批量转为链接。格式为每行一个“文字 | 网址”。</p>
+      <div class="examples" role="group" aria-label="尝试示例：">
+        <span class="examples-label">尝试示例：</span>
+        <span class="chips" id="examples"></span>
+      </div>
+
+      <div class="field" data-modes="single">
+        <div class="label-row"><label for="in-text">链接文字</label><span class="mini-actions"><button type="button" class="btn-mini" data-paste="in-text">粘贴</button><button type="button" class="btn-mini" data-clear="in-text">清除</button></span></div>
+        <input id="in-text" type="text" autocomplete="off" spellcheck="false" placeholder="阅读完整文章">
+      </div>
+      <div class="field" data-modes="single">
+        <div class="label-row"><label for="in-url">网址 (URL)</label><span class="mini-actions"><button type="button" class="btn-mini" data-paste="in-url">粘贴</button><button type="button" class="btn-mini" data-clear="in-url">清除</button></span></div>
+        <input id="in-url" type="text" inputmode="url" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="https://example.com/page" aria-describedby="url-error">
+        <p class="error" id="url-error" role="alert" hidden></p>
+      </div>
+
+      <div class="field" data-modes="linkify" hidden>
+        <div class="label-row"><label for="in-paste">包含URL的文本</label><span class="mini-actions"><button type="button" class="btn-mini" data-paste="in-paste">粘贴</button><button type="button" class="btn-mini" data-clear="in-paste">清除</button></span></div>
+        <textarea id="in-paste" rows="6" spellcheck="false" placeholder="粘贴任意文本。其中的每个URL都会转为链接，例如 https://example.com/article"></textarea>
+      </div>
+
+      <div class="field" data-modes="bulk" hidden>
+        <div class="label-row"><label for="in-bulk">每行一个链接</label><span class="mini-actions"><button type="button" class="btn-mini" data-paste="in-bulk">粘贴</button><button type="button" class="btn-mini" data-clear="in-bulk">清除</button></span></div>
+        <textarea id="in-bulk" rows="6" spellcheck="false" placeholder="示例网站 | https://example.com
+https://example.org/page" aria-describedby="bulk-hint"></textarea>
+        <p class="hint" id="bulk-hint">每行使用“文字 | 网址”格式，或仅输入网址。包含无效网址的行将被跳过。</p>
+      </div>
+
+      <details class="advanced" id="advanced">
+        <summary>高级选项</summary>
+        <div class="adv-grid">
+          <fieldset>
+            <legend>链接设置</legend>
+            <label class="check"><input type="checkbox" id="o-newtab"> <span>在新标签页中打开</span></label>
+            <label class="check"><input type="checkbox" id="o-nofollow"> <span>nofollow</span></label>
+            <label class="check"><input type="checkbox" id="o-sponsored"> <span>sponsored</span></label>
+            <label class="check"><input type="checkbox" id="o-ugc"> <span>ugc</span></label>
+            <div class="field" data-modes="single">
+              <label for="o-title">提示文字 (title)</label>
+              <input id="o-title" type="text" autocomplete="off">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>URL设置</legend>
+            <div class="field">
+              <label for="o-params">查询参数</label>
+              <select id="o-params">
+                <option value="keep">保留全部参数</option>
+                <option value="tracking">仅去除追踪参数 (utm_*, fbclid, gclid…)</option>
+                <option value="all">清除“?”后的全部内容</option>
+              </select>
+            </div>
+            <label class="check"><input type="checkbox" id="o-hash"> <span>去除 #锚点</span></label>
+            <label class="check" data-modes="linkify bulk" hidden><input type="checkbox" id="o-shorten"> <span>显示精简网址（去掉 https://, www.）</span></label>
+            <label class="check" data-modes="bulk" hidden><input type="checkbox" id="o-list"> <span>输出为无序列表</span></label>
+          </fieldset>
+
+          <fieldset class="adv-wide" data-modes="single">
+            <legend>高亮页面中的文本</legend>
+            <p class="hint">添加打开链接时浏览器自动滚动并高亮显示的指定文本。</p>
+            <div id="hl-list"></div>
+            <button type="button" class="btn btn-small" id="hl-add">添加另一处高亮</button>
+            <p class="hint">适用于 Chrome、Edge、Safari 16.1+ 和 Firefox 131+。其他浏览器打开页面时不带高亮。</p>
+          </fieldset>
+        </div>
+      </details>
+
+      <div class="result">
+        <div class="result-head">
+          <h2 class="result-title">生成结果</h2>
+          <div class="tabs formats" role="tablist" aria-label="输出格式">
+            <button type="button" role="tab" class="tab" data-fmt="html" aria-selected="true">HTML</button>
+            <button type="button" role="tab" class="tab" data-fmt="markdown" aria-selected="false" tabindex="-1">Markdown</button>
+            <button type="button" role="tab" class="tab" data-fmt="bbcode" aria-selected="false" tabindex="-1">BBCode</button>
+            <button type="button" role="tab" class="tab" data-fmt="url" aria-selected="false" tabindex="-1">URL</button>
+            <button type="button" role="tab" class="tab" data-fmt="rst" aria-selected="false" tabindex="-1">reST</button>
+            <button type="button" role="tab" class="tab" data-fmt="asciidoc" aria-selected="false" tabindex="-1">AsciiDoc</button>
+            <button type="button" role="tab" class="tab" data-fmt="slack" aria-selected="false" tabindex="-1">Slack</button>
+            <button type="button" role="tab" class="tab" data-fmt="textile" aria-selected="false" tabindex="-1">Textile</button>
+            <button type="button" role="tab" class="tab" data-fmt="org" aria-selected="false" tabindex="-1">Org</button>
+          </div>
+        </div>
+        <pre class="output"><code id="out" class="is-placeholder"></code></pre>
+        <p class="hint" id="fmt-hint"></p>
+        <p class="warn" id="warn" role="status" hidden></p>
+
+        <div class="actions">
+          <button type="button" class="btn btn-primary" id="btn-copy" title="复制代码 (Ctrl+Enter)" disabled>复制</button>
+          <button type="button" class="btn" id="btn-copy-rich" title="复制可直接粘贴至 Gmail、飞书、Notion 或 Slack 的富文本链接" disabled>复制为富文本链接</button>
+          <button type="button" class="btn" id="btn-test" data-modes="single" title="在新标签页中打开链接以进行检查" disabled>测试链接</button>
+          <button type="button" class="btn" id="btn-qr" data-modes="single" aria-expanded="false" aria-controls="qr-panel" data-src="/assets/qrcode.js?v=6e6189e2" disabled>二维码</button>
+          <button type="button" class="btn btn-ghost" id="btn-clear">全部清空</button>
+          <span class="status" id="status" role="status" aria-live="polite"></span>
+        </div>
+
+        <div class="qr" id="qr-panel" hidden>
+          <div class="qr-box" id="qr-svg" role="img" aria-label="二维码"></div>
+          <div class="qr-side">
+            <h3>二维码</h3>
+            <p class="hint" id="qr-msg">使用手机相机扫码即可打开链接。</p>
+            <div class="actions">
+              <button type="button" class="btn btn-small" id="qr-dl-svg">下载 SVG</button>
+              <button type="button" class="btn btn-small" id="qr-dl-png">下载 PNG</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-wrap" id="preview-wrap" hidden>
+          <h3 class="preview-title">实时预览</h3>
+          <div class="preview" id="preview"></div>
+        </div>
+      </div>
+    </div>
+    <p class="privacy-note">
+      <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M4 4a4 4 0 0 1 8 0v2h.25c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 12.25 15h-8.5A1.75 1.75 0 0 1 2 13.25v-5.5C2 6.784 2.784 6 3.75 6H4Zm8.25 3.5h-8.5a.25.25 0 0 0-.25.25v5.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25ZM10.5 6V4a2.5 2.5 0 1 0-5 0v2Z"/></svg>
+      完全在浏览器本地运行。您的文本和网址绝不会被上传到服务器。
+    </p>
+  </section>
+
+  <section class="prose" id="how">
+    <h2>如何将文本转换为链接</h2>
+    <ol class="steps">
+      <li><div><strong>输入链接文字</strong><span>输入读者可见并点击的文本，例如“阅读完整文章”。</span></div></li>
+      <li><div><strong>粘贴目标网址</strong><span>输入网址。如果缺少 https:// 我们会自动补全，并可自动清理追踪参数。</span></div></li>
+      <li><div><strong>选择格式并复制</strong><span>选择 HTML、Markdown、BBCode、reST、AsciiDoc、Slack、Textile 或 Org，然后复制代码或复制富文本链接。</span></div></li>
+    </ol>
+  </section>
+
+  <section class="prose" id="about">
+    <h2>免费便捷的文本超链接制作工具</h2>
+    <p>Text to Link 是一个免费的文本转超链接工具。只需输入要显示的文字和目标网址，即可立即生成适用于 HTML、Markdown、BBCode、reStructuredText、AsciiDoc、Slack、Textile 或 Org-mode 的标准链接。非常适合博客文章、电子邮件、论坛签名、技术文档和社交媒体主页。</p>
+    <p>它集成了文本链接生成、网址文本转换和文章链接定位功能：可自定义标题、设置新标签页打开、添加 nofollow、sponsored 或 ugc 属性，自动剔除 utm_ 等冗余追踪参数，并可一键复制为可直接粘贴至邮件与在线文档的富文本格式。</p>
+    <p>需要批量处理？在“一键转换链接”模式下粘贴整段文字即可自动解析所有网址；在“批量链接”模式下则可将多行“文字 | 网址”一键转为美观的 HTML 列表。所有运算均在本地浏览器完成，绝无泄露隐私之忧。</p>
+  </section>
+
+  <section class="prose" id="highlight-links">
+    <h2>如何制作直达并高亮页面文字的链接</h2>
+    <p>高亮定位链接（Text Fragment Link）可在打开网页时自动平滑滚动到指定段落并将其高亮显示。展开“高级选项”，在“高亮页面中的文本”输入框中填入目标词句，生成器便会在网址末尾追加 #:~:text= 规则。</p>
+    <p>如需高亮较长语段，可填写“结束文字”：浏览器将完整高亮起止之间的全部文字。若目标词句在文中多次出现，可使用“精确匹配上下文”指定其前后的词句进行辅助定位。</p>
+    <p>该功能获得 Chrome、Edge、Safari 16.1+ 及 Firefox 131+ 原生支持。在其他浏览器中访问时仍能正常打开原页面，只是不显示高亮。</p>
+    <p><code class="sample">https://example.com/article#:~:text=quick%20brown,lazy%20dog</code></p>
+  </section>
+
+  <section class="prose" id="faq">
+    <h2>常见问题解答</h2>
+    <details class="faq-item"><summary>如何把普通文本转成超链接？</summary><p>输入想要展示的文字，粘贴网址，选择 HTML、Markdown 或其他格式，点击“复制”即可。文字就会成为可点击的链接主体。</p></details>
+    <details class="faq-item"><summary>HTML、Markdown 和 BBCode 链接有什么区别？</summary><p>HTML 链接主要用于网页和邮件模板；Markdown 链接广泛用于 GitHub、Reddit、Notion 及技术文档；BBCode 链接常见于论坛发帖。</p></details>
+    <details class="faq-item"><summary>怎样制作直接定位并高亮网页文字的链接？</summary><p>展开高级选项，在“高亮页面中的文本”填入需标记的词句并复制生成的链接。链接末尾带有 #:~:text=，支持的浏览器会自动滚动并高亮该文本。</p></details>
+    <details class="faq-item"><summary>可以自动去除 URL 中的 utm 等追踪参数吗？</summary><p>可以。在高级选项中选择“仅去除追踪参数”，即可一键清除 utm_*、fbclid、gclid 等常见追踪标识，或彻底清除问号后的所有参数。</p></details>
+    <details class="faq-item"><summary>如何将可点击链接直接粘贴到邮件或文档中？</summary><p>点击“复制为富文本链接”后直接粘贴即可。文字会自带超链接，无需手动编辑代码。</p></details>
+    <details class="faq-item"><summary>可以通过网址参数预先填好内容吗？</summary><p>可以。在网址后追加参数即可：?url=https://example.com&amp;text=我的链接&amp;fmt=markdown。在手机上还可以将本站安装为应用并直接分享网页至本工具。</p></details>
+    <details class="faq-item"><summary>可以为链接生成二维码吗？</summary><p>可以。点击结果下方的“二维码”，扫码即可测试并支持免费下载 SVG 或 PNG 图片，全过程在本地浏览器完成。</p></details>
+    <details class="faq-item"><summary>该工具支持离线使用吗？</summary><p>支持。首次访问后，Service Worker 会将页面缓存在本地，即使没有网络也能随时打开生成链接。</p></details>
+    <details class="faq-item"><summary>使用此工具是否安全并保护隐私？</summary><p>是的。工具完全免费且免注册，所有处理都在浏览器内本地进行，您输入的文本和网址绝不会上传到服务器。</p></details>
+  </section>
+</main>
+
+<template id="hl-template">
+  <div class="hl-row">
+    <div class="hl-grid">
+      <label><span>起始高亮文字</span><input type="text" class="hl-start" autocomplete="off" spellcheck="false"></label>
+      <label><span>…结束文字（可选，用于高亮长段落）</span><input type="text" class="hl-until" autocomplete="off" spellcheck="false"></label>
+    </div>
+    <details class="hl-precise">
+      <summary>精确匹配上下文</summary>
+      <div class="hl-grid">
+        <label><span>紧靠前方的文字（可选）</span><input type="text" class="hl-prefix" autocomplete="off" spellcheck="false"></label>
+        <label><span>紧靠后方的文字（可选）</span><input type="text" class="hl-suffix" autocomplete="off" spellcheck="false"></label>
+      </div>
+    </details>
+    <button type="button" class="btn btn-small btn-ghost hl-remove">移除高亮</button>
+  </div>
+</template>
+
+
+
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <p>Text to Link – 免费在线链接工具箱。 <a href="https://github.com/text-to-link/text-to-link.github.io" rel="noopener">GitHub 开源代码</a> · <a href="/zh/privacy/">隐私政策</a></p>
+    <ul class="foot-langs" aria-label="语言">
+      <li><a href="/" hreflang="en" lang="en">English</a></li>
+      <li><a href="/uk/" hreflang="uk" lang="uk">Українська</a></li>
+      <li><a href="/es/" hreflang="es" lang="es">Español</a></li>
+      <li><a href="/pt/" hreflang="pt" lang="pt">Português</a></li>
+      <li><a href="/de/" hreflang="de" lang="de">Deutsch</a></li>
+      <li><a href="/fr/" hreflang="fr" lang="fr">Français</a></li>
+      <li><a href="/pl/" hreflang="pl" lang="pl">Polski</a></li>
+      <li><a href="/zh/" hreflang="zh" lang="zh" aria-current="page">中文</a></li>
+      <li><a href="/ar/" hreflang="ar" lang="ar">العربية</a></li>
+      <li><a href="/id/" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+      <li><a href="/ja/" hreflang="ja" lang="ja">日本語</a></li>
+      <li><a href="/hi/" hreflang="hi" lang="hi">हिन्दी</a></li>
+      <li><a href="/it/" hreflang="it" lang="it">Italiano</a></li>
+      <li><a href="/tr/" hreflang="tr" lang="tr">Türkçe</a></li>
+      <li><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></li>
+      <li><a href="/ko/" hreflang="ko" lang="ko">한국어</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="consent" id="consent" role="dialog" aria-label="数据分析许可" hidden>
+  <p>我们使用 Google Analytics 来了解用户的工具需求。除非您同意，否则该功能保持关闭状态。 <a href="/zh/privacy/">隐私政策</a></p>
+  <div class="actions">
+    <button type="button" class="btn btn-primary btn-small" id="consent-accept">接受</button>
+    <button type="button" class="btn btn-small" id="consent-decline">拒绝</button>
+  </div>
+</div>
+
+<script src="/assets/chrome.js?v=6a15fe14"></script>
+<script>window.TTL_I18N = {"err_url_invalid": "该内容似乎不是有效的网址格式。", "count_label": "检测到链接：{n} 个", "no_links": "未在文本中找到网址。网址需以 http://、https:// 或 www. 开头。", "bulk_errors": "已跳过包含无效网址的行：{lines}", "example_text": "示例文字", "copied": "已复制！", "copied_rich": "已复制为富文本链接！", "copy_failed": "复制失败，请手动选中文本进行复制。", "qr_help": "使用手机相机扫码即可打开链接。", "qr_need_url": "请输入有效网址以生成二维码。", "qr_too_long": "该网址过长，无法生成二维码。请精简文字或网址。", "qr_error": "二维码模块加载失败，请检查网络后重试。", "paste_fallback": "请按 Ctrl+V 粘贴", "example_note": "此为演示示例。请在上方输入内容以生成您的专属链接。", "fmt_hint": {"html": "HTML：适用于网站开发、博客发布及邮件模板制作。", "markdown": "Markdown：适用于 GitHub、Reddit、Notion、Obsidian 及 README 文档。", "bbcode": "BBCode：适用于各类网络论坛和社区交流平台。", "url": "URL：仅输出最终处理后的网址。在文本模式下会提取所有网址。", "rst": "reStructuredText：适用于 Sphinx 及 Python 官方文档编写。", "asciidoc": "AsciiDoc：适用于 Asciidoctor 及专业技术文档发布。", "slack": "Slack：适用于机器人与 Webhook。在聊天窗口建议使用“复制为富文本链接”。", "textile": "Textile：适用于 Redmine、Jira 经典编辑器等工具。", "org": "Org：适用于 Emacs Org-mode 笔记与日程管理。"}, "examples": {"single": [{"label": "标准链接", "text": "阅读完整文章", "url": "https://example.com/blog/my-article"}, {"label": "去除追踪参数", "text": "春季特惠活动", "url": "https://shop.example.com/sale?utm_source=newsletter&utm_medium=email&utm_campaign=spring&fbclid=IwAR0abc&color=blue", "params": "tracking"}, {"label": "文本高亮定位", "text": "什么是超链接？", "url": "https://en.wikipedia.org/wiki/Hyperlink", "hl": [{"start": "hyperlink, or simply a link", "until": "clicking or tapping"}]}, {"label": "商业赞助链接", "text": "合作伙伴特惠", "url": "https://partner.example.com/?ref=blog", "newTab": true, "nofollow": true, "sponsored": true}, {"label": "论坛格式 (BBCode)", "text": "我的 GitHub 开源项目", "url": "https://github.com/text-to-link/text-to-link.github.io", "fmt": "bbcode"}], "linkify": [{"label": "段落文本", "text": "大家好！草案文档位于 https://docs.example.com/draft ，任务看板在 www.example.com/board 。如有疑问请在频道中交流 (https://chat.example.com/help)。"}, {"label": "清理营销邮件链接", "text": "促销：https://shop.example.com/sale?utm_source=mail&utm_campaign=spring\n新品：https://shop.example.com/new?fbclid=IwAR0abc&size=m", "params": "tracking", "shorten": true}, {"label": "批量提取网址", "text": "参考来源：详见 https://example.com/a ，另见 www.example.org/b 以及 https://example.net/c 。", "fmt": "url"}], "bulk": [{"label": "常用资源列表", "text": "MDN Web 文档 | https://developer.mozilla.org\nGitHub 代码库 | https://github.com\nhttps://example.com/page", "list": true}, {"label": "Markdown 列表", "text": "MDN Web 文档 | https://developer.mozilla.org\nGitHub 代码库 | https://github.com\nhttps://example.com/page", "list": true, "fmt": "markdown"}, {"label": "清理多行追踪链接", "text": "电子简报 | https://example.com/?utm_source=a&id=7\n官方博客 | https://example.org/post?fbclid=IwAR0", "params": "tracking"}]}};</script>
+<script src="/assets/core.js?v=429b31f6"></script>
+<script src="/assets/app.js?v=d1877d73"></script>
+</body>
+</html>

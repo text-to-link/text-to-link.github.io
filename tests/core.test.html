@@ -63,10 +63,12 @@ eq('html rel+title', T.formatLink('html', 'A', 'https://e.co', {nofollow: true, 
 eq('html empty text', T.formatLink('html', '  ', 'https://e.co', {}), '<a href="https://e.co">https://e.co</a>');
 eq('md', T.formatLink('markdown', 'A [x]', 'https://e.co/a b(c)', {}), '[A \\[x\\]](https://e.co/a%20b%28c%29)');
 eq('md title', T.formatLink('markdown', 'A', 'https://e.co', {title: 'T'}), '[A](https://e.co "T")');
+eq('md title escape', T.formatLink('markdown', 'A', 'https://e.co', {title: 'A \\ "B"'}), '[A](https://e.co "A \\\\ \\"B\\"")');
 eq('bbcode', T.formatLink('bbcode', 'A', 'https://e.co', {}), '[url=https://e.co]A[/url]');
 eq('bbcode same', T.formatLink('bbcode', 'https://e.co', 'https://e.co', {}), '[url]https://e.co[/url]');
 eq('rst', T.formatLink('rst', 'A', 'https://e.co', {}), '`A <https://e.co>`__');
 eq('asciidoc', T.formatLink('asciidoc', 'A', 'https://e.co', {newTab: true}), 'https://e.co[A,window=_blank]');
+eq('asciidoc comma', T.formatLink('asciidoc', 'A, B', 'https://e.co', {newTab: true}), 'https://e.co["A, B",window=_blank]');
 eq('slack', T.formatLink('slack', 'A <b> & c', 'https://e.co/?a=1&b=2', {}), '<https://e.co/?a=1&amp;b=2|A &lt;b&gt; &amp; c>');
 eq('slack same', T.formatLink('slack', 'https://e.co', 'https://e.co', {}), '<https://e.co>');
 eq('textile', T.formatLink('textile', 'A "x"', 'https://e.co/a b', {}), '"A &quot;x&quot;":https://e.co/a%20b');
@@ -79,6 +81,7 @@ eq('url', T.formatLink('url', 'A', 'https://e.co', {}), 'https://e.co');
 
 // linkify
 eq('splitUrls trailing punct', T.splitUrls('see https://a.com/x. ok').map(function (s) { return s.value; }), ['see ', 'https://a.com/x', '.', ' ok']);
+eq('splitUrls ellipsis', T.splitUrls('see https://a.com/x… ok').map(function (s) { return s.value; }), ['see ', 'https://a.com/x', '…', ' ok']);
 eq('splitUrls parens', T.splitUrls('(https://a.com/x)').map(function (s) { return s.value; }), ['(', 'https://a.com/x', ')']);
 eq('splitUrls wiki parens', T.splitUrls('https://en.wikipedia.org/wiki/A_(b)').map(function (s) { return s.value; }), ['https://en.wikipedia.org/wiki/A_(b)']);
 eq('splitUrls www', T.splitUrls('go www.a.com now').map(function (s) { return s.type; }), ['text', 'url', 'text']);

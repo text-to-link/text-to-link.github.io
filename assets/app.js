@@ -19,6 +19,7 @@
 
   var mode = 'single';
   var fmt = 'html';
+  var FORMATS = ['html', 'markdown', 'bbcode', 'url', 'rst', 'asciidoc', 'slack', 'textile', 'org'];
   var current = null; // {text, html, url} of the last valid result
   var statusTimer = 0;
   var suppressSave = false; // examples must not overwrite the visitor's saved options
@@ -53,7 +54,7 @@
     if (!s || typeof s !== 'object') return;
     OPTION_IDS.forEach(function (id) { if (typeof s[id] === 'boolean') $(id).checked = s[id]; });
     if (['keep', 'tracking', 'all'].indexOf(s.params) !== -1) $('o-params').value = s.params;
-    if (document.querySelector('[data-fmt="' + s.fmt + '"]')) fmt = s.fmt;
+    if (FORMATS.indexOf(s.fmt) !== -1) fmt = s.fmt;
   }
 
   /* ---------- tabs ---------- */
@@ -482,7 +483,7 @@
     var text = (q.get('text') || '').trim();
     var title = (q.get('title') || '').trim();
     var f = q.get('fmt');
-    if (f && document.querySelector('[data-fmt="' + f + '"]')) fmt = f;
+    if (f && FORMATS.indexOf(f) !== -1) fmt = f;
     if (!url && !text && !title) return;
     if (!url) {
       // share sheets often put the page address into "text"

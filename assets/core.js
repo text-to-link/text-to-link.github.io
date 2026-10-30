@@ -142,14 +142,18 @@
       case 'markdown': {
         var mdUrl = url.replace(/ /g, '%20').replace(/\(/g, '%28').replace(/\)/g, '%29');
         var mdText = text.replace(/([\\\[\]])/g, '\\$1');
-        return '[' + mdText + '](' + mdUrl + (title ? ' "' + title.replace(/"/g, '\\"') + '"' : '') + ')';
+        var mdTitle = title ? ' "' + title.replace(/\\/g, '\\\\').replace(/"/g, '\\"') + '"' : '';
+        return '[' + mdText + '](' + mdUrl + mdTitle + ')';
       }
       case 'bbcode':
         return text === url ? '[url]' + url + '[/url]' : '[url=' + url + ']' + text + '[/url]';
       case 'rst':
         return text === url ? url : '`' + text.replace(/`/g, '\\`') + ' <' + url + '>`__';
-      case 'asciidoc':
-        return url + '[' + text.replace(/\]/g, '\\]') + (o.newTab ? ',window=_blank' : '') + ']';
+      case 'asciidoc': {
+        var aText = text.replace(/\]/g, '\\]');
+        if (o.newTab && aText.indexOf(',') !== -1) aText = '"' + aText.replace(/"/g, '\\"') + '"';
+        return url + '[' + aText + (o.newTab ? ',window=_blank' : '') + ']';
+      }
       case 'slack':
         return text === url ? '<' + slackEscape(url) + '>' : '<' + slackEscape(url) + '|' + slackEscape(text) + '>';
       case 'textile': {
@@ -184,7 +188,7 @@
       var tail = '';
       for (;;) {
         var c = found.charAt(found.length - 1);
-        var strip = /[.,;:!?]/.test(c);
+        var strip = /[.,;:!?\u2026]/.test(c);
         if (!strip && CLOSERS[c]) {
           var open = found.split(CLOSERS[c]).length - 1;
           var close = found.split(c).length - 1;

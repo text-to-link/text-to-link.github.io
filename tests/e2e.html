@@ -194,7 +194,7 @@ async function run() {
   eq('empty clipboard shows fallback hint', pasteBtn.textContent, 'Press Ctrl+V');
 
   // seo bits of every language, home and privacy pages
-  var langs = ['', 'uk/', 'es/', 'pt/', 'de/', 'fr/', 'pl/'];
+  var langs = ['', 'uk/', 'es/', 'pt/', 'de/', 'fr/', 'pl/', 'zh/', 'ar/', 'id/', 'ja/', 'hi/', 'it/', 'tr/', 'nl/', 'ko/'];
   for (var lang of langs) {
     for (var page of ['', 'privacy/']) {
       var path = '/' + lang + page, label = path;
@@ -238,6 +238,10 @@ async function run() {
   d = f.contentDocument;
   eq('prefill: url param', d.getElementById('in-url').value, 'example.org');
   eq('prefill: text param', d.getElementById('in-text').value, 'Hello');
+  f.src = '/?fmt=%22%5D&url=example.org&text=Hello';
+  await loaded();
+  d = f.contentDocument;
+  eq('prefill: invalid fmt handled safely', d.getElementById('out').textContent.indexOf('example.org') >= 0, true);
 
   // PWA files
   var manifest = await (await fetch('/site.webmanifest')).json();

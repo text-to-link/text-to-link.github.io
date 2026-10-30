@@ -1,0 +1,303 @@
+{
+  "meta": {
+    "lang": "it",
+    "dir": "ltr",
+    "locale": "it_IT",
+    "lang_short": "IT",
+    "native": "Italiano",
+    "title": "Generatore da testo a link: HTML, Markdown ed evidenziazione",
+    "description": "Generatore gratuito da testo a link: crea link HTML, Markdown o BBCode, link a testo evidenziato, rimuove il tracciamento e genera codici QR.",
+    "og_alt": "Text to Link – generatore gratuito di link cliccabili da testo"
+  },
+  "ui": {
+    "skip": "Vai allo strumento",
+    "nav_label": "Sito",
+    "language": "Lingua",
+    "theme_toggle": "Attiva/disattiva tema chiaro o scuro",
+    "h1": "Generatore da testo a link",
+    "lead": "Trasforma qualsiasi testo in un link cliccabile. Ottieni HTML, Markdown o BBCode, collega direttamente al testo evidenziato e crea codici QR gratis nel browser.",
+    "tool_label": "Generatore da testo a link",
+    "modes_label": "Modalità",
+    "mode_single": "Singolo link",
+    "mode_linkify": "Rendi gli URL cliccabili",
+    "mode_bulk": "Lista di link",
+    "label_text": "Testo del link",
+    "ph_text": "Leggi l'articolo completo",
+    "label_url": "URL",
+    "label_paste": "Testo con URL",
+    "ph_paste": "Incolla qualsiasi testo. Ogni URL diventerà un link, ad esempio https://example.com/articolo",
+    "label_bulk": "Un link per riga",
+    "ph_bulk": "Sito di esempio | https://example.com\nhttps://example.org/pagina",
+    "hint_bulk": "Usa \"testo | url\" per riga, o solo l'URL. Le righe con URL non validi vengono saltate.",
+    "adv_toggle": "Opzioni avanzate",
+    "adv_link": "Link",
+    "opt_newtab": "Apri in una nuova scheda",
+    "opt_title": "Titolo (tooltip)",
+    "adv_url": "URL",
+    "opt_params": "Parametri di query",
+    "params_keep": "Mantieni tutti",
+    "params_tracking": "Rimuovi solo tracciamento (utm_*, fbclid, gclid…)",
+    "params_all": "Rimuovi tutto dopo \"?\"",
+    "opt_hash": "Rimuovi #ancora",
+    "opt_shorten": "Mostra URL brevi (senza https://, www.)",
+    "opt_list": "Genera come elenco",
+    "adv_highlight": "Evidenzia testo nella pagina",
+    "hl_help": "Aggiungi il testo a cui il browser deve scorrere ed evidenziare all'apertura del link.",
+    "hl_add": "Aggiungi un'altra evidenziazione",
+    "hl_support": "Funziona su Chrome, Edge, Safari 16.1+ e Firefox 131+. Altri browser aprono la pagina senza evidenziazione.",
+    "hl_start": "Testo da evidenziare",
+    "hl_until": "…fino a (fine opzionale di un passaggio più lungo)",
+    "hl_prefix": "Testo immediatamente prima (opzionale)",
+    "hl_suffix": "Testo immediatamente dopo (opzionale)",
+    "hl_precise": "Corrispondenza esatta",
+    "hl_remove": "Rimuovi evidenziazione",
+    "label_result": "Risultato",
+    "formats_label": "Formato di output",
+    "btn_copy": "Copia",
+    "btn_copy_rich": "Copia come link formattato",
+    "btn_test": "Verifica link",
+    "btn_qr": "Codice QR",
+    "btn_clear": "Cancella",
+    "qr_title": "Codice QR",
+    "qr_help": "Inquadra con la fotocamera per aprire il link.",
+    "qr_dl_svg": "Scarica SVG",
+    "qr_dl_png": "Scarica PNG",
+    "label_preview": "Anteprima",
+    "privacy_badge": "Funziona interamente nel tuo browser. Testi e link non vengono mai caricati.",
+    "how_h2": "Come trasformare il testo in un link",
+    "about_h2": "Uno strumento gratuito per creare link da testo",
+    "hl_h2": "Come creare un link a testo evidenziato su una pagina",
+    "faq_h2": "Domande frequenti",
+    "footer_text": "Text to Link – strumenti online gratuiti per link.",
+    "footer_source": "Codice su GitHub",
+    "consent_label": "Consenso analitica",
+    "consent_text": "Usiamo Google Analytics per capire quali strumenti servono agli utenti. Rimane disattivato senza consenso.",
+    "consent_accept": "Accetta",
+    "consent_decline": "Rifiuta",
+    "btn_paste": "Incolla",
+    "btn_clear_all": "Cancella tutto",
+    "examples_label": "Prova un esempio:",
+    "mode_hint_single": "Crea un link dal tuo testo e un URL. Non sai da dove iniziare? Prova un esempio.",
+    "mode_hint_linkify": "Incolla qualsiasi testo: ogni URL al suo interno diventa un link cliccabile.",
+    "mode_hint_bulk": "Trasforma molte righe in link contemporaneamente. Un link per riga nel formato \"testo | url\".",
+    "tip_copy": "Copia il codice (Ctrl+Invio)",
+    "tip_copy_rich": "Copia link cliccabile da incollare in Gmail, Google Docs, Notion o Slack",
+    "tip_test": "Apri il link in una nuova scheda per verificarlo",
+    "footer_privacy": "Privacy"
+  },
+  "how": [
+    {
+      "t": "Inserisci il testo del link",
+      "d": "Scrivi le parole visibili e cliccabili, ad esempio \"Leggi l'articolo completo\"."
+    },
+    {
+      "t": "Incolla l'URL",
+      "d": "Aggiungi l'indirizzo. Aggiungiamo https:// se manca e possiamo rimuovere i parametri di tracciamento."
+    },
+    {
+      "t": "Scegli il formato e copia",
+      "d": "Scegli HTML, Markdown, BBCode, reST, AsciiDoc, Slack, Textile o Org, poi copia il codice o copia come link formattato."
+    }
+  ],
+  "about": [
+    "Text to Link è uno strumento gratuito per creare link da testo. Scrivi le parole desiderate, incolla l'indirizzo e ottieni un link pronto all'uso in HTML, Markdown, BBCode, reStructuredText, AsciiDoc, Slack, Textile o Org-mode. Ideale per post di blog, email, firme di forum, documentazione e social.",
+    "Funziona come generatore di collegamenti ipertestuali, generatore di URL e generatore di link per articoli: aggiungi un titolo, apri in una nuova scheda, contrassegna come nofollow, sponsored o ugc, rimuovi i parametri utm_ e copia come testo cliccabile per Gmail, Google Docs, Notion o Slack.",
+    "Ti servono più link? Incolla un intero paragrafo nella modalità Rendi gli URL cliccabili oppure usa Lista di link per convertire righe di \"testo | url\" in un elenco HTML. Tutto viene eseguito localmente nel tuo browser, garantendo la totale privacy."
+  ],
+  "hl_text": [
+    "Un link a testo evidenziato (text fragment link) apre una pagina web, scorre fino al passaggio desiderato e lo evidenzia. Apri Opzioni avanzate, trova \"Evidenzia testo nella pagina\", inserisci le parole esatte e il generatore aggiungerà la parte #:~:text= all'URL.",
+    "Per evidenziare un brano più lungo, compila il campo \"fino a\": il browser evidenzierà dalle parole iniziali a quelle finali. Se le stesse parole compaiono più volte, usa Corrispondenza esatta per specificare il testo precedente o successivo.",
+    "I link con evidenziazione funzionano su Chrome, Edge, Safari 16.1+ e Firefox 131+. Negli altri browser la pagina si apre normalmente senza evidenziazione. Il testo deve essere visibile e corrispondere esattamente, ignorando maiuscole e minuscole."
+  ],
+  "faq": [
+    {
+      "q": "Come faccio a convertire il testo in un link?",
+      "a": "Inserisci il testo, incolla l'URL, scegli HTML, Markdown o un altro formato e premi Copia. Il testo diventerà la parte cliccabile del link."
+    },
+    {
+      "q": "Qual è la differenza tra i link HTML, Markdown e BBCode?",
+      "a": "I link HTML si usano su siti web e template email, i link Markdown su GitHub, Reddit, Notion e nella documentazione, mentre i link BBCode su molti forum."
+    },
+    {
+      "q": "Come posso creare un link al testo evidenziato su una pagina?",
+      "a": "Apri Opzioni avanzate, inserisci le parole da evidenziare in \"Evidenzia testo nella pagina\" e copia il risultato. L'URL terminerà con #:~:text= seguito dal tuo testo."
+    },
+    {
+      "q": "Posso rimuovere utm e altri parametri di tracciamento?",
+      "a": "Sì. Nelle Opzioni avanzate scegli \"Rimuovi solo tracciamento\" per eliminare utm_*, fbclid, gclid e simili, oppure rimuovi tutto dopo il punto interrogativo."
+    },
+    {
+      "q": "Come incollo un link cliccabile in Gmail o Google Docs?",
+      "a": "Premi \"Copia come link formattato\", poi incolla. Il testo risulterà già cliccabile senza dover modificare codice."
+    },
+    {
+      "q": "Posso aprire il generatore con campi già precompilati?",
+      "a": "Sì. Aggiungi i parametri all'indirizzo: ?url=https://example.com&text=Mio%20link&fmt=markdown. Sugli smartphone puoi anche installare il sito come app e condividere una pagina direttamente con esso."
+    },
+    {
+      "q": "Posso creare un codice QR per il mio link?",
+      "a": "Sì. Premi \"Codice QR\" sotto al risultato, inquadralo per testarlo e scaricalo in SVG o PNG. Viene generato interamente nel browser."
+    },
+    {
+      "q": "Funziona offline?",
+      "a": "Sì. Dopo la prima visita il sito viene salvato dal browser, permettendoti di creare link anche senza connessione internet."
+    },
+    {
+      "q": "Lo strumento è gratuito e sicuro per la privacy?",
+      "a": "Sì. È completamente gratuito, non richiede registrazione e viene eseguito nel browser: testi e URL non vengono mai inviati a un server."
+    }
+  ],
+  "js": {
+    "err_url_invalid": "Questo indirizzo non sembra un URL valido.",
+    "count_label": "Link trovati: {n}",
+    "no_links": "Nessun link trovato nel testo. I link iniziano con http://, https:// o www.",
+    "bulk_errors": "Righe saltate con URL non valido: {lines}",
+    "example_text": "Esempio",
+    "copied": "Copiato!",
+    "copied_rich": "Copiato come link formattato!",
+    "copy_failed": "Impossibile copiare. Seleziona il testo e copialo manualmente.",
+    "qr_help": "Inquadra con la fotocamera per aprire il link.",
+    "qr_need_url": "Inserisci un URL valido per creare un codice QR.",
+    "qr_too_long": "Questo URL è troppo lungo per un codice QR. Riduci il testo o l'URL.",
+    "qr_error": "Impossibile caricare il generatore QR. Verifica la connessione e riprova.",
+    "paste_fallback": "Premi Ctrl+V",
+    "example_note": "Questo è un esempio. Compila i campi sopra per ottenere il tuo link.",
+    "fmt_hint": {
+      "html": "HTML: per siti web, blog e modelli di email.",
+      "markdown": "Markdown: per GitHub, Reddit, Notion, Obsidian e file README.",
+      "bbcode": "BBCode: per forum e bacheche di messaggi.",
+      "url": "URL: solo l'indirizzo web finale. In modalità testo estrae tutti gli URL.",
+      "rst": "reStructuredText: per documentazione Sphinx e Python.",
+      "asciidoc": "AsciiDoc: per Asciidoctor e documentazione tecnica.",
+      "slack": "Slack: mrkdwn per bot, webhook e workflow. Nelle chat usa \"Copia come link formattato\".",
+      "textile": "Textile: per Redmine, Jira (vecchio editor) e altri strumenti basati su Textile.",
+      "org": "Org: per note e agende in Emacs Org-mode."
+    },
+    "examples": {
+      "single": [
+        {
+          "label": "Link semplice",
+          "text": "Leggi l'articolo completo",
+          "url": "https://example.com/blog/my-article"
+        },
+        {
+          "label": "Rimuovi tracciamento",
+          "text": "Saldi di primavera",
+          "url": "https://shop.example.com/sale?utm_source=newsletter&utm_medium=email&utm_campaign=spring&fbclid=IwAR0abc&color=blue",
+          "params": "tracking"
+        },
+        {
+          "label": "Evidenzia testo",
+          "text": "Cos'è un collegamento ipertestuale?",
+          "url": "https://en.wikipedia.org/wiki/Hyperlink",
+          "hl": [
+            {
+              "start": "hyperlink, or simply a link",
+              "until": "clicking or tapping"
+            }
+          ]
+        },
+        {
+          "label": "Link sponsorizzato",
+          "text": "Offerta partner",
+          "url": "https://partner.example.com/?ref=blog",
+          "newTab": true,
+          "nofollow": true,
+          "sponsored": true
+        },
+        {
+          "label": "Forum (BBCode)",
+          "text": "Il mio progetto su GitHub",
+          "url": "https://github.com/text-to-link/text-to-link.github.io",
+          "fmt": "bbcode"
+        }
+      ],
+      "linkify": [
+        {
+          "label": "Paragrafo",
+          "text": "Ciao team! La bozza è su https://docs.example.com/draft e la bacheca su www.example.com/board. Domande? Chiedi nel canale (https://chat.example.com/help)."
+        },
+        {
+          "label": "Pulisci link newsletter",
+          "text": "Offerte: https://shop.example.com/sale?utm_source=mail&utm_campaign=spring\nNovità: https://shop.example.com/new?fbclid=IwAR0abc&size=m",
+          "params": "tracking",
+          "shorten": true
+        },
+        {
+          "label": "Estrai URL",
+          "text": "Fonti: vedi https://example.com/a, anche www.example.org/b e https://example.net/c.",
+          "fmt": "url"
+        }
+      ],
+      "bulk": [
+        {
+          "label": "Elenco risorse",
+          "text": "MDN Web Docs | https://developer.mozilla.org\nGitHub | https://github.com\nhttps://example.com/page",
+          "list": true
+        },
+        {
+          "label": "Elenco Markdown",
+          "text": "MDN Web Docs | https://developer.mozilla.org\nGitHub | https://github.com\nhttps://example.com/page",
+          "list": true,
+          "fmt": "markdown"
+        },
+        {
+          "label": "Con tracciamento",
+          "text": "Newsletter | https://example.com/?utm_source=a&id=7\nBlog | https://example.org/post?fbclid=IwAR0",
+          "params": "tracking"
+        }
+      ]
+    }
+  },
+  "privacy": {
+    "title": "Informativa sulla privacy – Text to Link",
+    "description": "Cosa Text to Link memorizza sul tuo dispositivo, quale analisi usa e come modificare la scelta.",
+    "h1": "Informativa sulla privacy",
+    "updated_label": "Ultimo aggiornamento",
+    "sections": [
+      {
+        "h": "In breve",
+        "p": [
+          "Text to Link funziona nel tuo browser. Il testo e gli URL inseriti vengono elaborati sul dispositivo e non sono mai inviati a un server. Non ci sono account né annunci."
+        ]
+      },
+      {
+        "h": "Cosa viene memorizzato sul tuo dispositivo",
+        "p": [
+          "Il browser conserva alcuni dati per questo sito: il tema (ttl-theme), formato e opzioni scelte ma non il testo (ttl-settings), e la scelta del consenso (ttl-consent).",
+          "Il sito viene anche memorizzato nella cache del service worker per aprirsi offline. Puoi cancellare tutto in qualsiasi momento dalle impostazioni del browser."
+        ]
+      },
+      {
+        "h": "Analitica",
+        "p": [
+          "Usiamo Google Analytics 4 per contare le visite e capire quali strumenti, lingue e paesi vengono usati. Non riceve mai testi o URL inseriti. Le funzioni pubblicitarie sono disattivate.",
+          "L'archiviazione per l'analisi è negata per impostazione predefinita. Finché non premi Accetta, non vengono impostati cookie di analisi. Il tag Google viene caricato da googletagmanager.com.",
+          "Se premi Accetta, Google Analytics imposta cookie (_ga e _ga_*) e raccoglie dati pseudonimi sull'uso, come pagine visitate, posizione approssimativa e tipo di browser o dispositivo."
+        ]
+      },
+      {
+        "h": "Hosting",
+        "p": [
+          "Il sito è ospitato su GitHub Pages. GitHub può registrare dati tecnici come il tuo indirizzo IP quando il browser richiede una pagina, come descritto nell'informativa di GitHub."
+        ]
+      },
+      {
+        "h": "Link, codici QR e siti esterni",
+        "p": [
+          "I codici QR vengono generati nel browser. Il pulsante Verifica link apre l'indirizzo inserito in una nuova scheda, quindi il sito visitato vedrà la tua visita. Noi non la vediamo."
+        ]
+      },
+      {
+        "h": "Diritti e contatti",
+        "p": [
+          "Puoi accettare o rifiutare l'analisi qui sotto in qualsiasi momento. A seconda di dove vivi, potresti avere il diritto di accedere, correggere o cancellare i tuoi dati personali.",
+          "Domande o richieste: apri una segnalazione su github.com/text-to-link/text-to-link.github.io/issues. Se l'informativa cambia, la data in alto viene aggiornata."
+        ]
+      }
+    ],
+    "choice_h2": "La tua scelta sull'analisi",
+    "choice_p": "Scegli se Google Analytics può salvare cookie e raccogliere dati di utilizzo. Puoi modificare la scelta in qualsiasi momento.",
+    "back": "Torna al generatore"
+  }
+}
